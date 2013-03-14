@@ -1,0 +1,125 @@
+Archive Project report for ProcessorV1
+Thu Mar 14 15:15:46 2013
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Mar 14 15:15:46 2013 ;
+; Revision Name          ; ProcessorV1                           ;
+; Top-level Entity Name  ; ProcessorV1                           ;
+; Family                 ; Cyclone II                            ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Critical Warning: Analysis & Elaboration was not run successfully
+    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
+Info: Parsing: ZeroConstant16Bit.vhd
+Info: Parsing: ResultFlags.bdf
+Info: Parsing: RegisterPins.bdf
+Info: Parsing: Processor16Bit.bdf
+Info: Parsing: OR16BIT.vhd
+Info: Parsing: MUX4_1_16bit.vhd
+Info: Parsing: MUX4_1.vhd
+Info: Parsing: MUX2_1.vhd
+Info: Parsing: Lab916to1Mux.vhd
+Info: Parsing: Lab9RegisterFile.bdf
+Info: Parsing: Lab9DD_FF.bdf
+Info: Parsing: Lab9_4x4bitRegisterFile.bdf
+Info: Parsing: Lab9_4BitRegister.bdf
+Info: Parsing: DFF_16BIT.vhd
+Info: Parsing: DECODER4TO16.vhd
+Info: Parsing: ../Lab9/ProcessorV1.bdf
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/Lab9/ProcessorV1.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'ProcessorV1.archive.rpt'
+Error: Evaluation of Tcl script c:/altera/11.0sp1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
+Error: Quartus II Shell was unsuccessful. 5 errors, 2 warnings
+    Error: Peak virtual memory: 208 megabytes
+    Error: Processing ended: Thu Mar 14 15:15:46 2013
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:03
+
+
++-------------------------------------------------------+
+; Files Archived                                        ;
++-------------------------------------------------------+
+; File Name                                             ;
++-------------------------------------------------------+
+; ../Lab9/ProcessorV1.bdf                               ;
+; C:/altera/11.0sp1/quartus/bin/assignment_defaults.qdf ;
+; c:/altera/11.0sp1/quartus/bin/assignment_defaults.qdf ;
+; D:/Lab9/ProcessorV1.bdf                               ;
+; DECODER4TO16.bsf                                      ;
+; DECODER4TO16.vhd                                      ;
+; DFF_16BIT.bsf                                         ;
+; DFF_16BIT.vhd                                         ;
+; Lab9_4BitRegister.bdf                                 ;
+; Lab9_4x4bitRegisterFile.bdf                           ;
+; Lab9DD_FF.bdf                                         ;
+; Lab9RegisterFile.bdf                                  ;
+; Lab916to1Mux.bsf                                      ;
+; Lab916to1Mux.vhd                                      ;
+; MUX2_1.bsf                                            ;
+; MUX2_1.qip                                            ;
+; MUX2_1.vhd                                            ;
+; MUX4_1.vhd                                            ;
+; MUX4_1_16bit.bsf                                      ;
+; MUX4_1_16bit.vhd                                      ;
+; OR16BIT.bsf                                           ;
+; OR16BIT.vhd                                           ;
+; Processor16Bit.bdf                                    ;
+; ProcessorV1.flow.rpt                                  ;
+; ProcessorV1.map.rpt                                   ;
+; ProcessorV1.map.summary                               ;
+; ProcessorV1.qpf                                       ;
+; ProcessorV1.qsf                                       ;
+; RegisterPins.bdf                                      ;
+; ResultFlags.bdf                                       ;
+; ResultFlags.bsf                                       ;
+; SixteenBitAdder.bsf                                   ;
+; smpRegisterFile.bsf                                   ;
+; ZeroConstant16Bit.bsf                                 ;
+; ZeroConstant16Bit.vhd                                 ;
++-------------------------------------------------------+
+
+
