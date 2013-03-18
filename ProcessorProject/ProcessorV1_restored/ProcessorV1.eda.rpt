@@ -1,6 +1,6 @@
 EDA Netlist Writer report for ProcessorV1
-Thu Mar 14 17:16:39 2013
-Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+Mon Mar 18 00:00:44 2013
+Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Mar 14 17:16:39 2013 ;
+; EDA Netlist Writer Status ; Successful - Mon Mar 18 00:00:43 2013 ;
 ; Revision Name             ; ProcessorV1                           ;
-; Top-level Entity Name     ; Lab9RegisterFile                      ;
+; Top-level Entity Name     ; ProcessorV1                           ;
 ; Family                    ; Cyclone II                            ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,32 +66,31 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                       ;
-+--------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                  ;
-+--------------------------------------------------------------------------------------------------+
-; Z:/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1.vho          ;
-; Z:/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_fast.vho     ;
-; Z:/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_vhd.sdo      ;
-; Z:/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_vhd_fast.sdo ;
-+--------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1.vho          ;
+; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_fast.vho     ;
+; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_vhd.sdo      ;
+; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/ProcessorV1_vhd_fast.sdo ;
++--------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II EDA Netlist Writer
-    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Mar 14 17:16:34 2013
+Info: Running Quartus II 32-bit EDA Netlist Writer
+    Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
+    Info: Processing started: Mon Mar 18 00:00:43 2013
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ProcessorV1 -c ProcessorV1
-Info: Generated simulation netlist will be non-hierarchical because the design has SignalTap II partitions, termination control logic and/or a design partition that contains bidirectional ports
-Info: Generated files "ProcessorV1.vho", "ProcessorV1_fast.vho", "ProcessorV1_vhd.sdo" and "ProcessorV1_vhd_fast.sdo" in directory "Z:/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 251 megabytes
-    Info: Processing ended: Thu Mar 14 17:16:39 2013
-    Info: Elapsed time: 00:00:05
+Info (204026): Generated files "ProcessorV1.vho", "ProcessorV1_fast.vho", "ProcessorV1_vhd.sdo" and "ProcessorV1_vhd_fast.sdo" in directory "C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 279 megabytes
+    Info: Processing ended: Mon Mar 18 00:00:44 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

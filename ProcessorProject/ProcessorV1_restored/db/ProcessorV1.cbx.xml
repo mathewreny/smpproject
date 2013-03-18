@@ -1,9 +1,23 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ProcessorV1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_c8f.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MuxINC:inst9|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MainMemory:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ghe1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_c8f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MemoryInterface:inst3|Const:inst3|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_ak6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ghe1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MuxPC:inst2|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_p4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|InstructionAddressGenerator:inst5|Const:inst5|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_ak6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|InstructionAddressGenerator:inst5|MuxINC:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|InstructionAddressGenerator:inst5|MuxPC:inst3|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_m4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MuxDest:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_53e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_rlh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MUX3_1:inst13|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_o4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

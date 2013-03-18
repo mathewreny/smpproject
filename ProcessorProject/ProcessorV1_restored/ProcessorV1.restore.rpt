@@ -1,6 +1,6 @@
 Restore Archived Project report for ProcessorV1
-Thu Mar 14 17:05:35 2013
-Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+Sun Mar 17 11:18:24 2013
+Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu Mar 14 17:05:35 2013 ;
+; Restore Archived Project Status ; Successful - Sun Mar 17 11:18:24 2013 ;
 ; Revision Name                   ; ProcessorV1                           ;
 ; Top-level Entity Name           ; Lab9RegisterFile                      ;
 ; Family                          ; Cyclone II                            ;
@@ -46,18 +46,25 @@ applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'Z:/smpproject/ProcessorProject/ProcessorV1.qar' into the 'Z:/smpproject/ProcessorProject/ProcessorV1_restored/' directory
+Info: Successfully restored 'C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1.qar' into the 'C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/' directory
 Info: Generated report 'ProcessorV1.restore.rpt'
-Info: Evaluation of Tcl script c:/altera/11.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus II Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 180 megabytes
-    Info: Processing ended: Thu Mar 14 17:05:35 2013
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:01
+Info (23030): Evaluation of Tcl script c:/altera/12.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 32-bit Shell was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Sun Mar 17 11:18:24 2013
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
 +--------------------------------------------------------+
-; Files Restored                                         ;
+; Files Not Restored                                     ;
 +--------------------------------------------------------+
 ; File Name                                              ;
 +--------------------------------------------------------+
@@ -83,12 +90,5 @@ Info: Quartus II Shell was successful. 0 errors, 0 warnings
 ; smpRegisterFile.bsf                                    ;
 ; assignment_defaults.qdf                                ;
 +--------------------------------------------------------+
-
-
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
 
 

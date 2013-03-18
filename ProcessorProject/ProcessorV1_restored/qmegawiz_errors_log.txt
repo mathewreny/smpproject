@@ -1,0 +1,36 @@
+
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DFF_16BIT.vhd
+
+Mar 17 11AM:31:22>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DFF_16BIT.vhd
+
+Mar 17 12PM:29:41>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/INV16BIT.vhd
+
+Mar 17 12PM:45:22>: Megafunction LPM_INV is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DFF_16BIT.vhd
+
+Mar 17 01PM:55:19>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Reg_24.vhd
+
+Mar 17 05PM:16:55>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Reg_24.vhd
+
+Mar 17 05PM:16:59>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Reg_24.vhd
+
+Mar 17 05PM:17:01>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

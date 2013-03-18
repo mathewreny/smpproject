@@ -1,0 +1,116 @@
+# Reading C:/altera/12.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do ProcessorV1_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying c:\altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {ProcessorV1.vho}
+# Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity smpRegisterFile
+# -- Compiling architecture structure of smpRegisterFile
+# 
+# do "C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/RegisterFileTest.do"
+# vsim smpRegisterFile
+# vsim smpRegisterFile 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.smpregisterfile(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# Test output of each register
+#add wave Out1
+#add wave Q1
+#add wave Q2
+#add wave Q3
+# 
+#add wave Q4
+#add wave Q5
+#add wave Q6
+# 
+#add wave Q7
+#add wave Q8
+#add wave Q9
+# 
+#add wave QA
+#add wave QB
+# 
+#add wave QC
+#add wave QD
+#add wave QE
+#add wave QF
+# 
+# 
+# add wave regA
+# add wave regB
+# add wave regDest
+# add wave dataD
+# add wave dataA
+# add wave dataB
+# add wave WEnable
+# 
+# add wave  reset
+# add wave  clock
+# 
+# Cycle regA to test all combinations
+# force regA(0) 1 0, 0 40 -repeat 80
+# force regA(1) 1 0, 0 80 -repeat 160 
+# force regA(2) 1 0, 0 160 -repeat 320 
+# force regA(3) 1 0, 0 320 -repeat 640
+# 
+# Cycle regB to test all combinations
+# force regB(0) 1 0, 0 80 -repeat 160
+# force regB(1) 1 0, 0 160 -repeat 320 
+# force regB(2) 1 0, 0 320 -repeat 640 
+# force regB(3) 1 0, 0 640 -repeat 1280
+# 
+# Cycle regS to test all combinations
+# force regDest(0) 1 0, 0 80 -repeat 160
+# force regDest(1) 1 0, 0 160 -repeat 320 
+# force regDest(2) 1 0, 0 320 -repeat 640 
+# force regDest(3) 1 0, 0 640 -repeat 1280
+# 
+# change dataD to check reg write values
+# force dataD  	1111000011110000 0,  1111111100000000 160 -repeat 320
+#  
+# Test WEnable after 1280 cycles
+# force WEnable  1 0, 0 1280 -repeat 2560
+# 
+# Test reset at 1500 cycles 
+# force reset 	0 0, 1 1500 -repeat 2560
+# 
+# force clock 	0 0, 1 20 -repeat 40 
+# 
+# run 5000
+#  
