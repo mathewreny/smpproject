@@ -51,8 +51,13 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS COMMAND_MACRO_MODE -section_id eda_simulation
 set_global_assignment -name EDA_SIMULATION_RUN_SCRIPT ProcessorV1.do -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name BDF_FILE ResultFlags.bdf
+set_global_assignment -name BSF_FILE DFF_16BIT.bsf
 set_global_assignment -name COMMAND_MACRO_FILE ProcessorV1.do
-set_global_assignment -name VHDL_FILE MUX3_1.vhd
 set_global_assignment -name VHDL_FILE Reg_24.vhd
 set_global_assignment -name BSF_FILE Reg_24.bsf
 set_global_assignment -name VHDL_FILE PC_Temp.vhd
@@ -96,7 +101,6 @@ set_global_assignment -name VHDL_FILE DECODER4TO16.vhd
 set_global_assignment -name BDF_FILE ProcessorV1.bdf
 set_global_assignment -name BDF_FILE Adder16Bit.bdf
 set_global_assignment -name QIP_FILE MuxDest.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE MuxMA.qip
+set_global_assignment -name QIP_FILE MuxY.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

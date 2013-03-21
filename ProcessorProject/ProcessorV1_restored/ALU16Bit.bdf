@@ -181,54 +181,6 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 184 72 360 88)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "ResultA[15..0]" (rect 90 0 160 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 176 200 352 216)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "ResultB[15..0]" (rect 90 0 160 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 576 448 758 464)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "SumResult[15..0]" (rect 90 0 176 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
 	(rect 536 504 712 520)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "C14out" (rect 90 0 125 12)(font "Arial" ))
@@ -619,9 +571,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 488 312 648 408)
+	(rect 496 312 656 408)
 	(text "Adder16Bit" (rect 5 0 68 14)(font "Arial" (font_size 8)))
-	(text "inst11" (rect 8 80 37 92)(font "Arial" ))
+	(text "inst" (rect 8 80 25 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -727,15 +679,15 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ResultA[15..0]" (rect 432 328 502 340)(font "Arial" ))
-	(pt 488 344)
-	(pt 432 344)
+	(text "ResultA[15..0]" (rect 440 328 510 340)(font "Arial" ))
+	(pt 496 344)
+	(pt 440 344)
 	(bus)
 )
 (connector
-	(text "ResultB[15..0]" (rect 432 344 502 356)(font "Arial" ))
-	(pt 488 360)
-	(pt 432 360)
+	(text "ResultB[15..0]" (rect 440 344 510 356)(font "Arial" ))
+	(pt 496 360)
+	(pt 440 360)
 	(bus)
 )
 (connector
@@ -751,16 +703,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 648 376)
-	(pt 680 376)
-)
-(connector
 	(pt 696 360)
 	(pt 696 392)
-)
-(connector
-	(pt 648 360)
-	(pt 696 360)
 )
 (connector
 	(pt 728 344)
@@ -788,12 +732,6 @@ applicable agreement for further details.
 	(text "ANDResult[15..0]" (rect 728 8 815 20)(font "Arial" ))
 	(pt 728 24)
 	(pt 784 24)
-	(bus)
-)
-(connector
-	(text "SumResult[15..0]" (rect 658 328 744 340)(font "Arial" ))
-	(pt 648 344)
-	(pt 728 344)
 	(bus)
 )
 (connector
@@ -895,27 +833,9 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ResultA[15..0]" (rect 144 64 214 76)(font "Arial" ))
-	(pt 184 80)
-	(pt 144 80)
-	(bus)
-)
-(connector
 	(text "ResultB[15..0]" (rect 360 264 430 276)(font "Arial" ))
 	(pt 360 280)
 	(pt 408 280)
-	(bus)
-)
-(connector
-	(text "ResultB[15..0]" (rect 136 192 206 204)(font "Arial" ))
-	(pt 176 208)
-	(pt 136 208)
-	(bus)
-)
-(connector
-	(text "SumResult[15..0]" (rect 536 440 622 452)(font "Arial" ))
-	(pt 576 456)
-	(pt 536 456)
 	(bus)
 )
 (connector
@@ -927,10 +847,6 @@ applicable agreement for further details.
 	(text "C15out" (rect 466 472 501 484)(font "Arial" ))
 	(pt 536 488)
 	(pt 456 488)
-)
-(connector
-	(pt 680 424)
-	(pt 680 376)
 )
 (connector
 	(text "C15out" (rect 786 392 821 404)(font "Arial" ))
@@ -971,4 +887,22 @@ applicable agreement for further details.
 	(text "Cin" (rect 202 416 218 428)(font "Arial" ))
 	(pt 272 432)
 	(pt 192 432)
+)
+(connector
+	(text "SumResult[15..0]" (rect 658 328 744 340)(font "Arial" ))
+	(pt 656 344)
+	(pt 728 344)
+	(bus)
+)
+(connector
+	(pt 656 376)
+	(pt 680 376)
+)
+(connector
+	(pt 680 376)
+	(pt 680 424)
+)
+(connector
+	(pt 656 360)
+	(pt 696 360)
 )

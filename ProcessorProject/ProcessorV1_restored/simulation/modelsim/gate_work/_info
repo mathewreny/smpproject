@@ -3,8 +3,8 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\sbrown\Documents\GitHub\smpproject\ProcessorProject\ProcessorV1_restored\simulation\modelsim
-Esmpregisterfile
-Z1 w1363567624
+Eprocessorv1
+Z1 w1363833332
 Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
 Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 ZR<8kGWUgGmZI_J19^bFE0
 Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
@@ -16,11 +16,11 @@ Z9 8ProcessorV1.vho
 Z10 FProcessorV1.vho
 l0
 L34
-VOKMPecnRBWGYP]6>X;KW]2
-!s100 XY8QD^FVOb?n6?jd@NWmk1
+V4VNGddIkWmeHhVIb4=fTD2
+!s100 hhGQY]IJBm[f]^B5]@XUG2
 Z11 OV;C;10.0d;49
 31
-Z12 !s108 1363568433.457000
+Z12 !s108 1363833500.091000
 Z13 !s90 -reportprogress|300|-93|-work|work|ProcessorV1.vho|
 Z14 !s107 ProcessorV1.vho|
 Z15 o-93 -work work -O0
@@ -32,11 +32,11 @@ R4
 R5
 R6
 R7
-DEx4 work 15 smpregisterfile 0 22 OKMPecnRBWGYP]6>X;KW]2
-l541
-L114
-VS1LiCm]i0TVnR_dYC>C?G0
-!s100 iVW641cj[ZllD`jbMQC<50
+DEx4 work 11 processorv1 0 22 4VNGddIkWmeHhVIb4=fTD2
+l2842
+L186
+VGK=a:k5gYKIg<8oaX@Z7I1
+!s100 IC]:VMhe647j]:3;^1SfQ0
 R11
 31
 R12
