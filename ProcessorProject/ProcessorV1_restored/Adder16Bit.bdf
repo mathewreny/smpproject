@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 576 1496 752 1512)
+	(rect 584 1496 760 1512)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Cout14" (rect 90 0 125 12)(font "Arial" ))
 	(pt 0 8)
@@ -1376,17 +1376,12 @@ applicable agreement for further details.
 	(pt 432 1504)
 )
 (connector
-	(pt 432 1504)
-	(pt 576 1504)
-)
-(connector
-	(pt 576 1504)
-	(pt 584 1504)
-)
-(connector
 	(text "Cout15" (rect 418 1592 453 1604)(font "Arial" ))
 	(pt 408 1608)
 	(pt 480 1608)
 )
+(connector
+	(pt 432 1504)
+	(pt 584 1504)
+)
 (junction (pt 432 1504))
-(junction (pt 576 1504))

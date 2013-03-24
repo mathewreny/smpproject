@@ -22,6 +22,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|MainMemory:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ghe1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_c8f.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorV1|smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_vl6.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -538,7 +538,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 296 352 360 400)
+	(rect 304 352 368 400)
 	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
 	(text "inst10" (rect 3 37 32 49)(font "Arial" ))
 	(port
@@ -869,19 +869,19 @@ applicable agreement for further details.
 	(pt 680 424)
 )
 (connector
-	(text "Ainv" (rect 234 352 256 364)(font "Arial" ))
-	(pt 296 368)
-	(pt 224 368)
+	(text "Ainv" (rect 242 352 264 364)(font "Arial" ))
+	(pt 304 368)
+	(pt 232 368)
 )
 (connector
-	(text "Binv" (rect 234 368 256 380)(font "Arial" ))
-	(pt 296 384)
-	(pt 224 384)
+	(text "Binv" (rect 242 368 264 380)(font "Arial" ))
+	(pt 304 384)
+	(pt 232 384)
 )
 (connector
-	(text "Cin" (rect 370 360 386 372)(font "Arial" ))
-	(pt 488 376)
-	(pt 360 376)
+	(text "Cin" (rect 378 360 394 372)(font "Arial" ))
+	(pt 496 376)
+	(pt 368 376)
 )
 (connector
 	(text "Cin" (rect 202 416 218 428)(font "Arial" ))

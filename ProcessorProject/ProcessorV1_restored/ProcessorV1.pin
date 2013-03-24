@@ -73,22 +73,22 @@ VCCD_PLL3                    : 2         : power  :                   : 1.2V    
 GND_PLL3                     : 3         : gnd    :                   :         :           :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 4         : input  : 3.3-V LVTTL       :         : 2         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 5         : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 6         :        :                   :         : 2         :                
-instruction[16]              : 7         : input  : 3.3-V LVTTL       :         : 2         : N              
-regYOut[7]                   : 8         : output : 3.3-V LVTTL       :         : 2         : N              
-instruction[18]              : 9         : input  : 3.3-V LVTTL       :         : 2         : N              
+instruction[21]              : 6         : input  : 3.3-V LVTTL       :         : 2         : N              
+regA[9]                      : 7         : output : 3.3-V LVTTL       :         : 2         : N              
+instruction[4]               : 8         : input  : 3.3-V LVTTL       :         : 2         : N              
+instruction[5]               : 9         : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 10        : power  :                   : 3.3V    : 2         :                
-dataAOut[5]                  : 11        : output : 3.3-V LVTTL       :         : 2         : N              
+regB[10]                     : 11        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 12        : gnd    :                   :         :           :                
-dataBOut[5]                  : 13        : output : 3.3-V LVTTL       :         : 2         : N              
-instruction[11]              : 14        : input  : 3.3-V LVTTL       :         : 2         : N              
-Reg1Input[9]                 : 15        : input  : 3.3-V LVTTL       :         : 2         : N              
-RF1[0]                       : 16        : output : 3.3-V LVTTL       :         : 2         : N              
+RF2[4]                       : 13        : output : 3.3-V LVTTL       :         : 2         : N              
+RF2[7]                       : 14        : output : 3.3-V LVTTL       :         : 2         : N              
+IRDest[1]                    : 15        : output : 3.3-V LVTTL       :         : 2         : N              
+RF2[3]                       : 16        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 17        : gnd    :                   :         :           :                
-Reg2Input[6]                 : 18        : input  : 3.3-V LVTTL       :         : 2         : N              
+regB[2]                      : 18        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 19        : power  :                   : 3.3V    : 2         :                
-Reg1Input[11]                : 20        : input  : 3.3-V LVTTL       :         : 2         : N              
-RF1[7]                       : 21        : output : 3.3-V LVTTL       :         : 2         : N              
+regA[11]                     : 20        : output : 3.3-V LVTTL       :         : 2         : N              
+regZOut[10]                  : 21        : output : 3.3-V LVTTL       :         : 2         : N              
 TDI                          : 22        : input  :                   :         : 2         :                
 TCK                          : 23        : input  :                   :         : 2         :                
 TMS                          : 24        : input  :                   :         : 2         :                
@@ -97,118 +97,118 @@ DCLK                         : 26        :        :                   :         
 DATA0                        : 27        : input  :                   :         : 2         :                
 VCCINT                       : 28        : power  :                   : 1.2V    :           :                
 nCE                          : 29        :        :                   :         : 2         :                
-instruction[3]               : 30        : input  : 3.3-V LVTTL       :         : 2         : N              
-instruction[2]               : 31        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND+                         : 30        :        :                   :         : 2         :                
+GND+                         : 31        :        :                   :         : 2         :                
 GND                          : 32        : gnd    :                   :         :           :                
 nCONFIG                      : 33        :        :                   :         : 2         :                
 clock                        : 34        : input  : 3.3-V LVTTL       :         : 1         : N              
 reset                        : 35        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 36        : power  :                   : 3.3V    : 1         :                
-dataAOut[7]                  : 37        : output : 3.3-V LVTTL       :         : 1         : N              
-dataAOut[4]                  : 38        : output : 3.3-V LVTTL       :         : 1         : N              
-dataAOut[1]                  : 39        : output : 3.3-V LVTTL       :         : 1         : N              
+regZOut[1]                   : 37        : output : 3.3-V LVTTL       :         : 1         : N              
+ALUOut[6]                    : 38        : output : 3.3-V LVTTL       :         : 1         : N              
+regB[8]                      : 39        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 40        : power  :                   : 1.2V    :           :                
-dataAOut[10]                 : 41        : output : 3.3-V LVTTL       :         : 1         : N              
-Reg2Input[3]                 : 42        : input  : 3.3-V LVTTL       :         : 1         : N              
+regZOut[5]                   : 41        : output : 3.3-V LVTTL       :         : 1         : N              
+regZOut[6]                   : 42        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 43        : gnd    :                   :         :           :                
-IRB[1]                       : 44        : output : 3.3-V LVTTL       :         : 1         : N              
+regA[3]                      : 44        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 45        : gnd    :                   :         :           :                
-Reg2Input[1]                 : 46        : input  : 3.3-V LVTTL       :         : 1         : N              
-RF2[1]                       : 47        : output : 3.3-V LVTTL       :         : 1         : N              
+regZOut[2]                   : 46        : output : 3.3-V LVTTL       :         : 1         : N              
+regZOut[0]                   : 47        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 48        : gnd    :                   :         :           :                
-instruction[15]              : 49        : input  : 3.3-V LVTTL       :         : 1         : N              
-Reg1Input[3]                 : 50        : input  : 3.3-V LVTTL       :         : 1         : N              
-Reg2Input[14]                : 51        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataAOut[13]                 : 52        : output : 3.3-V LVTTL       :         : 1         : N              
+regB[6]                      : 49        : output : 3.3-V LVTTL       :         : 1         : N              
+regA[4]                      : 50        : output : 3.3-V LVTTL       :         : 1         : N              
+regB[11]                     : 51        : output : 3.3-V LVTTL       :         : 1         : N              
+instruction[16]              : 52        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 53        : power  :                   : 3.3V    : 1         :                
-Reg2Input[7]                 : 54        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataAOut[11]                 : 55        : output : 3.3-V LVTTL       :         : 1         : N              
-regYOut[15]                  : 56        : output : 3.3-V LVTTL       :         : 1         : N              
-RF2[7]                       : 57        : output : 3.3-V LVTTL       :         : 1         : N              
-RF2[4]                       : 58        : output : 3.3-V LVTTL       :         : 1         : N              
+RegDest[0]                   : 54        : output : 3.3-V LVTTL       :         : 1         : N              
+instruction[17]              : 55        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 56        :        :                   :         : 1         :                
+SelectRegOrImmed             : 57        : output : 3.3-V LVTTL       :         : 1         : N              
+a_inv                        : 58        : output : 3.3-V LVTTL       :         : 1         : N              
 GND_PLL1                     : 59        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 60        : power  :                   : 1.2V    :           :                
 GND_PLL1                     : 61        : gnd    :                   :         :           :                
 VCCA_PLL1                    : 62        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 63        : gnd    :                   :         :           :                
-Reg1Input[7]                 : 64        : input  : 3.3-V LVTTL       :         : 8         : N              
-dataAOut[2]                  : 65        : output : 3.3-V LVTTL       :         : 8         : N              
-RF1[2]                       : 66        : output : 3.3-V LVTTL       :         : 8         : N              
-Reg1Input[4]                 : 67        : input  : 3.3-V LVTTL       :         : 8         : N              
-RF1[5]                       : 68        : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : 64        :        :                   :         : 8         :                
+GND*                         : 65        :        :                   :         : 8         :                
+RegDest[1]                   : 66        : output : 3.3-V LVTTL       :         : 8         : N              
+instruction[0]               : 67        : input  : 3.3-V LVTTL       :         : 8         : N              
+ALUOut[5]                    : 68        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : 69        : power  :                   : 3.3V    : 8         :                
-Reg1Input[6]                 : 70        : input  : 3.3-V LVTTL       :         : 8         : N              
+ALUOut[3]                    : 70        : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : 71        : gnd    :                   :         :           :                
-dataBOut[7]                  : 72        : output : 3.3-V LVTTL       :         : 8         : N              
-Reg1Input[15]                : 73        : input  : 3.3-V LVTTL       :         : 8         : N              
+ALUOut[1]                    : 72        : output : 3.3-V LVTTL       :         : 8         : N              
+regZOut[7]                   : 73        : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : 74        : gnd    :                   :         :           :                
 GND                          : 75        : gnd    :                   :         :           :                
 VCCINT                       : 76        : power  :                   : 1.2V    :           :                
 VCCIO8                       : 77        : power  :                   : 3.3V    : 8         :                
-Reg2Input[15]                : 78        : input  : 3.3-V LVTTL       :         : 8         : N              
-instruction[9]               : 79        : input  : 3.3-V LVTTL       :         : 8         : N              
-dataAOut[8]                  : 80        : output : 3.3-V LVTTL       :         : 8         : N              
+regB[1]                      : 78        : output : 3.3-V LVTTL       :         : 8         : N              
+instruction[20]              : 79        : input  : 3.3-V LVTTL       :         : 8         : N              
+instruction[3]               : 80        : input  : 3.3-V LVTTL       :         : 8         : N              
 GND                          : 81        : gnd    :                   :         :           :                
 VCCINT                       : 82        : power  :                   : 1.2V    :           :                
 VCCIO8                       : 83        : power  :                   : 3.3V    : 8         :                
-dataAOut[12]                 : 84        : output : 3.3-V LVTTL       :         : 8         : N              
+regZOut[9]                   : 84        : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : 85        : gnd    :                   :         :           :                
-Reg2Input[12]                : 86        : input  : 3.3-V LVTTL       :         : 8         : N              
-dataBOut[15]                 : 87        : output : 3.3-V LVTTL       :         : 8         : N              
-dataAOut[15]                 : 88        : output : 3.3-V LVTTL       :         : 8         : N              
+ALUOut[4]                    : 86        : output : 3.3-V LVTTL       :         : 8         : N              
+alu_op[0]                    : 87        : output : 3.3-V LVTTL       :         : 8         : N              
+regA[7]                      : 88        : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : 89        : gnd    :                   :         :           :                
-IRA[1]                       : 90        : output : 3.3-V LVTTL       :         : 8         : N              
-Reg2Input[11]                : 91        : input  : 3.3-V LVTTL       :         : 8         : N              
-Reg1Input[10]                : 92        : input  : 3.3-V LVTTL       :         : 8         : N              
+regA[0]                      : 90        : output : 3.3-V LVTTL       :         : 8         : N              
+instruction[7]               : 91        : input  : 3.3-V LVTTL       :         : 8         : N              
+instruction[6]               : 92        : input  : 3.3-V LVTTL       :         : 8         : N              
 VCCINT                       : 93        : power  :                   : 1.2V    :           :                
-Reg1Input[0]                 : 94        : input  : 3.3-V LVTTL       :         : 7         : N              
-Reg2Input[0]                 : 95        : input  : 3.3-V LVTTL       :         : 7         : N              
-IRB[0]                       : 96        : output : 3.3-V LVTTL       :         : 7         : N              
-RF2[3]                       : 97        : output : 3.3-V LVTTL       :         : 7         : N              
+instruction[19]              : 94        : input  : 3.3-V LVTTL       :         : 7         : N              
+instruction[18]              : 95        : input  : 3.3-V LVTTL       :         : 7         : N              
+regA[2]                      : 96        : output : 3.3-V LVTTL       :         : 7         : N              
+ALUOut[7]                    : 97        : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : 98        : gnd    :                   :         :           :                
 VCCINT                       : 99        : power  :                   : 1.2V    :           :                
-Reg1Input[13]                : 100       : input  : 3.3-V LVTTL       :         : 7         : N              
+RF1[5]                       : 100       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : 101       : power  :                   : 3.3V    : 7         :                
 GND                          : 102       : gnd    :                   :         :           :                
 GND                          : 103       : gnd    :                   :         :           :                
 VCCINT                       : 104       : power  :                   : 1.2V    :           :                
-dataBOut[8]                  : 105       : output : 3.3-V LVTTL       :         : 7         : N              
-Reg2Input[8]                 : 106       : input  : 3.3-V LVTTL       :         : 7         : N              
+regA[8]                      : 105       : output : 3.3-V LVTTL       :         : 7         : N              
+regZOut[3]                   : 106       : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : 107       : gnd    :                   :         :           :                
 VCCINT                       : 108       : power  :                   : 1.2V    :           :                
-Reg1Input[14]                : 109       : input  : 3.3-V LVTTL       :         : 7         : N              
-dataBOut[6]                  : 110       : output : 3.3-V LVTTL       :         : 7         : N              
-dataBOut[2]                  : 111       : output : 3.3-V LVTTL       :         : 7         : N              
+RF1[0]                       : 109       : output : 3.3-V LVTTL       :         : 7         : N              
+RF2[6]                       : 110       : output : 3.3-V LVTTL       :         : 7         : N              
+RF2[5]                       : 111       : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : 112       : gnd    :                   :         :           :                
-RF1[3]                       : 113       : output : 3.3-V LVTTL       :         : 7         : N              
-RF1[1]                       : 114       : output : 3.3-V LVTTL       :         : 7         : N              
+RF1[6]                       : 113       : output : 3.3-V LVTTL       :         : 7         : N              
+RF2[0]                       : 114       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : 115       : power  :                   : 3.3V    : 7         :                
-regYOut[13]                  : 116       : output : 3.3-V LVTTL       :         : 7         : N              
-Reg1Input[1]                 : 117       : input  : 3.3-V LVTTL       :         : 7         : N              
-Reg2Input[4]                 : 118       : input  : 3.3-V LVTTL       :         : 7         : N              
-regYOut[6]                   : 119       : output : 3.3-V LVTTL       :         : 7         : N              
+regA[13]                     : 116       : output : 3.3-V LVTTL       :         : 7         : N              
+regA[14]                     : 117       : output : 3.3-V LVTTL       :         : 7         : N              
+regZOut[4]                   : 118       : output : 3.3-V LVTTL       :         : 7         : N              
+regA[6]                      : 119       : output : 3.3-V LVTTL       :         : 7         : N              
 GNDA_PLL4                    : 120       : gnd    :                   :         :           :                
 VCCA_PLL4                    : 121       : power  :                   : 1.2V    :           :                
 GND_PLL4                     : 122       : gnd    :                   :         :           :                
 VCCD_PLL4                    : 123       : power  :                   : 1.2V    :           :                
 GND_PLL4                     : 124       : gnd    :                   :         :           :                
-RF2[5]                       : 125       : output : 3.3-V LVTTL       :         : 6         : N              
-dataBOut[10]                 : 126       : output : 3.3-V LVTTL       :         : 6         : N              
+regA[5]                      : 125       : output : 3.3-V LVTTL       :         : 6         : N              
+RF1[4]                       : 126       : output : 3.3-V LVTTL       :         : 6         : N              
 ~LVDS91p/nCEO~               : 127       : output : 3.3-V LVTTL       :         : 6         : N              
-RF1[4]                       : 128       : output : 3.3-V LVTTL       :         : 6         : N              
+regB[12]                     : 128       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : 129       : power  :                   : 3.3V    : 6         :                
-instruction[8]               : 130       : input  : 3.3-V LVTTL       :         : 6         : N              
-instruction[7]               : 131       : input  : 3.3-V LVTTL       :         : 6         : N              
-Reg2Input[10]                : 132       : input  : 3.3-V LVTTL       :         : 6         : N              
+regA[12]                     : 130       : output : 3.3-V LVTTL       :         : 6         : N              
+regB[9]                      : 131       : output : 3.3-V LVTTL       :         : 6         : N              
+regA[15]                     : 132       : output : 3.3-V LVTTL       :         : 6         : N              
 GND                          : 133       : gnd    :                   :         :           :                
-dataBOut[3]                  : 134       : output : 3.3-V LVTTL       :         : 6         : N              
-dataAOut[3]                  : 135       : output : 3.3-V LVTTL       :         : 6         : N              
-instruction[6]               : 136       : input  : 3.3-V LVTTL       :         : 6         : N              
-Reg1Input[5]                 : 137       : input  : 3.3-V LVTTL       :         : 6         : N              
+regB[7]                      : 134       : output : 3.3-V LVTTL       :         : 6         : N              
+regZOut[13]                  : 135       : output : 3.3-V LVTTL       :         : 6         : N              
+regB[13]                     : 136       : output : 3.3-V LVTTL       :         : 6         : N              
+regB[5]                      : 137       : output : 3.3-V LVTTL       :         : 6         : N              
 GND                          : 138       : gnd    :                   :         :           :                
-IRA[0]                       : 139       : output : 3.3-V LVTTL       :         : 6         : N              
-dataAOut[14]                 : 140       : output : 3.3-V LVTTL       :         : 6         : N              
-instruction[14]              : 141       : input  : 3.3-V LVTTL       :         : 6         : N              
+regB[15]                     : 139       : output : 3.3-V LVTTL       :         : 6         : N              
+regB[0]                      : 140       : output : 3.3-V LVTTL       :         : 6         : N              
+regZOut[8]                   : 141       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : 142       : power  :                   : 3.3V    : 6         :                
 nSTATUS                      : 143       :        :                   :         : 6         :                
 CONF_DONE                    : 144       :        :                   :         : 6         :                
@@ -216,95 +216,95 @@ GND                          : 145       : gnd    :                   :         
 MSEL1                        : 146       :        :                   :         : 6         :                
 MSEL0                        : 147       :        :                   :         : 6         :                
 VCCINT                       : 148       : power  :                   : 1.2V    :           :                
-dataBOut[11]                 : 149       : output : 3.3-V LVTTL       :         : 6         : N              
-IRB[3]                       : 150       : output : 3.3-V LVTTL       :         : 6         : N              
-Reg1Input[2]                 : 151       : input  : 3.3-V LVTTL       :         : 6         : N              
-Reg2Input[2]                 : 152       : input  : 3.3-V LVTTL       :         : 6         : N              
-GND+                         : 153       :        :                   :         : 5         :                
-GND+                         : 154       :        :                   :         : 5         :                
-Reg2Input[5]                 : 155       : input  : 3.3-V LVTTL       :         : 5         : N              
-RF2[0]                       : 156       : output : 3.3-V LVTTL       :         : 5         : N              
-RF1[6]                       : 157       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[1]                   : 149       : output : 3.3-V LVTTL       :         : 6         : N              
+regZOut[15]                  : 150       : output : 3.3-V LVTTL       :         : 6         : N              
+instruction[9]               : 151       : input  : 3.3-V LVTTL       :         : 6         : N              
+instruction[8]               : 152       : input  : 3.3-V LVTTL       :         : 6         : N              
+instruction[11]              : 153       : input  : 3.3-V LVTTL       :         : 5         : N              
+instruction[10]              : 154       : input  : 3.3-V LVTTL       :         : 5         : N              
+regYOut[5]                   : 155       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[0]                   : 156       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[6]                   : 157       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCINT                       : 158       : power  :                   : 1.2V    :           :                
-instruction[12]              : 159       : input  : 3.3-V LVTTL       :         : 5         : N              
+regYOut[3]                   : 159       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : 160       : power  :                   : 3.3V    : 5         :                
-Reg2Input[9]                 : 161       : input  : 3.3-V LVTTL       :         : 5         : N              
-dataBOut[12]                 : 162       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[13]                  : 161       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[4]                   : 162       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : 163       : gnd    :                   :         :           :                
-dataBOut[1]                  : 164       : output : 3.3-V LVTTL       :         : 5         : N              
-dataBOut[13]                 : 165       : output : 3.3-V LVTTL       :         : 5         : N              
-RF2[6]                       : 166       : output : 3.3-V LVTTL       :         : 5         : N              
-RF2[2]                       : 167       : output : 3.3-V LVTTL       :         : 5         : N              
-IRA[3]                       : 168       : output : 3.3-V LVTTL       :         : 5         : N              
+regB[14]                     : 164       : output : 3.3-V LVTTL       :         : 5         : N              
+IRA[1]                       : 165       : output : 3.3-V LVTTL       :         : 5         : N              
+IRB[1]                       : 166       : output : 3.3-V LVTTL       :         : 5         : N              
+IRB[0]                       : 167       : output : 3.3-V LVTTL       :         : 5         : N              
+IRB[2]                       : 168       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : 169       : gnd    :                   :         :           :                
-dataBOut[4]                  : 170       : output : 3.3-V LVTTL       :         : 5         : N              
-Reg1Input[8]                 : 171       : input  : 3.3-V LVTTL       :         : 5         : N              
+IRA[3]                       : 170       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[9]                   : 171       : output : 3.3-V LVTTL       :         : 5         : N              
 GND                          : 172       : gnd    :                   :         :           :                
-regYOut[5]                   : 173       : output : 3.3-V LVTTL       :         : 5         : N              
-dataAOut[9]                  : 174       : output : 3.3-V LVTTL       :         : 5         : N              
-dataBOut[9]                  : 175       : output : 3.3-V LVTTL       :         : 5         : N              
+RF1[7]                       : 173       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[8]                   : 174       : output : 3.3-V LVTTL       :         : 5         : N              
+regYOut[7]                   : 175       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : 176       : power  :                   : 3.3V    : 5         :                
-GND*                         : 177       :        :                   :         : 5         :                
-instruction[0]               : 178       : input  : 3.3-V LVTTL       :         : 5         : N              
+RF1[1]                       : 177       : output : 3.3-V LVTTL       :         : 5         : N              
+regZOut[11]                  : 178       : output : 3.3-V LVTTL       :         : 5         : N              
 GND_PLL2                     : 179       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 180       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : 181       : gnd    :                   :         :           :                
 VCCA_PLL2                    : 182       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 183       : gnd    :                   :         :           :                
-instruction[19]              : 184       : input  : 3.3-V LVTTL       :         : 4         : N              
-regYOut[8]                   : 185       : output : 3.3-V LVTTL       :         : 4         : N              
-regYOut[10]                  : 186       : output : 3.3-V LVTTL       :         : 4         : N              
-regYOut[3]                   : 187       : output : 3.3-V LVTTL       :         : 4         : N              
-regYOut[2]                   : 188       : output : 3.3-V LVTTL       :         : 4         : N              
-Reg2Input[13]                : 189       : input  : 3.3-V LVTTL       :         : 4         : N              
+regA[10]                     : 184       : output : 3.3-V LVTTL       :         : 4         : N              
+RF2[2]                       : 185       : output : 3.3-V LVTTL       :         : 4         : N              
+regA[1]                      : 186       : output : 3.3-V LVTTL       :         : 4         : N              
+regZOut[12]                  : 187       : output : 3.3-V LVTTL       :         : 4         : N              
+RF2[1]                       : 188       : output : 3.3-V LVTTL       :         : 4         : N              
+regZOut[14]                  : 189       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 190       : power  :                   : 3.3V    : 4         :                
-dataBOut[0]                  : 191       : output : 3.3-V LVTTL       :         : 4         : N              
-instruction[17]              : 192       : input  : 3.3-V LVTTL       :         : 4         : N              
+regYOut[14]                  : 191       : output : 3.3-V LVTTL       :         : 4         : N              
+regYOut[2]                   : 192       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 193       : gnd    :                   :         :           :                
-Reg1Input[12]                : 194       : input  : 3.3-V LVTTL       :         : 4         : N              
-instruction[5]               : 195       : input  : 3.3-V LVTTL       :         : 4         : N              
+regYOut[15]                  : 194       : output : 3.3-V LVTTL       :         : 4         : N              
+regYOut[12]                  : 195       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 196       : power  :                   : 1.2V    :           :                
-instruction[13]              : 197       : input  : 3.3-V LVTTL       :         : 4         : N              
+enable                       : 197       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 198       : gnd    :                   :         :           :                
-instruction[4]               : 199       : input  : 3.3-V LVTTL       :         : 4         : N              
-IRB[2]                       : 200       : output : 3.3-V LVTTL       :         : 4         : N              
+IRA[0]                       : 199       : output : 3.3-V LVTTL       :         : 4         : N              
+IRB[3]                       : 200       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 201       : power  :                   : 1.2V    :           :                
 GND                          : 202       : gnd    :                   :         :           :                
-instruction[10]              : 203       : input  : 3.3-V LVTTL       :         : 4         : N              
+regYOut[11]                  : 203       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 204       : power  :                   : 1.2V    :           :                
 GND                          : 205       : gnd    :                   :         :           :                
 GND                          : 206       : gnd    :                   :         :           :                
 VCCIO4                       : 207       : power  :                   : 3.3V    : 4         :                
-dataBOut[14]                 : 208       : output : 3.3-V LVTTL       :         : 4         : N              
-GND+                         : 209       :        :                   :         : 4         :                
-GND+                         : 210       :        :                   :         : 4         :                
+IRA[2]                       : 208       : output : 3.3-V LVTTL       :         : 4         : N              
+instruction[13]              : 209       : input  : 3.3-V LVTTL       :         : 4         : N              
+instruction[12]              : 210       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCINT                       : 211       : power  :                   : 1.2V    :           :                
-GND+                         : 212       :        :                   :         : 3         :                
-GND+                         : 213       :        :                   :         : 3         :                
-IRA[2]                       : 214       : output : 3.3-V LVTTL       :         : 3         : N              
+instruction[15]              : 212       : input  : 3.3-V LVTTL       :         : 3         : N              
+instruction[14]              : 213       : input  : 3.3-V LVTTL       :         : 3         : N              
+regYOut[10]                  : 214       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 215       : gnd    :                   :         :           :                
-instruction[23]              : 216       : input  : 3.3-V LVTTL       :         : 3         : N              
+ALUOut[2]                    : 216       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 217       : gnd    :                   :         :           :                
-instruction[20]              : 218       : input  : 3.3-V LVTTL       :         : 3         : N              
+alu_op[1]                    : 218       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 219       : power  :                   : 3.3V    : 3         :                
 VCCINT                       : 220       : power  :                   : 1.2V    :           :                
 GND                          : 221       : gnd    :                   :         :           :                
-dataAOut[0]                  : 222       : output : 3.3-V LVTTL       :         : 3         : N              
-dataAOut[6]                  : 223       : output : 3.3-V LVTTL       :         : 3         : N              
+instruction[1]               : 222       : input  : 3.3-V LVTTL       :         : 3         : N              
+instruction[2]               : 223       : input  : 3.3-V LVTTL       :         : 3         : N              
 VCCINT                       : 224       : power  :                   : 1.2V    :           :                
 GND                          : 225       : gnd    :                   :         :           :                
-instruction[22]              : 226       : input  : 3.3-V LVTTL       :         : 3         : N              
+b_inv                        : 226       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 227       : gnd    :                   :         :           :                
-instruction[21]              : 228       : input  : 3.3-V LVTTL       :         : 3         : N              
+RF1[2]                       : 228       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 229       : power  :                   : 3.3V    : 3         :                
-regYOut[0]                   : 230       : output : 3.3-V LVTTL       :         : 3         : N              
-regYOut[11]                  : 231       : output : 3.3-V LVTTL       :         : 3         : N              
-regYOut[14]                  : 232       : output : 3.3-V LVTTL       :         : 3         : N              
-regYOut[4]                   : 233       : output : 3.3-V LVTTL       :         : 3         : N              
-regYOut[9]                   : 234       : output : 3.3-V LVTTL       :         : 3         : N              
-instruction[1]               : 235       : input  : 3.3-V LVTTL       :         : 3         : N              
-regYOut[12]                  : 236       : output : 3.3-V LVTTL       :         : 3         : N              
-WEnable1                     : 237       : input  : 3.3-V LVTTL       :         : 3         : N              
-regYOut[1]                   : 238       : output : 3.3-V LVTTL       :         : 3         : N              
+regB[4]                      : 230       : output : 3.3-V LVTTL       :         : 3         : N              
+RF1[3]                       : 231       : output : 3.3-V LVTTL       :         : 3         : N              
+IRDest[0]                    : 232       : output : 3.3-V LVTTL       :         : 3         : N              
+regB[3]                      : 233       : output : 3.3-V LVTTL       :         : 3         : N              
+IRDest[3]                    : 234       : output : 3.3-V LVTTL       :         : 3         : N              
+ALUOut[0]                    : 235       : output : 3.3-V LVTTL       :         : 3         : N              
+instruction[22]              : 236       : input  : 3.3-V LVTTL       :         : 3         : N              
+instruction[23]              : 237       : input  : 3.3-V LVTTL       :         : 3         : N              
+IRDest[2]                    : 238       : output : 3.3-V LVTTL       :         : 3         : N              
 GNDA_PLL3                    : 239       : gnd    :                   :         :           :                
 VCCA_PLL3                    : 240       : power  :                   : 1.2V    :           :                

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessorV1
-Wed Mar 20 21:34:15 2013
+Sat Mar 23 22:16:39 2013
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -17,63 +17,64 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Source assignments for MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_ghe1:auto_generated
- 13. Source assignments for MainMemory:inst4|altsyncram:altsyncram_component|altsyncram_ghe1:auto_generated
- 14. Parameter Settings for User Entity Instance: smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component
- 15. Parameter Settings for User Entity Instance: smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component
- 16. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component
- 17. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component
- 18. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component
- 19. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component
- 20. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component
- 21. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component
- 22. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component
- 23. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst|lpm_ff:lpm_ff_component
- 24. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst2|lpm_ff:lpm_ff_component
- 25. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component
- 26. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component
- 27. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component
- 28. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component
- 29. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component
- 30. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component
- 31. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component
- 32. Parameter Settings for User Entity Instance: smpRegisterFile:inst|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component
- 33. Parameter Settings for User Entity Instance: Reg_24:inst7|lpm_ff:lpm_ff_component
- 34. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component
- 35. Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst7|lpm_inv:lpm_inv_component
- 36. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component
- 37. Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst3|lpm_inv:lpm_inv_component
- 38. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component
- 39. Parameter Settings for User Entity Instance: ALU16Bit:inst1|AND16BIT:inst2|LPM_AND:lpm_and_component
- 40. Parameter Settings for User Entity Instance: ALU16Bit:inst1|OR16BIT:inst9|LPM_OR:lpm_or_component
- 41. Parameter Settings for User Entity Instance: ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:lpm_xor_component
- 42. Parameter Settings for User Entity Instance: DFF_16BIT:RA|lpm_ff:lpm_ff_component
- 43. Parameter Settings for User Entity Instance: MuxINC:inst9|LPM_MUX:LPM_MUX_component
- 44. Parameter Settings for User Entity Instance: DFF_16BIT:RB|lpm_ff:lpm_ff_component
- 45. Parameter Settings for User Entity Instance: MemoryInterface:inst3|Const:inst3|lpm_constant:lpm_constant_component
- 46. Parameter Settings for User Entity Instance: MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component
- 47. Parameter Settings for User Entity Instance: MuxMA:inst14|LPM_MUX:LPM_MUX_component
- 48. Parameter Settings for User Entity Instance: DFF_16BIT:RZ|lpm_ff:lpm_ff_component
- 49. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component
- 50. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|MuxPC:inst3|LPM_MUX:lpm_mux_component
- 51. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component
- 52. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|MuxINC:inst|LPM_MUX:LPM_MUX_component
- 53. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|Const:inst5|lpm_constant:lpm_constant_component
- 54. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|PC_Temp:inst4|lpm_ff:lpm_ff_component
- 55. Parameter Settings for User Entity Instance: DFF_16BIT:RM|lpm_ff:lpm_ff_component
- 56. Parameter Settings for User Entity Instance: DFF_16BIT:RY|lpm_ff:lpm_ff_component
- 57. Parameter Settings for User Entity Instance: MuxY:inst15|LPM_MUX:LPM_MUX_component
- 58. Parameter Settings for User Entity Instance: PC_Temp:inst8|lpm_ff:lpm_ff_component
- 59. Parameter Settings for User Entity Instance: PC:inst6|lpm_ff:lpm_ff_component
- 60. Parameter Settings for User Entity Instance: MuxPC:inst2|LPM_MUX:lpm_mux_component
- 61. Parameter Settings for User Entity Instance: Adder:PCAdder|lpm_add_sub:lpm_add_sub_component
- 62. Parameter Settings for User Entity Instance: MuxINC:inst18|LPM_MUX:LPM_MUX_component
- 63. Parameter Settings for User Entity Instance: MuxDest:inst11|LPM_MUX:LPM_MUX_component
- 64. Parameter Settings for User Entity Instance: MainMemory:inst4|altsyncram:altsyncram_component
- 65. Parameter Settings for Inferred Entity Instance: control_unit_230:inst10|lpm_divide:Mod0
- 66. altsyncram Parameter Settings by Entity Instance
- 67. Elapsed Time Per Partition
- 68. Analysis & Synthesis Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_ghe1:auto_generated
+ 14. Source assignments for MainMemory:inst4|altsyncram:altsyncram_component|altsyncram_ghe1:auto_generated
+ 15. Parameter Settings for User Entity Instance: Reg_24:inst7|lpm_ff:lpm_ff_component
+ 16. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component
+ 17. Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst7|lpm_inv:lpm_inv_component
+ 18. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component
+ 19. Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst3|lpm_inv:lpm_inv_component
+ 20. Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component
+ 21. Parameter Settings for User Entity Instance: ALU16Bit:inst1|AND16BIT:inst2|LPM_AND:lpm_and_component
+ 22. Parameter Settings for User Entity Instance: ALU16Bit:inst1|OR16BIT:inst9|LPM_OR:lpm_or_component
+ 23. Parameter Settings for User Entity Instance: ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:lpm_xor_component
+ 24. Parameter Settings for User Entity Instance: DFF_16BIT:RA|lpm_ff:lpm_ff_component
+ 25. Parameter Settings for User Entity Instance: smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component
+ 26. Parameter Settings for User Entity Instance: smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component
+ 27. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component
+ 28. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component
+ 29. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component
+ 30. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component
+ 31. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component
+ 32. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component
+ 33. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component
+ 34. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst|lpm_ff:lpm_ff_component
+ 35. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst2|lpm_ff:lpm_ff_component
+ 36. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component
+ 37. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component
+ 38. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component
+ 39. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component
+ 40. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component
+ 41. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component
+ 42. Parameter Settings for User Entity Instance: smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component
+ 43. Parameter Settings for User Entity Instance: smpRegisterFile:inst|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component
+ 44. Parameter Settings for User Entity Instance: DFF_16BIT:RY|lpm_ff:lpm_ff_component
+ 45. Parameter Settings for User Entity Instance: MuxY:inst15|LPM_MUX:LPM_MUX_component
+ 46. Parameter Settings for User Entity Instance: DFF_16BIT:RZ|lpm_ff:lpm_ff_component
+ 47. Parameter Settings for User Entity Instance: MemoryInterface:inst3|Const:inst3|lpm_constant:lpm_constant_component
+ 48. Parameter Settings for User Entity Instance: MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component
+ 49. Parameter Settings for User Entity Instance: MuxMA:inst14|LPM_MUX:LPM_MUX_component
+ 50. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component
+ 51. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|MuxPC:inst3|LPM_MUX:lpm_mux_component
+ 52. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component
+ 53. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|MuxINC:inst|LPM_MUX:LPM_MUX_component
+ 54. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|Const:inst5|lpm_constant:lpm_constant_component
+ 55. Parameter Settings for User Entity Instance: InstructionAddressGenerator:inst5|PC_Temp:inst4|lpm_ff:lpm_ff_component
+ 56. Parameter Settings for User Entity Instance: DFF_16BIT:RM|lpm_ff:lpm_ff_component
+ 57. Parameter Settings for User Entity Instance: PC_Temp:inst8|lpm_ff:lpm_ff_component
+ 58. Parameter Settings for User Entity Instance: PC:inst6|lpm_ff:lpm_ff_component
+ 59. Parameter Settings for User Entity Instance: MuxPC:inst2|LPM_MUX:lpm_mux_component
+ 60. Parameter Settings for User Entity Instance: Adder:PCAdder|lpm_add_sub:lpm_add_sub_component
+ 61. Parameter Settings for User Entity Instance: MuxINC:inst18|LPM_MUX:LPM_MUX_component
+ 62. Parameter Settings for User Entity Instance: MuxDest:inst11|LPM_MUX:LPM_MUX_component
+ 63. Parameter Settings for User Entity Instance: MuxINC:inst9|LPM_MUX:LPM_MUX_component
+ 64. Parameter Settings for User Entity Instance: DFF_16BIT:RB|lpm_ff:lpm_ff_component
+ 65. Parameter Settings for User Entity Instance: MainMemory:inst4|altsyncram:altsyncram_component
+ 66. Parameter Settings for Inferred Entity Instance: control_unit_230:inst10|lpm_divide:Mod0
+ 67. altsyncram Parameter Settings by Entity Instance
+ 68. Elapsed Time Per Partition
+ 69. Analysis & Synthesis Messages
 
 
 
@@ -99,16 +100,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 20 21:34:14 2013    ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 23 22:16:39 2013    ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; ProcessorV1                              ;
 ; Top-level Entity Name              ; ProcessorV1                              ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 1,969                                    ;
-;     Total combinational functions  ; 1,921                                    ;
-;     Dedicated logic registers      ; 82                                       ;
-; Total registers                    ; 82                                       ;
-; Total pins                         ; 131                                      ;
+; Total logic elements               ; 2,616                                    ;
+;     Total combinational functions  ; 2,341                                    ;
+;     Dedicated logic registers      ; 360                                      ;
+; Total registers                    ; 360                                      ;
+; Total pins                         ; 134                                      ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
@@ -248,25 +249,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; MuxDest.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest.vhd                     ;         ;
 ; MuxMA.vhd                        ; yes             ; User Wizard-Generated File         ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA.vhd                       ;         ;
 ; MuxY.vhd                         ; yes             ; User Wizard-Generated File         ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY.vhd                        ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.tdf                                                        ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_ff.tdf                                                         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.inc                                                   ;         ;
 ; aglobal120.inc                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc                                                     ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.tdf                                                        ;         ;
 ; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/muxlut.inc                                                         ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/bypassff.inc                                                       ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altshift.inc                                                       ;         ;
-; db/mux_e6e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_e6e.tdf                  ;         ;
-; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.tdf                                                   ;         ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_ff.tdf                                                         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.inc                                                   ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_decode.tdf                                                     ;         ;
-; declut.inc                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/declut.inc                                                         ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_compare.inc                                                    ;         ;
-; db/decode_c8f.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/decode_c8f.tdf               ;         ;
 ; db/mux_m4e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_m4e.tdf                  ;         ;
 ; lpm_inv.tdf                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_inv.tdf                                                        ;         ;
 ; db/mux_p4e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_p4e.tdf                  ;         ;
 ; lpm_and.tdf                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_and.tdf                                                        ;         ;
 ; lpm_or.tdf                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_or.tdf                                                         ;         ;
 ; lpm_xor.tdf                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_xor.tdf                                                        ;         ;
+; db/mux_e6e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_e6e.tdf                  ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_constant.tdf                                                   ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_decode.tdf                                                     ;         ;
+; declut.inc                       ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/declut.inc                                                         ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_compare.inc                                                    ;         ;
+; db/decode_c8f.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/decode_c8f.tdf               ;         ;
+; db/mux_o4e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_o4e.tdf                  ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/altsyncram.tdf                                                     ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                              ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mux.inc                                                        ;         ;
@@ -281,7 +283,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; look_add.inc                     ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/look_add.inc                                                       ;         ;
 ; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                            ;         ;
 ; db/add_sub_rlh.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/add_sub_rlh.tdf              ;         ;
-; db/mux_o4e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_o4e.tdf                  ;         ;
 ; db/mux_53e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/db/mux_53e.tdf                  ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_divide.tdf                                                     ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/altera/12.0/quartus/libraries/megafunctions/abs_divider.inc                                                    ;         ;
@@ -295,33 +296,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                        ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,969                                                                                                                        ;
-;                                             ;                                                                                                                              ;
-; Total combinational functions               ; 1921                                                                                                                         ;
-; Logic element usage by number of LUT inputs ;                                                                                                                              ;
-;     -- 4 input functions                    ; 583                                                                                                                          ;
-;     -- 3 input functions                    ; 624                                                                                                                          ;
-;     -- <=2 input functions                  ; 714                                                                                                                          ;
-;                                             ;                                                                                                                              ;
-; Logic elements by mode                      ;                                                                                                                              ;
-;     -- normal mode                          ; 1242                                                                                                                         ;
-;     -- arithmetic mode                      ; 679                                                                                                                          ;
-;                                             ;                                                                                                                              ;
-; Total registers                             ; 82                                                                                                                           ;
-;     -- Dedicated logic registers            ; 82                                                                                                                           ;
-;     -- I/O registers                        ; 0                                                                                                                            ;
-;                                             ;                                                                                                                              ;
-; I/O pins                                    ; 131                                                                                                                          ;
-; Maximum fan-out node                        ; control_unit_230:inst10|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_23~62 ;
-; Maximum fan-out                             ; 93                                                                                                                           ;
-; Total fan-out                               ; 5850                                                                                                                         ;
-; Average fan-out                             ; 2.74                                                                                                                         ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 2,616 ;
+;                                             ;       ;
+; Total combinational functions               ; 2341  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 941   ;
+;     -- 3 input functions                    ; 676   ;
+;     -- <=2 input functions                  ; 724   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1662  ;
+;     -- arithmetic mode                      ; 679   ;
+;                                             ;       ;
+; Total registers                             ; 360   ;
+;     -- Dedicated logic registers            ; 360   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 134   ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 360   ;
+; Total fan-out                               ; 8626  ;
+; Average fan-out                             ; 3.04  ;
++---------------------------------------------+-------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -329,26 +330,82 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |ProcessorV1                             ; 1921 (0)          ; 82 (0)       ; 0           ; 0            ; 0       ; 0         ; 131  ; 0            ; |ProcessorV1                                                                                                                      ;              ;
-;    |Reg_24:inst7|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|Reg_24:inst7                                                                                                         ;              ;
-;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|Reg_24:inst7|lpm_ff:lpm_ff_component                                                                                 ;              ;
-;    |control_unit_230:inst10|             ; 1855 (153)        ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10                                                                                              ;              ;
+; |ProcessorV1                             ; 2341 (0)          ; 360 (0)      ; 0           ; 0            ; 0       ; 0         ; 134  ; 0            ; |ProcessorV1                                                                                                                      ;              ;
+;    |ALU16Bit:inst1|                      ; 77 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1                                                                                                       ;              ;
+;       |Adder16Bit:inst|                  ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst                                                                                       ;              ;
+;          |Adder1Bit:inst17|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst17                                                                      ;              ;
+;          |Adder1Bit:inst18|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst18                                                                      ;              ;
+;          |Adder1Bit:inst19|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst19                                                                      ;              ;
+;          |Adder1Bit:inst20|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst20                                                                      ;              ;
+;          |Adder1Bit:inst21|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst21                                                                      ;              ;
+;          |Adder1Bit:inst22|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst22                                                                      ;              ;
+;          |Adder1Bit:inst23|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst23                                                                      ;              ;
+;          |Adder1Bit:inst24|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst24                                                                      ;              ;
+;          |Adder1Bit:inst25|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst25                                                                      ;              ;
+;          |Adder1Bit:inst26|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst26                                                                      ;              ;
+;          |Adder1Bit:inst29|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst29                                                                      ;              ;
+;          |Adder1Bit:inst30|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst30                                                                      ;              ;
+;          |Adder1Bit:inst31|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst31                                                                      ;              ;
+;          |Adder1Bit:inst|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst                                                                        ;              ;
+;       |MUX2_1:inst6|                     ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6                                                                                          ;              ;
+;          |lpm_mux:lpm_mux_component|     ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6|lpm_mux:lpm_mux_component                                                                ;              ;
+;             |mux_m4e:auto_generated|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6|lpm_mux:lpm_mux_component|mux_m4e:auto_generated                                         ;              ;
+;       |MUX4_1_16bit:inst4|               ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4                                                                                    ;              ;
+;          |lpm_mux:LPM_MUX_component|     ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4|lpm_mux:LPM_MUX_component                                                          ;              ;
+;             |mux_p4e:auto_generated|     ; 61 (61)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4|lpm_mux:LPM_MUX_component|mux_p4e:auto_generated                                   ;              ;
+;    |DFF_16BIT:RA|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RA                                                                                                         ;              ;
+;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RA|lpm_ff:lpm_ff_component                                                                                 ;              ;
+;    |DFF_16BIT:RB|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RB                                                                                                         ;              ;
+;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RB|lpm_ff:lpm_ff_component                                                                                 ;              ;
+;    |DFF_16BIT:RY|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RY                                                                                                         ;              ;
+;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RY|lpm_ff:lpm_ff_component                                                                                 ;              ;
+;    |DFF_16BIT:RZ|                        ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RZ                                                                                                         ;              ;
+;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|DFF_16BIT:RZ|lpm_ff:lpm_ff_component                                                                                 ;              ;
+;    |Reg_24:inst7|                        ; 0 (0)             ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|Reg_24:inst7                                                                                                         ;              ;
+;       |lpm_ff:lpm_ff_component|          ; 0 (0)             ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|Reg_24:inst7|lpm_ff:lpm_ff_component                                                                                 ;              ;
+;    |control_unit_230:inst10|             ; 1874 (172)        ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10                                                                                              ;              ;
 ;       |lpm_divide:Mod0|                  ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10|lpm_divide:Mod0                                                                              ;              ;
 ;          |lpm_divide_qlo:auto_generated| ; 1702 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                ;              ;
 ;             |abs_divider_4dg:divider|    ; 1702 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                        ;              ;
 ;                |alt_u_div_k5f:divider|   ; 1605 (1605)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider  ;              ;
 ;                |lpm_abs_0s9:my_abs_num|  ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|control_unit_230:inst10|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num ;              ;
-;    |smpRegisterFile:inst|                ; 66 (2)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst                                                                                                 ;              ;
+;    |smpRegisterFile:inst|                ; 390 (17)          ; 240 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst                                                                                                 ;              ;
+;       |DFF_16BIT:inst10|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst10                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |DFF_16BIT:inst11|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst11                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |DFF_16BIT:inst12|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst12                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |DFF_16BIT:inst13|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst13                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |DFF_16BIT:inst16|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst16                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component                                                        ;              ;
+;       |DFF_16BIT:inst17|                 ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst17                                                                                ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component                                                        ;              ;
 ;       |DFF_16BIT:inst2|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst2                                                                                 ;              ;
 ;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst2|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst3|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst3                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst4|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst4                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst5|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst5                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst6|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst6                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst7|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst7                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst8|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst8                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component                                                         ;              ;
+;       |DFF_16BIT:inst9|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst9                                                                                 ;              ;
+;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component                                                         ;              ;
 ;       |DFF_16BIT:inst|                   ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst                                                                                  ;              ;
 ;          |lpm_ff:lpm_ff_component|       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst|lpm_ff:lpm_ff_component                                                          ;              ;
-;       |Lab916to1Mux:inst20|              ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20                                                                             ;              ;
-;          |lpm_mux:LPM_MUX_component|     ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|lpm_mux:LPM_MUX_component                                                   ;              ;
-;             |mux_e6e:auto_generated|     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|lpm_mux:LPM_MUX_component|mux_e6e:auto_generated                            ;              ;
-;       |Lab916to1Mux:inst21|              ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21                                                                             ;              ;
-;          |lpm_mux:LPM_MUX_component|     ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|lpm_mux:LPM_MUX_component                                                   ;              ;
-;             |mux_e6e:auto_generated|     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|lpm_mux:LPM_MUX_component|mux_e6e:auto_generated                            ;              ;
+;       |Lab916to1Mux:inst20|              ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20                                                                             ;              ;
+;          |lpm_mux:LPM_MUX_component|     ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|lpm_mux:LPM_MUX_component                                                   ;              ;
+;             |mux_e6e:auto_generated|     ; 186 (186)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|lpm_mux:LPM_MUX_component|mux_e6e:auto_generated                            ;              ;
+;       |Lab916to1Mux:inst21|              ; 187 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21                                                                             ;              ;
+;          |lpm_mux:LPM_MUX_component|     ; 187 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|lpm_mux:LPM_MUX_component                                                   ;              ;
+;             |mux_e6e:auto_generated|     ; 187 (187)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|lpm_mux:LPM_MUX_component|mux_e6e:auto_generated                            ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -419,393 +476,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+---------------------------------------------+
 ; PC:inst6|lpm_ff:lpm_ff_component|dffs[0..15]                                   ; Stuck at GND due to stuck port clock_enable ;
 ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[0..15]                              ; Stuck at GND due to stuck port data_in      ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[15]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[15]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[15]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[15]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[14]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[14]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[14]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[14]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[13]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[13]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[13]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[13]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[12]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[12]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[12]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[12]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[11]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[11]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[11]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[11]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[10]                                  ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[10]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[10]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[10]                                  ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[9]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[9]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[8]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[8]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[7]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[7]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[6]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[6]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[5]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[5]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[4]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[4]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[3]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[3]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[2]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[2]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[1]                                   ; Stuck at GND due to stuck port clock_enable ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[1]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[0]                                   ; Stuck at GND due to stuck port clock_enable ;
-; control_unit_230:inst10|y_select[0,1]                                          ; Lost fanout                                 ;
-; control_unit_230:inst10|mem_write                                              ; Lost fanout                                 ;
-; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[0]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[0..8]                                ; Lost fanout                                 ;
-; control_unit_230:inst10|ma_select                                              ; Lost fanout                                 ;
-; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[9]                                   ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[1..9]                                ; Lost fanout                                 ;
-; control_unit_230:inst10|a_inv                                                  ; Lost fanout                                 ;
-; control_unit_230:inst10|b_select                                               ; Lost fanout                                 ;
-; DFF_16BIT:RB|lpm_ff:lpm_ff_component|dffs[0]                                   ; Lost fanout                                 ;
-; control_unit_230:inst10|flag_enable                                            ; Stuck at GND due to stuck port data_in      ;
 ; control_unit_230:inst10|extend[0,1]                                            ; Stuck at GND due to stuck port data_in      ;
+; control_unit_230:inst10|ma_select                                              ; Stuck at VCC due to stuck port data_in      ;
+; control_unit_230:inst10|mem_write                                              ; Stuck at GND due to stuck port data_in      ;
 ; control_unit_230:inst10|pc_select                                              ; Stuck at VCC due to stuck port data_in      ;
 ; control_unit_230:inst10|inc_select                                             ; Stuck at GND due to stuck port data_in      ;
+; control_unit_230:inst10|a_inv                                                  ; Stuck at GND due to stuck port data_in      ;
+; control_unit_230:inst10|b_select                                               ; Stuck at GND due to stuck port data_in      ;
+; control_unit_230:inst10|y_select[0,1]                                          ; Stuck at GND due to stuck port data_in      ;
 ; control_unit_230:inst10|c_select[0]                                            ; Stuck at VCC due to stuck port data_in      ;
 ; control_unit_230:inst10|c_select[1]                                            ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[0..15]       ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[0..15]      ; Stuck at GND due to stuck port data_in      ;
-; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[0..15]                               ; Lost fanout                                 ;
+; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[0..15]                               ; Lost fanout                                 ;
 ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[0..15] ; Lost fanout                                 ;
-; Reg_24:inst7|lpm_ff:lpm_ff_component|dffs[1..3]                                ; Lost fanout                                 ;
-; control_unit_230:inst10|b_inv                                                  ; Lost fanout                                 ;
 ; control_unit_230:inst10|pc_enable                                              ; Lost fanout                                 ;
-; control_unit_230:inst10|alu_op[0,1]                                            ; Lost fanout                                 ;
 ; control_unit_230:inst10|wmfc                                                   ; Lost fanout                                 ;
-; Total Number of Removed Registers = 357                                        ;                                             ;
+; Total Number of Removed Registers = 78                                         ;                                             ;
 +--------------------------------------------------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
-+-------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; Register name                             ; Reason for Removal             ; Registers Removed due to This Register                                              ;
-+-------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[15] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[15],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[15],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[15],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[15], control_unit_230:inst10|y_select[1], ;
-;                                           ;                                ; control_unit_230:inst10|y_select[0], control_unit_230:inst10|mem_write,             ;
-;                                           ;                                ; control_unit_230:inst10|a_inv,                                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[15],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[15],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[15], control_unit_230:inst10|b_inv,       ;
-;                                           ;                                ; control_unit_230:inst10|pc_enable, control_unit_230:inst10|alu_op[0],               ;
-;                                           ;                                ; control_unit_230:inst10|alu_op[1], control_unit_230:inst10|wmfc                     ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[2]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[2],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[2],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[2],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[2],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[2],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[2],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[2],                                       ;
-;                                           ;                                ; Reg_24:inst7|lpm_ff:lpm_ff_component|dffs[3]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[1]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[1],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[1],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[1],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[1],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[1],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[1],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[1],                                       ;
-;                                           ;                                ; Reg_24:inst7|lpm_ff:lpm_ff_component|dffs[2]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[0]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[0],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[0],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[0],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[0],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[0],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[0],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[0],                                       ;
-;                                           ;                                ; Reg_24:inst7|lpm_ff:lpm_ff_component|dffs[1]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[14] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[14],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[14],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[14],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[14],                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[14],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[14],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[14]                                       ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[13] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[13],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[13],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[13],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[13],                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[13],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[13],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[13]                                       ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[12] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[12],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[12],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[12],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[12],                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[12],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[12],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[12]                                       ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[11] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[11],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[11],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[11],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[11],                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[11],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[11],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[11]                                       ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[10] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[10],                                     ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[10],                                      ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[10],                                      ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[10],                                      ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[10],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[10],             ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[10]                                       ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[9]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[9],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[9],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[9],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[9],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[9],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[9],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[9]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[8]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[8],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[8],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[8],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[8],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[8],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[8],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[8]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[7]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[7],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[7],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[7],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[7],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[7],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[7],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[7]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[6]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[6],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[6],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[6],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[6],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[6],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[6],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[6]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[5]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[5],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[5],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[5],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[5],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[5],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[5],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[5]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[4]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[4],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[4],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[4],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[4],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[4],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[4],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[4]                                        ;
-; PC:inst6|lpm_ff:lpm_ff_component|dffs[3]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[3],                                      ;
-;                                           ; due to stuck port clock_enable ; DFF_16BIT:RY|lpm_ff:lpm_ff_component|dffs[3],                                       ;
-;                                           ;                                ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[3],                                       ;
-;                                           ;                                ; DFF_16BIT:RZ|lpm_ff:lpm_ff_component|dffs[3],                                       ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component|dffs[3],               ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component|dffs[3],              ;
-;                                           ;                                ; DFF_16BIT:RA|lpm_ff:lpm_ff_component|dffs[3]                                        ;
-; control_unit_230:inst10|pc_select         ; Stuck at VCC                   ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[14],        ;
-;                                           ; due to stuck port data_in      ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[13],        ;
-;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[12]         ;
-+-------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++-------------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
+; Register name                             ; Reason for Removal             ; Registers Removed due to This Register                                           ;
++-------------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
+; control_unit_230:inst10|ma_select         ; Stuck at VCC                   ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[9],      ;
+;                                           ; due to stuck port data_in      ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[8],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[7],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[6],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[5],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[4],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[3],      ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[0]       ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[15] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[15],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[15], control_unit_230:inst10|pc_enable ;
+; control_unit_230:inst10|pc_select         ; Stuck at VCC                   ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[14],     ;
+;                                           ; due to stuck port data_in      ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[13],     ;
+;                                           ;                                ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[12]      ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[14] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[14],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[14]                                    ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[13] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[13],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[13]                                    ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[12] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[12],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[12]                                    ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[11] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[11],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[11]                                    ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[10] ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[10],                                  ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[10]                                    ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[9]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[9],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[9]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[8]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[8],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[8]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[7]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[7],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[7]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[6]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[6],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[6]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[5]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[5],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[5]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[4]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[4],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[4]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[3]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[3],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[3]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[2]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[2],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[2]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[1]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[1],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[1]                                     ;
+; PC:inst6|lpm_ff:lpm_ff_component|dffs[0]  ; Stuck at GND                   ; PC_Temp:inst8|lpm_ff:lpm_ff_component|dffs[0],                                   ;
+;                                           ; due to stuck port clock_enable ; DFF_16BIT:RM|lpm_ff:lpm_ff_component|dffs[0]                                     ;
+; control_unit_230:inst10|mem_write         ; Stuck at GND                   ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[2],      ;
+;                                           ; due to stuck port data_in      ; InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component|dffs[1]       ;
++-------------------------------------------+--------------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -813,14 +552,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 82    ;
+; Total registers                              ; 360   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 304   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 325   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                     ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
+; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; |ProcessorV1|control_unit_230:inst10|alu_op[1] ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------+----------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -839,6 +587,170 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
 +---------------------------------+--------------------+------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Reg_24:inst7|lpm_ff:lpm_ff_component ;
++------------------------+------------+---------------------------------------------+
+; Parameter Name         ; Value      ; Type                                        ;
++------------------------+------------+---------------------------------------------+
+; LPM_WIDTH              ; 24         ; Signed Integer                              ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
++------------------------+------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                         ;
++------------------------+------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                               ;
+; LPM_SIZE               ; 2          ; Signed Integer                                               ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                               ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                               ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                      ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                      ;
++------------------------+------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst7|lpm_inv:lpm_inv_component ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                         ;
++------------------------+------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                               ;
+; LPM_SIZE               ; 2          ; Signed Integer                                               ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                               ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                               ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                      ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                      ;
++------------------------+------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst3|lpm_inv:lpm_inv_component ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                               ;
++------------------------+------------+--------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                     ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                                     ;
+; LPM_SIZE               ; 4          ; Signed Integer                                                     ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                                                     ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                     ;
+; CBXI_PARAMETER         ; mux_p4e    ; Untyped                                                            ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                            ;
++------------------------+------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|AND16BIT:inst2|LPM_AND:lpm_and_component ;
++------------------------+------------+----------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                           ;
++------------------------+------------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                                 ;
+; LPM_SIZE               ; 2          ; Signed Integer                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                             ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                        ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                        ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                        ;
++------------------------+------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|OR16BIT:inst9|LPM_OR:lpm_or_component ;
++------------------------+------------+-------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                        ;
++------------------------+------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                              ;
+; LPM_SIZE               ; 2          ; Signed Integer                                              ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                          ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                     ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                     ;
++------------------------+------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:lpm_xor_component ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
+; LPM_SIZE       ; 2     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DFF_16BIT:RA|lpm_ff:lpm_ff_component ;
++------------------------+------------+---------------------------------------------+
+; Parameter Name         ; Value      ; Type                                        ;
++------------------------+------------+---------------------------------------------+
+; LPM_WIDTH              ; 16         ; Signed Integer                              ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
++------------------------+------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -866,9 +778,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name     ; Value            ; Type                                                                                   ;
 +--------------------+------------------+----------------------------------------------------------------------------------------+
 ; LPM_WIDTH          ; 16               ; Signed Integer                                                                         ;
-; LPM_CVALUE         ; 0                ; Signed Integer                                                                         ;
+; LPM_CVALUE         ; 15               ; Signed Integer                                                                         ;
 ; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                                                ;
-; CBXI_PARAMETER     ; lpm_constant_9k6 ; Untyped                                                                                ;
+; CBXI_PARAMETER     ; lpm_constant_vl6 ; Untyped                                                                                ;
 +--------------------+------------------+----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1197,152 +1109,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Reg_24:inst7|lpm_ff:lpm_ff_component ;
-+------------------------+------------+---------------------------------------------+
-; Parameter Name         ; Value      ; Type                                        ;
-+------------------------+------------+---------------------------------------------+
-; LPM_WIDTH              ; 24         ; Signed Integer                              ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
-+------------------------+------------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component ;
-+------------------------+------------+--------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                         ;
-+------------------------+------------+--------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                               ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                               ;
-; LPM_SIZE               ; 2          ; Signed Integer                                               ;
-; LPM_WIDTHS             ; 1          ; Signed Integer                                               ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                               ;
-; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                      ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                      ;
-+------------------------+------------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst7|lpm_inv:lpm_inv_component ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component ;
-+------------------------+------------+--------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                         ;
-+------------------------+------------+--------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                               ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                               ;
-; LPM_SIZE               ; 2          ; Signed Integer                                               ;
-; LPM_WIDTHS             ; 1          ; Signed Integer                                               ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                               ;
-; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                                      ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                      ;
-+------------------------+------------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|INV16BIT:inst3|lpm_inv:lpm_inv_component ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component ;
-+------------------------+------------+--------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                               ;
-+------------------------+------------+--------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                         ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                       ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                       ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                     ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                                     ;
-; LPM_SIZE               ; 4          ; Signed Integer                                                     ;
-; LPM_WIDTHS             ; 2          ; Signed Integer                                                     ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                     ;
-; CBXI_PARAMETER         ; mux_p4e    ; Untyped                                                            ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                            ;
-+------------------------+------------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|AND16BIT:inst2|LPM_AND:lpm_and_component ;
-+------------------------+------------+----------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                           ;
-+------------------------+------------+----------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                   ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                 ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                                 ;
-; LPM_SIZE               ; 2          ; Signed Integer                                                 ;
-; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                             ;
-; CARRY_CHAIN            ; MANUAL     ; Untyped                                                        ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                        ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                        ;
-+------------------------+------------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|OR16BIT:inst9|LPM_OR:lpm_or_component ;
-+------------------------+------------+-------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                        ;
-+------------------------+------------+-------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                              ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                              ;
-; LPM_SIZE               ; 2          ; Signed Integer                                              ;
-; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                          ;
-; CARRY_CHAIN            ; MANUAL     ; Untyped                                                     ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                     ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                     ;
-+------------------------+------------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:lpm_xor_component ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; LPM_WIDTH      ; 16    ; Signed Integer                                                              ;
-; LPM_SIZE       ; 2     ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DFF_16BIT:RA|lpm_ff:lpm_ff_component ;
+; Parameter Settings for User Entity Instance: DFF_16BIT:RY|lpm_ff:lpm_ff_component ;
 +------------------------+------------+---------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                        ;
 +------------------------+------------+---------------------------------------------+
@@ -1360,27 +1127,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MuxINC:inst9|LPM_MUX:LPM_MUX_component ;
-+------------------------+------------+-----------------------------------------------+
-; Parameter Name         ; Value      ; Type                                          ;
-+------------------------+------------+-----------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
-; LPM_WIDTH              ; 16         ; Signed Integer                                ;
-; LPM_SIZE               ; 2          ; Signed Integer                                ;
-; LPM_WIDTHS             ; 1          ; Signed Integer                                ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                ;
-; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                       ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                       ;
-+------------------------+------------+-----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MuxY:inst15|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                         ;
++------------------------+------------+----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                               ;
+; LPM_WIDTH              ; 16         ; Signed Integer                               ;
+; LPM_SIZE               ; 3          ; Signed Integer                               ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                               ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                               ;
+; CBXI_PARAMETER         ; mux_o4e    ; Untyped                                      ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                      ;
++------------------------+------------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DFF_16BIT:RB|lpm_ff:lpm_ff_component ;
+; Parameter Settings for User Entity Instance: DFF_16BIT:RZ|lpm_ff:lpm_ff_component ;
 +------------------------+------------+---------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                        ;
 +------------------------+------------+---------------------------------------------+
@@ -1488,25 +1255,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                       ;
 ; DEVICE_FAMILY          ; Cyclone II ; Untyped                                       ;
 +------------------------+------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DFF_16BIT:RZ|lpm_ff:lpm_ff_component ;
-+------------------------+------------+---------------------------------------------+
-; Parameter Name         ; Value      ; Type                                        ;
-+------------------------+------------+---------------------------------------------+
-; LPM_WIDTH              ; 16         ; Signed Integer                              ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
-+------------------------+------------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1646,44 +1394,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DFF_16BIT:RY|lpm_ff:lpm_ff_component ;
-+------------------------+------------+---------------------------------------------+
-; Parameter Name         ; Value      ; Type                                        ;
-+------------------------+------------+---------------------------------------------+
-; LPM_WIDTH              ; 16         ; Signed Integer                              ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
-+------------------------+------------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MuxY:inst15|LPM_MUX:LPM_MUX_component ;
-+------------------------+------------+----------------------------------------------+
-; Parameter Name         ; Value      ; Type                                         ;
-+------------------------+------------+----------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                               ;
-; LPM_WIDTH              ; 16         ; Signed Integer                               ;
-; LPM_SIZE               ; 3          ; Signed Integer                               ;
-; LPM_WIDTHS             ; 2          ; Signed Integer                               ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                               ;
-; CBXI_PARAMETER         ; mux_o4e    ; Untyped                                      ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                      ;
-+------------------------+------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: PC_Temp:inst8|lpm_ff:lpm_ff_component ;
 +------------------------+------------+----------------------------------------------+
@@ -1807,6 +1517,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MuxINC:inst9|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+-----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                          ;
++------------------------+------------+-----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
+; LPM_WIDTH              ; 16         ; Signed Integer                                ;
+; LPM_SIZE               ; 2          ; Signed Integer                                ;
+; LPM_WIDTHS             ; 1          ; Signed Integer                                ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                ;
+; CBXI_PARAMETER         ; mux_m4e    ; Untyped                                       ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                       ;
++------------------------+------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DFF_16BIT:RB|lpm_ff:lpm_ff_component ;
++------------------------+------------+---------------------------------------------+
+; Parameter Name         ; Value      ; Type                                        ;
++------------------------+------------+---------------------------------------------+
+; LPM_WIDTH              ; 16         ; Signed Integer                              ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                     ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                     ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                     ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                              ;
++------------------------+------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: MainMemory:inst4|altsyncram:altsyncram_component ;
 +------------------------------------+--------------------------+-------------------------------+
@@ -1927,7 +1675,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:00:39     ;
 +----------------+--------------+
 
 
@@ -1937,7 +1685,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Wed Mar 20 21:33:49 2013
+    Info: Processing started: Sat Mar 23 22:16:00 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessorV1 -c ProcessorV1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file resultflags.bdf
@@ -2026,46 +1774,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file muxy.vh
     Info (12022): Found design unit 1: muxy-SYN
     Info (12023): Found entity 1: MuxY
 Info (12127): Elaborating entity "ProcessorV1" for the top level hierarchy
-Warning (275009): Pin "WEnable1" not connected
-Info (12128): Elaborating entity "smpRegisterFile" for hierarchy "smpRegisterFile:inst"
-Info (12128): Elaborating entity "Lab916to1Mux" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "16"
-    Info (12134): Parameter "LPM_SIZE" = "16"
-    Info (12134): Parameter "LPM_WIDTHS" = "4"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_e6e.tdf
-    Info (12023): Found entity 1: mux_e6e
-Info (12128): Elaborating entity "mux_e6e" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component|mux_e6e:auto_generated"
-Info (12128): Elaborating entity "ZeroConstant16Bit" for hierarchy "smpRegisterFile:inst|ZeroConstant16Bit:inst18"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component"
-Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component"
-Info (12133): Instantiated megafunction "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" with the following parameter:
-    Info (12134): Parameter "lpm_cvalue" = "0"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
-    Info (12134): Parameter "lpm_width" = "16"
-Info (12128): Elaborating entity "DFF_16BIT" for hierarchy "smpRegisterFile:inst|DFF_16BIT:inst10"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component"
-Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component"
-Info (12133): Instantiated megafunction "smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component" with the following parameter:
-    Info (12134): Parameter "lpm_fftype" = "DFF"
-    Info (12134): Parameter "lpm_type" = "LPM_FF"
-    Info (12134): Parameter "lpm_width" = "16"
-Info (12128): Elaborating entity "DECODER4TO16" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1"
-Info (12128): Elaborating entity "lpm_decode" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component"
-Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component"
-Info (12133): Instantiated megafunction "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" with the following parameter:
-    Info (12134): Parameter "lpm_decodes" = "16"
-    Info (12134): Parameter "lpm_type" = "LPM_DECODE"
-    Info (12134): Parameter "lpm_width" = "4"
-Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8f.tdf
-    Info (12023): Found entity 1: decode_c8f
-Info (12128): Elaborating entity "decode_c8f" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component|decode_c8f:auto_generated"
 Info (12128): Elaborating entity "control_unit_230" for hierarchy "control_unit_230:inst10"
 Info (12128): Elaborating entity "Reg_24" for hierarchy "Reg_24:inst7"
 Info (12128): Elaborating entity "lpm_ff" for hierarchy "Reg_24:inst7|lpm_ff:lpm_ff_component"
@@ -2134,8 +1842,58 @@ Info (12133): Instantiated megafunction "ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:l
     Info (12134): Parameter "LPM_SIZE" = "2"
     Info (12134): Parameter "LPM_TYPE" = "LPM_XOR"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "MuxINC" for hierarchy "MuxINC:inst9"
-Info (12128): Elaborating entity "immediate" for hierarchy "immediate:inst12"
+Info (12128): Elaborating entity "DFF_16BIT" for hierarchy "DFF_16BIT:RA"
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "DFF_16BIT:RA|lpm_ff:lpm_ff_component"
+Info (12130): Elaborated megafunction instantiation "DFF_16BIT:RA|lpm_ff:lpm_ff_component"
+Info (12133): Instantiated megafunction "DFF_16BIT:RA|lpm_ff:lpm_ff_component" with the following parameter:
+    Info (12134): Parameter "lpm_fftype" = "DFF"
+    Info (12134): Parameter "lpm_type" = "LPM_FF"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "smpRegisterFile" for hierarchy "smpRegisterFile:inst"
+Info (12128): Elaborating entity "Lab916to1Mux" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_SIZE" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "4"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_e6e.tdf
+    Info (12023): Found entity 1: mux_e6e
+Info (12128): Elaborating entity "mux_e6e" for hierarchy "smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component|mux_e6e:auto_generated"
+Info (12128): Elaborating entity "ZeroConstant16Bit" for hierarchy "smpRegisterFile:inst|ZeroConstant16Bit:inst18"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "15"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "DECODER4TO16" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1"
+Info (12128): Elaborating entity "lpm_decode" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component"
+Info (12130): Elaborated megafunction instantiation "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component"
+Info (12133): Instantiated megafunction "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" with the following parameter:
+    Info (12134): Parameter "lpm_decodes" = "16"
+    Info (12134): Parameter "lpm_type" = "LPM_DECODE"
+    Info (12134): Parameter "lpm_width" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8f.tdf
+    Info (12023): Found entity 1: decode_c8f
+Info (12128): Elaborating entity "decode_c8f" for hierarchy "smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component|decode_c8f:auto_generated"
+Info (12128): Elaborating entity "MuxY" for hierarchy "MuxY:inst15"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "MuxY:inst15|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "MuxY:inst15|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "MuxY:inst15|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_SIZE" = "3"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_o4e.tdf
+    Info (12023): Found entity 1: mux_o4e
+Info (12128): Elaborating entity "mux_o4e" for hierarchy "MuxY:inst15|LPM_MUX:LPM_MUX_component|mux_o4e:auto_generated"
 Info (12128): Elaborating entity "MemoryInterface" for hierarchy "MemoryInterface:inst3"
 Warning (275009): Pin "MEM_read" not connected
 Info (12128): Elaborating entity "Const" for hierarchy "MemoryInterface:inst3|Const:inst3"
@@ -2183,6 +1941,7 @@ Info (12133): Instantiated megafunction "InstructionAddressGenerator:inst5|Adder
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rlh.tdf
     Info (12023): Found entity 1: add_sub_rlh
 Info (12128): Elaborating entity "add_sub_rlh" for hierarchy "InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component|add_sub_rlh:auto_generated"
+Info (12128): Elaborating entity "MuxINC" for hierarchy "InstructionAddressGenerator:inst5|MuxINC:inst"
 Info (12128): Elaborating entity "PC_Temp" for hierarchy "InstructionAddressGenerator:inst5|PC_Temp:inst4"
 Info (12128): Elaborating entity "lpm_ff" for hierarchy "InstructionAddressGenerator:inst5|PC_Temp:inst4|lpm_ff:lpm_ff_component"
 Info (12130): Elaborated megafunction instantiation "InstructionAddressGenerator:inst5|PC_Temp:inst4|lpm_ff:lpm_ff_component"
@@ -2190,19 +1949,7 @@ Info (12133): Instantiated megafunction "InstructionAddressGenerator:inst5|PC_Te
     Info (12134): Parameter "lpm_fftype" = "DFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "16"
-Info (12128): Elaborating entity "MuxY" for hierarchy "MuxY:inst15"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "MuxY:inst15|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "MuxY:inst15|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "MuxY:inst15|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "16"
-    Info (12134): Parameter "LPM_SIZE" = "3"
-    Info (12134): Parameter "LPM_WIDTHS" = "2"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_o4e.tdf
-    Info (12023): Found entity 1: mux_o4e
-Info (12128): Elaborating entity "mux_o4e" for hierarchy "MuxY:inst15|LPM_MUX:LPM_MUX_component|mux_o4e:auto_generated"
+Info (12128): Elaborating entity "immediate" for hierarchy "immediate:inst12"
 Info (12128): Elaborating entity "MuxDest" for hierarchy "MuxDest:inst11"
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "MuxDest:inst11|LPM_MUX:LPM_MUX_component"
 Info (12130): Elaborated megafunction instantiation "MuxDest:inst11|LPM_MUX:LPM_MUX_component"
@@ -2288,43 +2035,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_0s9.tdf
     Info (12023): Found entity 1: lpm_abs_0s9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "regYOut[15]" is stuck at GND
-    Warning (13410): Pin "regYOut[14]" is stuck at GND
-    Warning (13410): Pin "regYOut[13]" is stuck at GND
-    Warning (13410): Pin "regYOut[12]" is stuck at GND
-    Warning (13410): Pin "regYOut[11]" is stuck at GND
-    Warning (13410): Pin "regYOut[10]" is stuck at GND
-    Warning (13410): Pin "regYOut[9]" is stuck at GND
-    Warning (13410): Pin "regYOut[8]" is stuck at GND
-    Warning (13410): Pin "regYOut[7]" is stuck at GND
-    Warning (13410): Pin "regYOut[6]" is stuck at GND
-    Warning (13410): Pin "regYOut[5]" is stuck at GND
-    Warning (13410): Pin "regYOut[4]" is stuck at GND
-    Warning (13410): Pin "regYOut[3]" is stuck at GND
-    Warning (13410): Pin "regYOut[2]" is stuck at GND
-    Warning (13410): Pin "regYOut[1]" is stuck at GND
-    Warning (13410): Pin "regYOut[0]" is stuck at GND
-Info (17049): 94 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "a_inv" is stuck at GND
+    Warning (13410): Pin "RegDest[1]" is stuck at GND
+    Warning (13410): Pin "RegDest[0]" is stuck at VCC
+    Warning (13410): Pin "SelectRegOrImmed" is stuck at GND
+Info (17049): 34 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "instruction[19]"
     Warning (15610): No output dependent on input pin "instruction[18]"
     Warning (15610): No output dependent on input pin "instruction[17]"
     Warning (15610): No output dependent on input pin "instruction[16]"
-    Warning (15610): No output dependent on input pin "instruction[3]"
-    Warning (15610): No output dependent on input pin "instruction[2]"
-    Warning (15610): No output dependent on input pin "instruction[1]"
     Warning (15610): No output dependent on input pin "instruction[0]"
-    Warning (15610): No output dependent on input pin "WEnable1"
-Info (21057): Implemented 2132 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 59 input pins
-    Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 2001 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 375 megabytes
-    Info: Processing ended: Wed Mar 20 21:34:15 2013
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:25
+Info (21057): Implemented 2790 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 27 input pins
+    Info (21059): Implemented 107 output pins
+    Info (21061): Implemented 2656 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 376 megabytes
+    Info: Processing ended: Sat Mar 23 22:16:39 2013
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:38
 
 
