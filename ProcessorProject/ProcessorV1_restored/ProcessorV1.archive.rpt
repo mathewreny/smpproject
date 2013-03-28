@@ -1,0 +1,137 @@
+Archive Project report for ProcessorV1
+Thu Mar 28 16:19:41 2013
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Mar 28 16:19:41 2013 ;
+; Revision Name          ; ProcessorV1                           ;
+; Top-level Entity Name  ; ProcessorV1                           ;
+; Family                 ; Cyclone II                            ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PartII.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'ProcessorV1.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/altera/12.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 327 megabytes
+    Info: Processing ended: Thu Mar 28 16:19:41 2013
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++--------------------------------------------------------+
+; Files Archived                                         ;
++--------------------------------------------------------+
+; File Name                                              ;
++--------------------------------------------------------+
+; Adder.bsf                                              ;
+; Adder.vhd                                              ;
+; Adder1Bit.bdf                                          ;
+; Adder16Bit.bdf                                         ;
+; ALU16Bit.bdf                                           ;
+; ALUTest.do                                             ;
+; AND16BIT.vhd                                           ;
+; assignment_defaults.qdf                                ;
+; Const.bsf                                              ;
+; Const.vhd                                              ;
+; control_unit_230.bsf                                   ;
+; control_unit_230.vhd                                   ;
+; DECODER4TO16.vhd                                       ;
+; DFF_16BIT.bsf                                          ;
+; DFF_16BIT.vhd                                          ;
+; immediate.bsf                                          ;
+; immediate.vhd                                          ;
+; incremental_db/compiled_partitions/ProcessorV1.db_info ;
+; InstructionAddressGenerator.bdf                        ;
+; InstructionAddressGenerator.bsf                        ;
+; INV16BIT.vhd                                           ;
+; MainMemory.bsf                                         ;
+; MainMemory.vhd                                         ;
+; MemoryInitialization.mif                               ;
+; MemoryInterface.bdf                                    ;
+; MemoryInterface.bsf                                    ;
+; MUX2_1.vhd                                             ;
+; MUX4_1_16bit.vhd                                       ;
+; MuxDest.bsf                                            ;
+; MuxDest.cmp                                            ;
+; MuxDest.qip                                            ;
+; MuxDest.vhd                                            ;
+; MuxDest_inst.vhd                                       ;
+; MuxINC.vhd                                             ;
+; MuxMA.bsf                                              ;
+; MuxMA.cmp                                              ;
+; MuxMA.qip                                              ;
+; MuxMA.vhd                                              ;
+; MuxMA_inst.vhd                                         ;
+; MuxPC.bsf                                              ;
+; MuxPC.vhd                                              ;
+; MuxY.bsf                                               ;
+; MuxY.cmp                                               ;
+; MuxY.qip                                               ;
+; MuxY.vhd                                               ;
+; MuxY_inst.vhd                                          ;
+; OR16BIT.vhd                                            ;
+; PC.bsf                                                 ;
+; PC.vhd                                                 ;
+; PC_Temp.bsf                                            ;
+; PC_Temp.vhd                                            ;
+; ProcessorV1.bdf                                        ;
+; ProcessorV1.do                                         ;
+; ProcessorV1.qpf                                        ;
+; ProcessorV1.qsf                                        ;
+; ProcessorV1_assignment_defaults.qdf                    ;
+; Reg_24.bsf                                             ;
+; Reg_24.vhd                                             ;
+; RegisterFileTest.do                                    ;
+; ResultFlags.bdf                                        ;
+; smp16to1Mux.bsf                                        ;
+; smp16to1Mux.vhd                                        ;
+; smpRegisterFile.bdf                                    ;
+; XOR16BIT.vhd                                           ;
+; ZeroConstant16Bit.vhd                                  ;
++--------------------------------------------------------+
+
+

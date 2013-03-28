@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Mar 23 22:16:39 2013
-Quartus II 32-bit Version : 12.0 Build 178 05/31/2012 SJ Web Edition
+Analysis & Synthesis Status : Successful - Thu Mar 28 15:04:12 2013
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
 Revision Name : ProcessorV1
 Top-level Entity Name : ProcessorV1
 Family : Cyclone II
-Total logic elements : 2,616
-    Total combinational functions : 2,341
+Total logic elements : 2,618
+    Total combinational functions : 2,343
     Dedicated logic registers : 360
 Total registers : 360
 Total pins : 134

@@ -1,0 +1,76 @@
+Quartus II Archive log --	C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PartII.qarlog
+
+Archive:	C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PartII.qar
+Date:		Thu Mar 28 16:19:41 2013
+Quartus II 64-Bit		12.1 Build 177 11/07/2012 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ALU16Bit.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ALUTest.do
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/AND16BIT.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Adder.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Adder.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Adder16Bit.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Adder1Bit.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Const.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Const.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DECODER4TO16.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DFF_16BIT.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/DFF_16BIT.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/INV16BIT.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/InstructionAddressGenerator.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/InstructionAddressGenerator.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MUX2_1.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MUX4_1_16bit.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MainMemory.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MainMemory.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MemoryInitialization.mif
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MemoryInterface.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MemoryInterface.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest.cmp
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest.qip
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxDest_inst.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxINC.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA.cmp
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA.qip
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxMA_inst.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxPC.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxPC.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY.cmp
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY.qip
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/MuxY_inst.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/OR16BIT.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PC.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PC.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PC_Temp.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/PC_Temp.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.do
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.qpf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.qsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1_assignment_defaults.qdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Reg_24.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/Reg_24.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/RegisterFileTest.do
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ResultFlags.bdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/XOR16BIT.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ZeroConstant16Bit.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/assignment_defaults.qdf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/control_unit_230.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/control_unit_230.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/immediate.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/immediate.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/incremental_db/compiled_partitions/ProcessorV1.db_info
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/smp16to1Mux.bsf
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/smp16to1Mux.vhd
+C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/smpRegisterFile.bdf
+	======= Total: 65 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

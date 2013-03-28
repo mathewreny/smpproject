@@ -7,4 +7,4 @@ vmap work gate_work
 
 vcom -93 -work work {ProcessorV1.vho}
 
-do "C:/Users/sbrown/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.do"
+do "C:/Users/phil/Documents/GitHub/smpproject/ProcessorProject/ProcessorV1_restored/ProcessorV1.do"
