@@ -1,4 +1,4 @@
-im ProcessorV1
+vsim ProcessorV1
 view wave 
 
 add wave  reset
