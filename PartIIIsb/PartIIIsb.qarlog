@@ -1,0 +1,83 @@
+Quartus II Archive log --	C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PartIIIsb.qarlog
+
+Archive:	C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PartIIIsb.qar
+Date:		Thu Apr 04 06:42:54 2013
+Quartus II 32-bit		12.0 Build 178 05/31/2012 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ALU16Bit.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ALUTest.do
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/AND16BIT.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Adder.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Adder.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Adder16Bit.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Adder1Bit.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Const.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Const.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DECODER4TO16.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/INV16BIT.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/InstructionAddressGenerator.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/InstructionAddressGenerator.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MUX2_1.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MUX4_1_16bit.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MainMemory.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MainMemory.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MemoryInitialization.mif
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MemoryInterface.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MemoryInterface.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxB.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxB.cmp
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxB.qip
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxB.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxB_inst.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxDest.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxDest.cmp
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxDest.qip
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxDest.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxDest_inst.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxINC.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxMA.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxMA.cmp
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxMA.qip
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxMA.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxMA_inst.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxPC.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxPC.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxY.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxY.cmp
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxY.qip
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxY.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/MuxY_inst.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/OR16BIT.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PC.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PC.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PC_Temp.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/PC_Temp.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ProcessorV1.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ProcessorV1.do
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ProcessorV1.qpf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ProcessorV1.qsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ProcessorV1_assignment_defaults.qdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_16.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_16.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_24.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_24.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/RegisterFileTest.do
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ResultFlags.bdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/XOR16BIT.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/ZeroConstant16Bit.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/assignment_defaults.qdf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/control_unit_230.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/control_unit_230.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/immediate.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/immediate.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/incremental_db/compiled_partitions/ProcessorV1.db_info
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/smp16to1Mux.bsf
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/smp16to1Mux.vhd
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/smpRegisterFile.bdf
+	======= Total: 72 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

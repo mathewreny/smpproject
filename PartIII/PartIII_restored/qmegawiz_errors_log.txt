@@ -1,0 +1,51 @@
+
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 09PM:47:58>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 09PM:48:01>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 09PM:48:18>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 09PM:50:04>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 09PM:50:13>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 10PM:04:51>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/DFF_16BIT.vhd
+
+Apr 03 10PM:04:56>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_16.vhd
+
+Apr 03 10PM:19:06>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_16.vhd
+
+Apr 03 10PM:19:07>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/sbrown/Documents/GitHub/smpproject/PartIII/PartIII_restored/Reg_16.vhd
+
+Apr 03 10PM:19:10>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
