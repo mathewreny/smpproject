@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="ProcessorV1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_c8f.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e6e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab9RegisterFile|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
