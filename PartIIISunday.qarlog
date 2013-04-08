@@ -1,0 +1,93 @@
+Quartus II Archive log --	C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PartIIISunday.qarlog
+
+Archive:	C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PartIIISunday.qar
+Date:		Sun Apr 07 22:27:02 2013
+Quartus II 32-bit		12.0 Build 178 05/31/2012 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ALU16Bit.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ALUTest.do
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/AND16BIT.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Adder.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Adder.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Adder16Bit.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Adder1Bit.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Const.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Const.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/DECODER4TO16.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/DFF_16BIT.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/DFF_16BIT.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/INV16BIT.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/InstructionAddressGenerator.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/InstructionAddressGenerator.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/LinkReg.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/LinkReg.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/LinkReg.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/LinkReg.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/LinkReg_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MUX2_1.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MUX4_1_16bit.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MainMemory.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MainMemory.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MemoryInitialization.mif
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MemoryInterface.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MemoryInterface.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxB.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxB.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxB.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxB.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxB_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxC.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxC.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxC.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxC.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxC_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxDest.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxDest.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxDest.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxDest.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxDest_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxINC.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxMA.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxMA.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxMA.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxMA.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxMA_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxPC.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxPC.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxY.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxY.cmp
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxY.qip
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxY.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/MuxY_inst.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/OR16BIT.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PC.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PC.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PC_Temp.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/PC_Temp.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ProcessorV1.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ProcessorV1.do
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ProcessorV1.qpf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ProcessorV1.qsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ProcessorV1_assignment_defaults.qdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Reg_16.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Reg_16.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Reg_24.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/Reg_24.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/RegisterFileTest.do
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ResultFlags.bdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/XOR16BIT.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/ZeroConstant16Bit.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/assignment_defaults.qdf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/control_unit_230.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/control_unit_230.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/immediate.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/immediate.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/incremental_db/compiled_partitions/ProcessorV1.db_info
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/smp16to1Mux.bsf
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/smp16to1Mux.vhd
+C:/Users/sbrown/Desktop/Processor/PartIIIGood_restored/smpRegisterFile.bdf
+	======= Total: 82 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

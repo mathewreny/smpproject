@@ -148,9 +148,30 @@ begin
 					-- not implemented
 					
 				-- other r-type instructions
-				else
-					-- no memory read/write needed
+				elsif(op_code(2) = '0' and op_code(0) = '0') then
 					
+					-- add instruction
+					if(opx = "100") then
+						alu_op <= "11";
+					
+					-- sub instruction
+					elsif(opx = "000") then
+						alu_op <= "11";
+						b_inv <= '1';
+						
+					-- and instruction
+					elsif(opx = "010") then
+						alu_op <= "00";
+						
+					-- or instruction
+					elsif(opx = "011") then
+						alu_op <= "01";
+						
+					-- xor instruction
+					elsif(opx = "001") then
+						alu_op <= "10";
+						
+					end if;
 				end if;
 			
 			
@@ -170,6 +191,7 @@ begin
 				
 				
 			end if; -- instruction check
+		
 		
 		-- destination register
 		elsif(stage = 5) then

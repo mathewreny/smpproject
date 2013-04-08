@@ -1,4 +1,5 @@
 |ProcessorV1
+a_inv <= control_unit_230:inst10.a_inv
 clock => Reg_24:inst7.clock
 clock => DFF_16BIT:RA.clock
 clock => inst13.IN0
@@ -35,6 +36,23 @@ instruction[20] => Reg_24:inst7.data[20]
 instruction[21] => Reg_24:inst7.data[21]
 instruction[22] => Reg_24:inst7.data[22]
 instruction[23] => Reg_24:inst7.data[23]
+b_inv <= control_unit_230:inst10.b_inv
+regA[0] <= DFF_16BIT:RA.q[0]
+regA[1] <= DFF_16BIT:RA.q[1]
+regA[2] <= DFF_16BIT:RA.q[2]
+regA[3] <= DFF_16BIT:RA.q[3]
+regA[4] <= DFF_16BIT:RA.q[4]
+regA[5] <= DFF_16BIT:RA.q[5]
+regA[6] <= DFF_16BIT:RA.q[6]
+regA[7] <= DFF_16BIT:RA.q[7]
+regA[8] <= DFF_16BIT:RA.q[8]
+regA[9] <= DFF_16BIT:RA.q[9]
+regA[10] <= DFF_16BIT:RA.q[10]
+regA[11] <= DFF_16BIT:RA.q[11]
+regA[12] <= DFF_16BIT:RA.q[12]
+regA[13] <= DFF_16BIT:RA.q[13]
+regA[14] <= DFF_16BIT:RA.q[14]
+regA[15] <= DFF_16BIT:RA.q[15]
 reset => DFF_16BIT:RA.aclr
 reset => smpRegisterFile:inst.reset
 reset => DFF_16BIT:RY.aclr
@@ -49,6 +67,95 @@ enable => DFF_16BIT:RY.enable
 enable => DFF_16BIT:RZ.enable
 enable => DFF_16BIT:RM.enable
 enable => DFF_16BIT:RB.enable
+regYOut[0] <= DFF_16BIT:RY.q[0]
+regYOut[1] <= DFF_16BIT:RY.q[1]
+regYOut[2] <= DFF_16BIT:RY.q[2]
+regYOut[3] <= DFF_16BIT:RY.q[3]
+regYOut[4] <= DFF_16BIT:RY.q[4]
+regYOut[5] <= DFF_16BIT:RY.q[5]
+regYOut[6] <= DFF_16BIT:RY.q[6]
+regYOut[7] <= DFF_16BIT:RY.q[7]
+regYOut[8] <= DFF_16BIT:RY.q[8]
+regYOut[9] <= DFF_16BIT:RY.q[9]
+regYOut[10] <= DFF_16BIT:RY.q[10]
+regYOut[11] <= DFF_16BIT:RY.q[11]
+regYOut[12] <= DFF_16BIT:RY.q[12]
+regYOut[13] <= DFF_16BIT:RY.q[13]
+regYOut[14] <= DFF_16BIT:RY.q[14]
+regYOut[15] <= DFF_16BIT:RY.q[15]
+regZOut[0] <= DFF_16BIT:RZ.q[0]
+regZOut[1] <= DFF_16BIT:RZ.q[1]
+regZOut[2] <= DFF_16BIT:RZ.q[2]
+regZOut[3] <= DFF_16BIT:RZ.q[3]
+regZOut[4] <= DFF_16BIT:RZ.q[4]
+regZOut[5] <= DFF_16BIT:RZ.q[5]
+regZOut[6] <= DFF_16BIT:RZ.q[6]
+regZOut[7] <= DFF_16BIT:RZ.q[7]
+regZOut[8] <= DFF_16BIT:RZ.q[8]
+regZOut[9] <= DFF_16BIT:RZ.q[9]
+regZOut[10] <= DFF_16BIT:RZ.q[10]
+regZOut[11] <= DFF_16BIT:RZ.q[11]
+regZOut[12] <= DFF_16BIT:RZ.q[12]
+regZOut[13] <= DFF_16BIT:RZ.q[13]
+regZOut[14] <= DFF_16BIT:RZ.q[14]
+regZOut[15] <= DFF_16BIT:RZ.q[15]
+ALUOut[0] <= ALU16Bit:inst1.FinalResult[0]
+ALUOut[1] <= ALU16Bit:inst1.FinalResult[1]
+ALUOut[2] <= ALU16Bit:inst1.FinalResult[2]
+ALUOut[3] <= ALU16Bit:inst1.FinalResult[3]
+ALUOut[4] <= ALU16Bit:inst1.FinalResult[4]
+ALUOut[5] <= ALU16Bit:inst1.FinalResult[5]
+ALUOut[6] <= ALU16Bit:inst1.FinalResult[6]
+ALUOut[7] <= ALU16Bit:inst1.FinalResult[7]
+RegDest[0] <= control_unit_230:inst10.c_select[0]
+RegDest[1] <= control_unit_230:inst10.c_select[1]
+alu_op[0] <= control_unit_230:inst10.alu_op[0]
+alu_op[1] <= control_unit_230:inst10.alu_op[1]
+regB[0] <= MuxINC:inst9.result[0]
+regB[1] <= MuxINC:inst9.result[1]
+regB[2] <= MuxINC:inst9.result[2]
+regB[3] <= MuxINC:inst9.result[3]
+regB[4] <= MuxINC:inst9.result[4]
+regB[5] <= MuxINC:inst9.result[5]
+regB[6] <= MuxINC:inst9.result[6]
+regB[7] <= MuxINC:inst9.result[7]
+regB[8] <= MuxINC:inst9.result[8]
+regB[9] <= MuxINC:inst9.result[9]
+regB[10] <= MuxINC:inst9.result[10]
+regB[11] <= MuxINC:inst9.result[11]
+regB[12] <= MuxINC:inst9.result[12]
+regB[13] <= MuxINC:inst9.result[13]
+regB[14] <= MuxINC:inst9.result[14]
+regB[15] <= MuxINC:inst9.result[15]
+SelectRegOrImmed <= control_unit_230:inst10.b_select
+IRA[0] <= IR[12].DB_MAX_OUTPUT_PORT_TYPE
+IRA[1] <= IR[13].DB_MAX_OUTPUT_PORT_TYPE
+IRA[2] <= IR[14].DB_MAX_OUTPUT_PORT_TYPE
+IRA[3] <= IR[15].DB_MAX_OUTPUT_PORT_TYPE
+IRB[0] <= IR[8].DB_MAX_OUTPUT_PORT_TYPE
+IRB[1] <= IR[9].DB_MAX_OUTPUT_PORT_TYPE
+IRB[2] <= IR[10].DB_MAX_OUTPUT_PORT_TYPE
+IRB[3] <= IR[11].DB_MAX_OUTPUT_PORT_TYPE
+IRDest[0] <= IR[4].DB_MAX_OUTPUT_PORT_TYPE
+IRDest[1] <= IR[5].DB_MAX_OUTPUT_PORT_TYPE
+IRDest[2] <= IR[6].DB_MAX_OUTPUT_PORT_TYPE
+IRDest[3] <= IR[7].DB_MAX_OUTPUT_PORT_TYPE
+RF1[0] <= smpRegisterFile:inst.RF1[0]
+RF1[1] <= smpRegisterFile:inst.RF1[1]
+RF1[2] <= smpRegisterFile:inst.RF1[2]
+RF1[3] <= smpRegisterFile:inst.RF1[3]
+RF1[4] <= smpRegisterFile:inst.RF1[4]
+RF1[5] <= smpRegisterFile:inst.RF1[5]
+RF1[6] <= smpRegisterFile:inst.RF1[6]
+RF1[7] <= smpRegisterFile:inst.RF1[7]
+RF2[0] <= smpRegisterFile:inst.RF2[0]
+RF2[1] <= smpRegisterFile:inst.RF2[1]
+RF2[2] <= smpRegisterFile:inst.RF2[2]
+RF2[3] <= smpRegisterFile:inst.RF2[3]
+RF2[4] <= smpRegisterFile:inst.RF2[4]
+RF2[5] <= smpRegisterFile:inst.RF2[5]
+RF2[6] <= smpRegisterFile:inst.RF2[6]
+RF2[7] <= smpRegisterFile:inst.RF2[7]
 
 
 |ProcessorV1|control_unit_230:inst10
@@ -169,6 +276,26 @@ reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
 reset => stage.OUTPUTSELECT
+alu_op[0] <= alu_op[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+alu_op[1] <= alu_op[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_select[0] <= c_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+c_select[1] <= c_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y_select[0] <= y_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y_select[1] <= y_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rf_write <= rf_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b_select <= b_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a_inv <= a_inv~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b_inv <= b_inv~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flag_enable <= flag_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+extend[0] <= extend[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+extend[1] <= extend[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ir_enable <= ir_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ma_select <= ma_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mem_read <= mem_read~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mem_write <= mem_write~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_select <= pc_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pc_enable <= pc_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inc_select <= inc_select~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|Reg_24:inst7
@@ -198,6 +325,30 @@ data[21] => lpm_ff:lpm_ff_component.data[21]
 data[22] => lpm_ff:lpm_ff_component.data[22]
 data[23] => lpm_ff:lpm_ff_component.data[23]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
+q[16] <= lpm_ff:lpm_ff_component.q[16]
+q[17] <= lpm_ff:lpm_ff_component.q[17]
+q[18] <= lpm_ff:lpm_ff_component.q[18]
+q[19] <= lpm_ff:lpm_ff_component.q[19]
+q[20] <= lpm_ff:lpm_ff_component.q[20]
+q[21] <= lpm_ff:lpm_ff_component.q[21]
+q[22] <= lpm_ff:lpm_ff_component.q[22]
+q[23] <= lpm_ff:lpm_ff_component.q[23]
 
 
 |ProcessorV1|Reg_24:inst7|lpm_ff:lpm_ff_component
@@ -279,9 +430,36 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= dffs[16].DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= dffs[17].DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= dffs[18].DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= dffs[19].DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= dffs[20].DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= dffs[21].DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= dffs[22].DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= dffs[23].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1
+Z <= ResultFlags:inst1.Z
+C14out <= Adder16Bit:inst.Cout14
+Cin <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 Binv => inst10.IN0
 Binv => MUX2_1:inst6.sel
 Ainv => inst10.IN1
@@ -350,14 +528,37 @@ B[14] => MUX2_1:inst6.data0x[14]
 B[14] => INV16BIT:inst3.data[14]
 B[15] => MUX2_1:inst6.data0x[15]
 B[15] => INV16BIT:inst3.data[15]
+C15out <= Adder16Bit:inst.Cout15
+N <= ResultFlags:inst1.N
+V <= ResultFlags:inst1.V
+C <= ResultFlags:inst1.C
+FinalResult[0] <= MUX4_1_16bit:inst4.result[0]
+FinalResult[1] <= MUX4_1_16bit:inst4.result[1]
+FinalResult[2] <= MUX4_1_16bit:inst4.result[2]
+FinalResult[3] <= MUX4_1_16bit:inst4.result[3]
+FinalResult[4] <= MUX4_1_16bit:inst4.result[4]
+FinalResult[5] <= MUX4_1_16bit:inst4.result[5]
+FinalResult[6] <= MUX4_1_16bit:inst4.result[6]
+FinalResult[7] <= MUX4_1_16bit:inst4.result[7]
+FinalResult[8] <= MUX4_1_16bit:inst4.result[8]
+FinalResult[9] <= MUX4_1_16bit:inst4.result[9]
+FinalResult[10] <= MUX4_1_16bit:inst4.result[10]
+FinalResult[11] <= MUX4_1_16bit:inst4.result[11]
+FinalResult[12] <= MUX4_1_16bit:inst4.result[12]
+FinalResult[13] <= MUX4_1_16bit:inst4.result[13]
+FinalResult[14] <= MUX4_1_16bit:inst4.result[14]
+FinalResult[15] <= MUX4_1_16bit:inst4.result[15]
 ALUop[0] => MUX4_1_16bit:inst4.sel[0]
 ALUop[1] => MUX4_1_16bit:inst4.sel[1]
 
 
 |ProcessorV1|ALU16Bit:inst1|ResultFlags:inst1
+C <= C15out.DB_MAX_OUTPUT_PORT_TYPE
 C15out => C.DATAIN
 C15out => inst.IN1
+V <= inst.DB_MAX_OUTPUT_PORT_TYPE
 C14out => inst.IN0
+Z <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 Sum[0] => inst3.IN0
 Sum[1] => inst3.IN2
 Sum[2] => inst3.IN1
@@ -375,9 +576,11 @@ Sum[13] => inst2.IN4
 Sum[14] => inst2.IN6
 Sum[15] => inst2.IN7
 Sum[15] => N.DATAIN
+N <= Sum[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst
+Cout14 <= Adder1Bit:inst27.Cout
 A[0] => Adder1Bit:inst.A
 A[1] => Adder1Bit:inst17.A
 A[2] => Adder1Bit:inst18.A
@@ -411,150 +614,199 @@ B[13] => Adder1Bit:inst29.B
 B[14] => Adder1Bit:inst27.B
 B[15] => Adder1Bit:inst28.B
 Cin => Adder1Bit:inst.Cin
+Cout15 <= Adder1Bit:inst28.Cout
+Sum[0] <= Adder1Bit:inst.Sum
+Sum[1] <= Adder1Bit:inst17.Sum
+Sum[2] <= Adder1Bit:inst18.Sum
+Sum[3] <= Adder1Bit:inst19.Sum
+Sum[4] <= Adder1Bit:inst20.Sum
+Sum[5] <= Adder1Bit:inst30.Sum
+Sum[6] <= Adder1Bit:inst21.Sum
+Sum[7] <= Adder1Bit:inst31.Sum
+Sum[8] <= Adder1Bit:inst22.Sum
+Sum[9] <= Adder1Bit:inst23.Sum
+Sum[10] <= Adder1Bit:inst24.Sum
+Sum[11] <= Adder1Bit:inst25.Sum
+Sum[12] <= Adder1Bit:inst26.Sum
+Sum[13] <= Adder1Bit:inst29.Sum
+Sum[14] <= Adder1Bit:inst27.Sum
+Sum[15] <= Adder1Bit:inst28.Sum
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst27
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst29
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst26
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst25
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst24
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst23
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst22
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst31
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst21
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst30
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst20
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst19
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst18
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst17
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|Adder16Bit:inst|Adder1Bit:inst28
+Sum <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst5.IN0
 B => inst.IN1
 B => inst5.IN1
 Cin => inst3.IN1
 Cin => inst4.IN1
+Cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst5
@@ -591,6 +843,22 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
+result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
+result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
+result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
+result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
+result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
+result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
+result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component
@@ -630,6 +898,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst5|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -665,6 +949,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -716,6 +1016,22 @@ data[12] => lpm_inv:lpm_inv_component.data[12]
 data[13] => lpm_inv:lpm_inv_component.data[13]
 data[14] => lpm_inv:lpm_inv_component.data[14]
 data[15] => lpm_inv:lpm_inv_component.data[15]
+result[0] <= lpm_inv:lpm_inv_component.result[0]
+result[1] <= lpm_inv:lpm_inv_component.result[1]
+result[2] <= lpm_inv:lpm_inv_component.result[2]
+result[3] <= lpm_inv:lpm_inv_component.result[3]
+result[4] <= lpm_inv:lpm_inv_component.result[4]
+result[5] <= lpm_inv:lpm_inv_component.result[5]
+result[6] <= lpm_inv:lpm_inv_component.result[6]
+result[7] <= lpm_inv:lpm_inv_component.result[7]
+result[8] <= lpm_inv:lpm_inv_component.result[8]
+result[9] <= lpm_inv:lpm_inv_component.result[9]
+result[10] <= lpm_inv:lpm_inv_component.result[10]
+result[11] <= lpm_inv:lpm_inv_component.result[11]
+result[12] <= lpm_inv:lpm_inv_component.result[12]
+result[13] <= lpm_inv:lpm_inv_component.result[13]
+result[14] <= lpm_inv:lpm_inv_component.result[14]
+result[15] <= lpm_inv:lpm_inv_component.result[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|INV16BIT:inst7|lpm_inv:lpm_inv_component
@@ -735,6 +1051,22 @@ data[12] => result[12].IN0
 data[13] => result[13].IN0
 data[14] => result[14].IN0
 data[15] => result[15].IN0
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6
@@ -771,6 +1103,22 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
+result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
+result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
+result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
+result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
+result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
+result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
+result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component
@@ -810,6 +1158,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX2_1:inst6|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -845,6 +1209,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -896,6 +1276,22 @@ data[12] => lpm_inv:lpm_inv_component.data[12]
 data[13] => lpm_inv:lpm_inv_component.data[13]
 data[14] => lpm_inv:lpm_inv_component.data[14]
 data[15] => lpm_inv:lpm_inv_component.data[15]
+result[0] <= lpm_inv:lpm_inv_component.result[0]
+result[1] <= lpm_inv:lpm_inv_component.result[1]
+result[2] <= lpm_inv:lpm_inv_component.result[2]
+result[3] <= lpm_inv:lpm_inv_component.result[3]
+result[4] <= lpm_inv:lpm_inv_component.result[4]
+result[5] <= lpm_inv:lpm_inv_component.result[5]
+result[6] <= lpm_inv:lpm_inv_component.result[6]
+result[7] <= lpm_inv:lpm_inv_component.result[7]
+result[8] <= lpm_inv:lpm_inv_component.result[8]
+result[9] <= lpm_inv:lpm_inv_component.result[9]
+result[10] <= lpm_inv:lpm_inv_component.result[10]
+result[11] <= lpm_inv:lpm_inv_component.result[11]
+result[12] <= lpm_inv:lpm_inv_component.result[12]
+result[13] <= lpm_inv:lpm_inv_component.result[13]
+result[14] <= lpm_inv:lpm_inv_component.result[14]
+result[15] <= lpm_inv:lpm_inv_component.result[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|INV16BIT:inst3|lpm_inv:lpm_inv_component
@@ -915,6 +1311,22 @@ data[12] => result[12].IN0
 data[13] => result[13].IN0
 data[14] => result[14].IN0
 data[15] => result[15].IN0
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4
@@ -984,6 +1396,22 @@ data3x[14] => LPM_MUX:LPM_MUX_component.DATA[3][14]
 data3x[15] => LPM_MUX:LPM_MUX_component.DATA[3][15]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component
@@ -1056,6 +1484,22 @@ sel[1] => mux_p4e:auto_generated.sel[1]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_p4e:auto_generated.result[0]
+result[1] <= mux_p4e:auto_generated.result[1]
+result[2] <= mux_p4e:auto_generated.result[2]
+result[3] <= mux_p4e:auto_generated.result[3]
+result[4] <= mux_p4e:auto_generated.result[4]
+result[5] <= mux_p4e:auto_generated.result[5]
+result[6] <= mux_p4e:auto_generated.result[6]
+result[7] <= mux_p4e:auto_generated.result[7]
+result[8] <= mux_p4e:auto_generated.result[8]
+result[9] <= mux_p4e:auto_generated.result[9]
+result[10] <= mux_p4e:auto_generated.result[10]
+result[11] <= mux_p4e:auto_generated.result[11]
+result[12] <= mux_p4e:auto_generated.result[12]
+result[13] <= mux_p4e:auto_generated.result[13]
+result[14] <= mux_p4e:auto_generated.result[14]
+result[15] <= mux_p4e:auto_generated.result[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|MUX4_1_16bit:inst4|LPM_MUX:LPM_MUX_component|mux_p4e:auto_generated
@@ -1155,6 +1599,22 @@ data[60] => _.IN0
 data[61] => _.IN0
 data[62] => _.IN0
 data[63] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => _.IN1
 sel[0] => _.IN0
 sel[0] => _.IN0
@@ -1350,6 +1810,22 @@ data1x[12] => LPM_AND:lpm_and_component.DATA[1][12]
 data1x[13] => LPM_AND:lpm_and_component.DATA[1][13]
 data1x[14] => LPM_AND:lpm_and_component.DATA[1][14]
 data1x[15] => LPM_AND:lpm_and_component.DATA[1][15]
+result[0] <= LPM_AND:lpm_and_component.RESULT[0]
+result[1] <= LPM_AND:lpm_and_component.RESULT[1]
+result[2] <= LPM_AND:lpm_and_component.RESULT[2]
+result[3] <= LPM_AND:lpm_and_component.RESULT[3]
+result[4] <= LPM_AND:lpm_and_component.RESULT[4]
+result[5] <= LPM_AND:lpm_and_component.RESULT[5]
+result[6] <= LPM_AND:lpm_and_component.RESULT[6]
+result[7] <= LPM_AND:lpm_and_component.RESULT[7]
+result[8] <= LPM_AND:lpm_and_component.RESULT[8]
+result[9] <= LPM_AND:lpm_and_component.RESULT[9]
+result[10] <= LPM_AND:lpm_and_component.RESULT[10]
+result[11] <= LPM_AND:lpm_and_component.RESULT[11]
+result[12] <= LPM_AND:lpm_and_component.RESULT[12]
+result[13] <= LPM_AND:lpm_and_component.RESULT[13]
+result[14] <= LPM_AND:lpm_and_component.RESULT[14]
+result[15] <= LPM_AND:lpm_and_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|AND16BIT:inst2|LPM_AND:lpm_and_component
@@ -1385,6 +1861,22 @@ data[1][12] => and_node[12][1].IN0
 data[1][13] => and_node[13][1].IN0
 data[1][14] => and_node[14][1].IN0
 data[1][15] => and_node[15][1].IN0
+result[0] <= and_node[0][1].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= and_node[1][1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= and_node[2][1].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= and_node[3][1].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= and_node[4][1].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= and_node[5][1].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= and_node[6][1].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= and_node[7][1].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= and_node[8][1].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= and_node[9][1].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= and_node[10][1].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= and_node[11][1].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= and_node[12][1].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= and_node[13][1].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= and_node[14][1].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= and_node[15][1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|OR16BIT:inst9
@@ -1420,6 +1912,22 @@ data1x[12] => LPM_OR:lpm_or_component.DATA[1][12]
 data1x[13] => LPM_OR:lpm_or_component.DATA[1][13]
 data1x[14] => LPM_OR:lpm_or_component.DATA[1][14]
 data1x[15] => LPM_OR:lpm_or_component.DATA[1][15]
+result[0] <= LPM_OR:lpm_or_component.RESULT[0]
+result[1] <= LPM_OR:lpm_or_component.RESULT[1]
+result[2] <= LPM_OR:lpm_or_component.RESULT[2]
+result[3] <= LPM_OR:lpm_or_component.RESULT[3]
+result[4] <= LPM_OR:lpm_or_component.RESULT[4]
+result[5] <= LPM_OR:lpm_or_component.RESULT[5]
+result[6] <= LPM_OR:lpm_or_component.RESULT[6]
+result[7] <= LPM_OR:lpm_or_component.RESULT[7]
+result[8] <= LPM_OR:lpm_or_component.RESULT[8]
+result[9] <= LPM_OR:lpm_or_component.RESULT[9]
+result[10] <= LPM_OR:lpm_or_component.RESULT[10]
+result[11] <= LPM_OR:lpm_or_component.RESULT[11]
+result[12] <= LPM_OR:lpm_or_component.RESULT[12]
+result[13] <= LPM_OR:lpm_or_component.RESULT[13]
+result[14] <= LPM_OR:lpm_or_component.RESULT[14]
+result[15] <= LPM_OR:lpm_or_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|OR16BIT:inst9|LPM_OR:lpm_or_component
@@ -1455,6 +1963,22 @@ data[1][12] => or_node[12][1].IN0
 data[1][13] => or_node[13][1].IN0
 data[1][14] => or_node[14][1].IN0
 data[1][15] => or_node[15][1].IN0
+result[0] <= or_node[0][1].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= or_node[1][1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= or_node[2][1].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= or_node[3][1].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= or_node[4][1].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= or_node[5][1].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= or_node[6][1].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= or_node[7][1].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= or_node[8][1].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= or_node[9][1].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= or_node[10][1].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= or_node[11][1].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= or_node[12][1].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= or_node[13][1].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= or_node[14][1].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= or_node[15][1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|ALU16Bit:inst1|XOR16BIT:inst8
@@ -1490,6 +2014,22 @@ data1x[12] => LPM_XOR:lpm_xor_component.DATA[1][12]
 data1x[13] => LPM_XOR:lpm_xor_component.DATA[1][13]
 data1x[14] => LPM_XOR:lpm_xor_component.DATA[1][14]
 data1x[15] => LPM_XOR:lpm_xor_component.DATA[1][15]
+result[0] <= LPM_XOR:lpm_xor_component.RESULT[0]
+result[1] <= LPM_XOR:lpm_xor_component.RESULT[1]
+result[2] <= LPM_XOR:lpm_xor_component.RESULT[2]
+result[3] <= LPM_XOR:lpm_xor_component.RESULT[3]
+result[4] <= LPM_XOR:lpm_xor_component.RESULT[4]
+result[5] <= LPM_XOR:lpm_xor_component.RESULT[5]
+result[6] <= LPM_XOR:lpm_xor_component.RESULT[6]
+result[7] <= LPM_XOR:lpm_xor_component.RESULT[7]
+result[8] <= LPM_XOR:lpm_xor_component.RESULT[8]
+result[9] <= LPM_XOR:lpm_xor_component.RESULT[9]
+result[10] <= LPM_XOR:lpm_xor_component.RESULT[10]
+result[11] <= LPM_XOR:lpm_xor_component.RESULT[11]
+result[12] <= LPM_XOR:lpm_xor_component.RESULT[12]
+result[13] <= LPM_XOR:lpm_xor_component.RESULT[13]
+result[14] <= LPM_XOR:lpm_xor_component.RESULT[14]
+result[15] <= LPM_XOR:lpm_xor_component.RESULT[15]
 
 
 |ProcessorV1|ALU16Bit:inst1|XOR16BIT:inst8|LPM_XOR:lpm_xor_component
@@ -1525,6 +2065,22 @@ data[1][12] => xor_cascade[12][1].IN0
 data[1][13] => xor_cascade[13][1].IN0
 data[1][14] => xor_cascade[14][1].IN0
 data[1][15] => xor_cascade[15][1].IN0
+result[0] <= xor_cascade[0][1].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= xor_cascade[1][1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= xor_cascade[2][1].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= xor_cascade[3][1].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= xor_cascade[4][1].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= xor_cascade[5][1].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= xor_cascade[6][1].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= xor_cascade[7][1].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= xor_cascade[8][1].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= xor_cascade[9][1].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= xor_cascade[10][1].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= xor_cascade[11][1].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= xor_cascade[12][1].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= xor_cascade[13][1].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= xor_cascade[14][1].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= xor_cascade[15][1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|DFF_16BIT:RA
@@ -1547,6 +2103,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|DFF_16BIT:RA|lpm_ff:lpm_ff_component
@@ -1604,9 +2176,41 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst
+dataA[0] <= Lab916to1Mux:inst21.result[0]
+dataA[1] <= Lab916to1Mux:inst21.result[1]
+dataA[2] <= Lab916to1Mux:inst21.result[2]
+dataA[3] <= Lab916to1Mux:inst21.result[3]
+dataA[4] <= Lab916to1Mux:inst21.result[4]
+dataA[5] <= Lab916to1Mux:inst21.result[5]
+dataA[6] <= Lab916to1Mux:inst21.result[6]
+dataA[7] <= Lab916to1Mux:inst21.result[7]
+dataA[8] <= Lab916to1Mux:inst21.result[8]
+dataA[9] <= Lab916to1Mux:inst21.result[9]
+dataA[10] <= Lab916to1Mux:inst21.result[10]
+dataA[11] <= Lab916to1Mux:inst21.result[11]
+dataA[12] <= Lab916to1Mux:inst21.result[12]
+dataA[13] <= Lab916to1Mux:inst21.result[13]
+dataA[14] <= Lab916to1Mux:inst21.result[14]
+dataA[15] <= Lab916to1Mux:inst21.result[15]
 reset => DFF_16BIT:inst10.aclr
 reset => DFF_16BIT:inst11.aclr
 reset => DFF_16BIT:inst12.aclr
@@ -1900,10 +2504,42 @@ regA[0] => Lab916to1Mux:inst21.sel[0]
 regA[1] => Lab916to1Mux:inst21.sel[1]
 regA[2] => Lab916to1Mux:inst21.sel[2]
 regA[3] => Lab916to1Mux:inst21.sel[3]
+dataB[0] <= Lab916to1Mux:inst20.result[0]
+dataB[1] <= Lab916to1Mux:inst20.result[1]
+dataB[2] <= Lab916to1Mux:inst20.result[2]
+dataB[3] <= Lab916to1Mux:inst20.result[3]
+dataB[4] <= Lab916to1Mux:inst20.result[4]
+dataB[5] <= Lab916to1Mux:inst20.result[5]
+dataB[6] <= Lab916to1Mux:inst20.result[6]
+dataB[7] <= Lab916to1Mux:inst20.result[7]
+dataB[8] <= Lab916to1Mux:inst20.result[8]
+dataB[9] <= Lab916to1Mux:inst20.result[9]
+dataB[10] <= Lab916to1Mux:inst20.result[10]
+dataB[11] <= Lab916to1Mux:inst20.result[11]
+dataB[12] <= Lab916to1Mux:inst20.result[12]
+dataB[13] <= Lab916to1Mux:inst20.result[13]
+dataB[14] <= Lab916to1Mux:inst20.result[14]
+dataB[15] <= Lab916to1Mux:inst20.result[15]
 regB[0] => Lab916to1Mux:inst20.sel[0]
 regB[1] => Lab916to1Mux:inst20.sel[1]
 regB[2] => Lab916to1Mux:inst20.sel[2]
 regB[3] => Lab916to1Mux:inst20.sel[3]
+RF1[0] <= Q1[0].DB_MAX_OUTPUT_PORT_TYPE
+RF1[1] <= Q1[1].DB_MAX_OUTPUT_PORT_TYPE
+RF1[2] <= Q1[2].DB_MAX_OUTPUT_PORT_TYPE
+RF1[3] <= Q1[3].DB_MAX_OUTPUT_PORT_TYPE
+RF1[4] <= Q1[4].DB_MAX_OUTPUT_PORT_TYPE
+RF1[5] <= Q1[5].DB_MAX_OUTPUT_PORT_TYPE
+RF1[6] <= Q1[6].DB_MAX_OUTPUT_PORT_TYPE
+RF1[7] <= Q1[7].DB_MAX_OUTPUT_PORT_TYPE
+RF2[0] <= Q2[0].DB_MAX_OUTPUT_PORT_TYPE
+RF2[1] <= Q2[1].DB_MAX_OUTPUT_PORT_TYPE
+RF2[2] <= Q2[2].DB_MAX_OUTPUT_PORT_TYPE
+RF2[3] <= Q2[3].DB_MAX_OUTPUT_PORT_TYPE
+RF2[4] <= Q2[4].DB_MAX_OUTPUT_PORT_TYPE
+RF2[5] <= Q2[5].DB_MAX_OUTPUT_PORT_TYPE
+RF2[6] <= Q2[6].DB_MAX_OUTPUT_PORT_TYPE
+RF2[7] <= Q2[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21
@@ -2167,6 +2803,22 @@ sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
 sel[2] => LPM_MUX:LPM_MUX_component.SEL[2]
 sel[3] => LPM_MUX:LPM_MUX_component.SEL[3]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component
@@ -2433,6 +3085,22 @@ sel[3] => mux_e6e:auto_generated.sel[3]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_e6e:auto_generated.result[0]
+result[1] <= mux_e6e:auto_generated.result[1]
+result[2] <= mux_e6e:auto_generated.result[2]
+result[3] <= mux_e6e:auto_generated.result[3]
+result[4] <= mux_e6e:auto_generated.result[4]
+result[5] <= mux_e6e:auto_generated.result[5]
+result[6] <= mux_e6e:auto_generated.result[6]
+result[7] <= mux_e6e:auto_generated.result[7]
+result[8] <= mux_e6e:auto_generated.result[8]
+result[9] <= mux_e6e:auto_generated.result[9]
+result[10] <= mux_e6e:auto_generated.result[10]
+result[11] <= mux_e6e:auto_generated.result[11]
+result[12] <= mux_e6e:auto_generated.result[12]
+result[13] <= mux_e6e:auto_generated.result[13]
+result[14] <= mux_e6e:auto_generated.result[14]
+result[15] <= mux_e6e:auto_generated.result[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst21|LPM_MUX:LPM_MUX_component|mux_e6e:auto_generated
@@ -3012,6 +3680,22 @@ data[252] => _.IN0
 data[253] => _.IN0
 data[254] => _.IN0
 data[255] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => _.IN1
 sel[0] => _.IN0
 sel[0] => _.IN0
@@ -4135,9 +4819,41 @@ sel[3] => _.IN0
 
 
 |ProcessorV1|smpRegisterFile:inst|ZeroConstant16Bit:inst18
+result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
+result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
+result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
+result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
+result[4] <= lpm_constant:LPM_CONSTANT_component.result[4]
+result[5] <= lpm_constant:LPM_CONSTANT_component.result[5]
+result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
+result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
+result[8] <= lpm_constant:LPM_CONSTANT_component.result[8]
+result[9] <= lpm_constant:LPM_CONSTANT_component.result[9]
+result[10] <= lpm_constant:LPM_CONSTANT_component.result[10]
+result[11] <= lpm_constant:LPM_CONSTANT_component.result[11]
+result[12] <= lpm_constant:LPM_CONSTANT_component.result[12]
+result[13] <= lpm_constant:LPM_CONSTANT_component.result[13]
+result[14] <= lpm_constant:LPM_CONSTANT_component.result[14]
+result[15] <= lpm_constant:LPM_CONSTANT_component.result[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|ZeroConstant16Bit:inst18|lpm_constant:LPM_CONSTANT_component
+result[0] <= <VCC>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst10
@@ -4160,6 +4876,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst10|lpm_ff:lpm_ff_component
@@ -4217,6 +4949,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DECODER4TO16:inst1
@@ -4224,6 +4972,22 @@ data[0] => lpm_decode:LPM_DECODE_component.data[0]
 data[1] => lpm_decode:LPM_DECODE_component.data[1]
 data[2] => lpm_decode:LPM_DECODE_component.data[2]
 data[3] => lpm_decode:LPM_DECODE_component.data[3]
+eq0 <= lpm_decode:LPM_DECODE_component.eq[0]
+eq1 <= lpm_decode:LPM_DECODE_component.eq[1]
+eq10 <= lpm_decode:LPM_DECODE_component.eq[10]
+eq11 <= lpm_decode:LPM_DECODE_component.eq[11]
+eq12 <= lpm_decode:LPM_DECODE_component.eq[12]
+eq13 <= lpm_decode:LPM_DECODE_component.eq[13]
+eq14 <= lpm_decode:LPM_DECODE_component.eq[14]
+eq15 <= lpm_decode:LPM_DECODE_component.eq[15]
+eq2 <= lpm_decode:LPM_DECODE_component.eq[2]
+eq3 <= lpm_decode:LPM_DECODE_component.eq[3]
+eq4 <= lpm_decode:LPM_DECODE_component.eq[4]
+eq5 <= lpm_decode:LPM_DECODE_component.eq[5]
+eq6 <= lpm_decode:LPM_DECODE_component.eq[6]
+eq7 <= lpm_decode:LPM_DECODE_component.eq[7]
+eq8 <= lpm_decode:LPM_DECODE_component.eq[8]
+eq9 <= lpm_decode:LPM_DECODE_component.eq[9]
 
 
 |ProcessorV1|smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component
@@ -4235,6 +4999,22 @@ enable => ~NO_FANOUT~
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+eq[0] <= decode_c8f:auto_generated.eq[0]
+eq[1] <= decode_c8f:auto_generated.eq[1]
+eq[2] <= decode_c8f:auto_generated.eq[2]
+eq[3] <= decode_c8f:auto_generated.eq[3]
+eq[4] <= decode_c8f:auto_generated.eq[4]
+eq[5] <= decode_c8f:auto_generated.eq[5]
+eq[6] <= decode_c8f:auto_generated.eq[6]
+eq[7] <= decode_c8f:auto_generated.eq[7]
+eq[8] <= decode_c8f:auto_generated.eq[8]
+eq[9] <= decode_c8f:auto_generated.eq[9]
+eq[10] <= decode_c8f:auto_generated.eq[10]
+eq[11] <= decode_c8f:auto_generated.eq[11]
+eq[12] <= decode_c8f:auto_generated.eq[12]
+eq[13] <= decode_c8f:auto_generated.eq[13]
+eq[14] <= decode_c8f:auto_generated.eq[14]
+eq[15] <= decode_c8f:auto_generated.eq[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DECODER4TO16:inst1|lpm_decode:LPM_DECODE_component|decode_c8f:auto_generated
@@ -4295,6 +5075,22 @@ data[3] => w_anode142w[1].IN0
 data[3] => w_anode152w[1].IN0
 data[3] => w_anode162w[1].IN0
 data[3] => w_anode91w[1].IN0
+eq[0] <= w_anode4w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode21w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode31w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode51w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode61w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode71w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode81w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[8] <= w_anode91w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[9] <= w_anode102w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[10] <= w_anode112w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[11] <= w_anode122w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[12] <= w_anode132w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[13] <= w_anode142w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[14] <= w_anode152w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[15] <= w_anode162w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst11
@@ -4317,6 +5113,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst11|lpm_ff:lpm_ff_component
@@ -4374,6 +5186,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst12
@@ -4396,6 +5224,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst12|lpm_ff:lpm_ff_component
@@ -4453,6 +5297,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst13
@@ -4475,6 +5335,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst13|lpm_ff:lpm_ff_component
@@ -4532,6 +5408,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst16
@@ -4554,6 +5446,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst16|lpm_ff:lpm_ff_component
@@ -4611,6 +5519,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst17
@@ -4633,6 +5557,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst17|lpm_ff:lpm_ff_component
@@ -4690,6 +5630,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst
@@ -4712,6 +5668,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst|lpm_ff:lpm_ff_component
@@ -4769,6 +5741,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst2
@@ -4791,6 +5779,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst2|lpm_ff:lpm_ff_component
@@ -4848,6 +5852,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst3
@@ -4870,6 +5890,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst3|lpm_ff:lpm_ff_component
@@ -4927,6 +5963,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst4
@@ -4949,6 +6001,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst4|lpm_ff:lpm_ff_component
@@ -5006,6 +6074,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst5
@@ -5028,6 +6112,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst5|lpm_ff:lpm_ff_component
@@ -5085,6 +6185,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst6
@@ -5107,6 +6223,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst6|lpm_ff:lpm_ff_component
@@ -5164,6 +6296,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst7
@@ -5186,6 +6334,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst7|lpm_ff:lpm_ff_component
@@ -5243,6 +6407,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst8
@@ -5265,6 +6445,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst8|lpm_ff:lpm_ff_component
@@ -5322,6 +6518,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst9
@@ -5344,6 +6556,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|DFF_16BIT:inst9|lpm_ff:lpm_ff_component
@@ -5401,6 +6629,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20
@@ -5664,6 +6908,22 @@ sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
 sel[2] => LPM_MUX:LPM_MUX_component.SEL[2]
 sel[3] => LPM_MUX:LPM_MUX_component.SEL[3]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component
@@ -5930,6 +7190,22 @@ sel[3] => mux_e6e:auto_generated.sel[3]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_e6e:auto_generated.result[0]
+result[1] <= mux_e6e:auto_generated.result[1]
+result[2] <= mux_e6e:auto_generated.result[2]
+result[3] <= mux_e6e:auto_generated.result[3]
+result[4] <= mux_e6e:auto_generated.result[4]
+result[5] <= mux_e6e:auto_generated.result[5]
+result[6] <= mux_e6e:auto_generated.result[6]
+result[7] <= mux_e6e:auto_generated.result[7]
+result[8] <= mux_e6e:auto_generated.result[8]
+result[9] <= mux_e6e:auto_generated.result[9]
+result[10] <= mux_e6e:auto_generated.result[10]
+result[11] <= mux_e6e:auto_generated.result[11]
+result[12] <= mux_e6e:auto_generated.result[12]
+result[13] <= mux_e6e:auto_generated.result[13]
+result[14] <= mux_e6e:auto_generated.result[14]
+result[15] <= mux_e6e:auto_generated.result[15]
 
 
 |ProcessorV1|smpRegisterFile:inst|Lab916to1Mux:inst20|LPM_MUX:LPM_MUX_component|mux_e6e:auto_generated
@@ -6509,6 +7785,22 @@ data[252] => _.IN0
 data[253] => _.IN0
 data[254] => _.IN0
 data[255] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => _.IN1
 sel[0] => _.IN0
 sel[0] => _.IN0
@@ -7651,6 +8943,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|DFF_16BIT:RY|lpm_ff:lpm_ff_component
@@ -7708,6 +9016,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|MuxY:inst15
@@ -7761,6 +9085,22 @@ data2x[14] => LPM_MUX:LPM_MUX_component.DATA[2][14]
 data2x[15] => LPM_MUX:LPM_MUX_component.DATA[2][15]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|MuxY:inst15|LPM_MUX:LPM_MUX_component
@@ -7817,6 +9157,22 @@ sel[1] => mux_o4e:auto_generated.sel[1]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_o4e:auto_generated.result[0]
+result[1] <= mux_o4e:auto_generated.result[1]
+result[2] <= mux_o4e:auto_generated.result[2]
+result[3] <= mux_o4e:auto_generated.result[3]
+result[4] <= mux_o4e:auto_generated.result[4]
+result[5] <= mux_o4e:auto_generated.result[5]
+result[6] <= mux_o4e:auto_generated.result[6]
+result[7] <= mux_o4e:auto_generated.result[7]
+result[8] <= mux_o4e:auto_generated.result[8]
+result[9] <= mux_o4e:auto_generated.result[9]
+result[10] <= mux_o4e:auto_generated.result[10]
+result[11] <= mux_o4e:auto_generated.result[11]
+result[12] <= mux_o4e:auto_generated.result[12]
+result[13] <= mux_o4e:auto_generated.result[13]
+result[14] <= mux_o4e:auto_generated.result[14]
+result[15] <= mux_o4e:auto_generated.result[15]
 
 
 |ProcessorV1|MuxY:inst15|LPM_MUX:LPM_MUX_component|mux_o4e:auto_generated
@@ -7868,6 +9224,22 @@ data[44] => data2_wire[12].IN0
 data[45] => data2_wire[13].IN0
 data[46] => data2_wire[14].IN0
 data[47] => data2_wire[15].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => data0_wire[15].IN0
 sel[0] => data1_wire[15].IN1
 sel[0] => data1_wire[14].IN1
@@ -7924,6 +9296,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|DFF_16BIT:RZ|lpm_ff:lpm_ff_component
@@ -7981,9 +9369,50 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|MemoryInterface:inst3
+MFC <= Const:inst3.result[0]
+DataOut[0] <= MainMemory:inst.q[0]
+DataOut[1] <= MainMemory:inst.q[1]
+DataOut[2] <= MainMemory:inst.q[2]
+DataOut[3] <= MainMemory:inst.q[3]
+DataOut[4] <= MainMemory:inst.q[4]
+DataOut[5] <= MainMemory:inst.q[5]
+DataOut[6] <= MainMemory:inst.q[6]
+DataOut[7] <= MainMemory:inst.q[7]
+DataOut[8] <= MainMemory:inst.q[8]
+DataOut[9] <= MainMemory:inst.q[9]
+DataOut[10] <= MainMemory:inst.q[10]
+DataOut[11] <= MainMemory:inst.q[11]
+DataOut[12] <= MainMemory:inst.q[12]
+DataOut[13] <= MainMemory:inst.q[13]
+DataOut[14] <= MainMemory:inst.q[14]
+DataOut[15] <= MainMemory:inst.q[15]
+DataOut[16] <= MainMemory:inst.q[16]
+DataOut[17] <= MainMemory:inst.q[17]
+DataOut[18] <= MainMemory:inst.q[18]
+DataOut[19] <= MainMemory:inst.q[19]
+DataOut[20] <= MainMemory:inst.q[20]
+DataOut[21] <= MainMemory:inst.q[21]
+DataOut[22] <= MainMemory:inst.q[22]
+DataOut[23] <= MainMemory:inst.q[23]
 MEM_write => MainMemory:inst.wren
 clock => MainMemory:inst.clock
 Address[0] => MainMemory:inst.address[0]
@@ -8030,9 +9459,41 @@ MEM_read => ~NO_FANOUT~
 
 
 |ProcessorV1|MemoryInterface:inst3|Const:inst3
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+result[2] <= lpm_constant:lpm_constant_component.result[2]
+result[3] <= lpm_constant:lpm_constant_component.result[3]
+result[4] <= lpm_constant:lpm_constant_component.result[4]
+result[5] <= lpm_constant:lpm_constant_component.result[5]
+result[6] <= lpm_constant:lpm_constant_component.result[6]
+result[7] <= lpm_constant:lpm_constant_component.result[7]
+result[8] <= lpm_constant:lpm_constant_component.result[8]
+result[9] <= lpm_constant:lpm_constant_component.result[9]
+result[10] <= lpm_constant:lpm_constant_component.result[10]
+result[11] <= lpm_constant:lpm_constant_component.result[11]
+result[12] <= lpm_constant:lpm_constant_component.result[12]
+result[13] <= lpm_constant:lpm_constant_component.result[13]
+result[14] <= lpm_constant:lpm_constant_component.result[14]
+result[15] <= lpm_constant:lpm_constant_component.result[15]
 
 
 |ProcessorV1|MemoryInterface:inst3|Const:inst3|lpm_constant:lpm_constant_component
+result[0] <= <VCC>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
 
 
 |ProcessorV1|MemoryInterface:inst3|MainMemory:inst
@@ -8072,6 +9533,30 @@ data[21] => altsyncram:altsyncram_component.data_a[21]
 data[22] => altsyncram:altsyncram_component.data_a[22]
 data[23] => altsyncram:altsyncram_component.data_a[23]
 wren => altsyncram:altsyncram_component.wren_a
+q[0] <= altsyncram:altsyncram_component.q_a[0]
+q[1] <= altsyncram:altsyncram_component.q_a[1]
+q[2] <= altsyncram:altsyncram_component.q_a[2]
+q[3] <= altsyncram:altsyncram_component.q_a[3]
+q[4] <= altsyncram:altsyncram_component.q_a[4]
+q[5] <= altsyncram:altsyncram_component.q_a[5]
+q[6] <= altsyncram:altsyncram_component.q_a[6]
+q[7] <= altsyncram:altsyncram_component.q_a[7]
+q[8] <= altsyncram:altsyncram_component.q_a[8]
+q[9] <= altsyncram:altsyncram_component.q_a[9]
+q[10] <= altsyncram:altsyncram_component.q_a[10]
+q[11] <= altsyncram:altsyncram_component.q_a[11]
+q[12] <= altsyncram:altsyncram_component.q_a[12]
+q[13] <= altsyncram:altsyncram_component.q_a[13]
+q[14] <= altsyncram:altsyncram_component.q_a[14]
+q[15] <= altsyncram:altsyncram_component.q_a[15]
+q[16] <= altsyncram:altsyncram_component.q_a[16]
+q[17] <= altsyncram:altsyncram_component.q_a[17]
+q[18] <= altsyncram:altsyncram_component.q_a[18]
+q[19] <= altsyncram:altsyncram_component.q_a[19]
+q[20] <= altsyncram:altsyncram_component.q_a[20]
+q[21] <= altsyncram:altsyncram_component.q_a[21]
+q[22] <= altsyncram:altsyncram_component.q_a[22]
+q[23] <= altsyncram:altsyncram_component.q_a[23]
 
 
 |ProcessorV1|MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component
@@ -8127,6 +9612,34 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_ghe1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_ghe1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_ghe1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_ghe1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_ghe1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_ghe1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_ghe1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_ghe1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_ghe1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_ghe1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_ghe1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_ghe1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_ghe1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_ghe1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_ghe1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_ghe1:auto_generated.q_a[15]
+q_a[16] <= altsyncram_ghe1:auto_generated.q_a[16]
+q_a[17] <= altsyncram_ghe1:auto_generated.q_a[17]
+q_a[18] <= altsyncram_ghe1:auto_generated.q_a[18]
+q_a[19] <= altsyncram_ghe1:auto_generated.q_a[19]
+q_a[20] <= altsyncram_ghe1:auto_generated.q_a[20]
+q_a[21] <= altsyncram_ghe1:auto_generated.q_a[21]
+q_a[22] <= altsyncram_ghe1:auto_generated.q_a[22]
+q_a[23] <= altsyncram_ghe1:auto_generated.q_a[23]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
 
 
 |ProcessorV1|MemoryInterface:inst3|MainMemory:inst|altsyncram:altsyncram_component|altsyncram_ghe1:auto_generated
@@ -8418,6 +9931,30 @@ data_a[20] => ram_block1a20.PORTADATAIN
 data_a[21] => ram_block1a21.PORTADATAIN
 data_a[22] => ram_block1a22.PORTADATAIN
 data_a[23] => ram_block1a23.PORTADATAIN
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
+q_a[8] <= ram_block1a8.PORTADATAOUT
+q_a[9] <= ram_block1a9.PORTADATAOUT
+q_a[10] <= ram_block1a10.PORTADATAOUT
+q_a[11] <= ram_block1a11.PORTADATAOUT
+q_a[12] <= ram_block1a12.PORTADATAOUT
+q_a[13] <= ram_block1a13.PORTADATAOUT
+q_a[14] <= ram_block1a14.PORTADATAOUT
+q_a[15] <= ram_block1a15.PORTADATAOUT
+q_a[16] <= ram_block1a16.PORTADATAOUT
+q_a[17] <= ram_block1a17.PORTADATAOUT
+q_a[18] <= ram_block1a18.PORTADATAOUT
+q_a[19] <= ram_block1a19.PORTADATAOUT
+q_a[20] <= ram_block1a20.PORTADATAOUT
+q_a[21] <= ram_block1a21.PORTADATAOUT
+q_a[22] <= ram_block1a22.PORTADATAOUT
+q_a[23] <= ram_block1a23.PORTADATAOUT
 wren_a => ram_block1a0.PORTAWE
 wren_a => ram_block1a1.PORTAWE
 wren_a => ram_block1a2.PORTAWE
@@ -8478,6 +10015,22 @@ data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
 data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
 data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
 sel => LPM_MUX:LPM_MUX_component.SEL[0]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|MuxMA:inst14|LPM_MUX:LPM_MUX_component
@@ -8517,6 +10070,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|MuxMA:inst14|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
@@ -8552,6 +10121,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -8587,6 +10172,22 @@ sel[0] => _.IN0
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5
+Address[0] <= PC:inst2.q[0]
+Address[1] <= PC:inst2.q[1]
+Address[2] <= PC:inst2.q[2]
+Address[3] <= PC:inst2.q[3]
+Address[4] <= PC:inst2.q[4]
+Address[5] <= PC:inst2.q[5]
+Address[6] <= PC:inst2.q[6]
+Address[7] <= PC:inst2.q[7]
+Address[8] <= PC:inst2.q[8]
+Address[9] <= PC:inst2.q[9]
+Address[10] <= PC:inst2.q[10]
+Address[11] <= PC:inst2.q[11]
+Address[12] <= PC:inst2.q[12]
+Address[13] <= PC:inst2.q[13]
+Address[14] <= PC:inst2.q[14]
+Address[15] <= PC:inst2.q[15]
 clock => PC:inst2.clock
 clock => PC_Temp:inst4.clock
 PC_enable => PC:inst2.enable
@@ -8626,6 +10227,22 @@ Immediate[12] => MuxINC:inst.data1x[12]
 Immediate[13] => MuxINC:inst.data1x[13]
 Immediate[14] => MuxINC:inst.data1x[14]
 Immediate[15] => MuxINC:inst.data1x[15]
+MuxY[0] <= PC_Temp:inst4.q[0]
+MuxY[1] <= PC_Temp:inst4.q[1]
+MuxY[2] <= PC_Temp:inst4.q[2]
+MuxY[3] <= PC_Temp:inst4.q[3]
+MuxY[4] <= PC_Temp:inst4.q[4]
+MuxY[5] <= PC_Temp:inst4.q[5]
+MuxY[6] <= PC_Temp:inst4.q[6]
+MuxY[7] <= PC_Temp:inst4.q[7]
+MuxY[8] <= PC_Temp:inst4.q[8]
+MuxY[9] <= PC_Temp:inst4.q[9]
+MuxY[10] <= PC_Temp:inst4.q[10]
+MuxY[11] <= PC_Temp:inst4.q[11]
+MuxY[12] <= PC_Temp:inst4.q[12]
+MuxY[13] <= PC_Temp:inst4.q[13]
+MuxY[14] <= PC_Temp:inst4.q[14]
+MuxY[15] <= PC_Temp:inst4.q[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|PC:inst2
@@ -8648,6 +10265,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|PC:inst2|lpm_ff:lpm_ff_component
@@ -8705,6 +10338,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxPC:inst3
@@ -8741,6 +10390,22 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
+result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
+result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
+result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
+result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
+result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
+result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
+result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxPC:inst3|LPM_MUX:lpm_mux_component
@@ -8780,6 +10445,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxPC:inst3|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -8815,6 +10496,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -8882,6 +10579,22 @@ datab[12] => lpm_add_sub:lpm_add_sub_component.datab[12]
 datab[13] => lpm_add_sub:lpm_add_sub_component.datab[13]
 datab[14] => lpm_add_sub:lpm_add_sub_component.datab[14]
 datab[15] => lpm_add_sub:lpm_add_sub_component.datab[15]
+result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
+result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
+result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
+result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
+result[4] <= lpm_add_sub:lpm_add_sub_component.result[4]
+result[5] <= lpm_add_sub:lpm_add_sub_component.result[5]
+result[6] <= lpm_add_sub:lpm_add_sub_component.result[6]
+result[7] <= lpm_add_sub:lpm_add_sub_component.result[7]
+result[8] <= lpm_add_sub:lpm_add_sub_component.result[8]
+result[9] <= lpm_add_sub:lpm_add_sub_component.result[9]
+result[10] <= lpm_add_sub:lpm_add_sub_component.result[10]
+result[11] <= lpm_add_sub:lpm_add_sub_component.result[11]
+result[12] <= lpm_add_sub:lpm_add_sub_component.result[12]
+result[13] <= lpm_add_sub:lpm_add_sub_component.result[13]
+result[14] <= lpm_add_sub:lpm_add_sub_component.result[14]
+result[15] <= lpm_add_sub:lpm_add_sub_component.result[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component
@@ -8922,6 +10635,24 @@ add_sub => ~NO_FANOUT~
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= add_sub_rlh:auto_generated.result[0]
+result[1] <= add_sub_rlh:auto_generated.result[1]
+result[2] <= add_sub_rlh:auto_generated.result[2]
+result[3] <= add_sub_rlh:auto_generated.result[3]
+result[4] <= add_sub_rlh:auto_generated.result[4]
+result[5] <= add_sub_rlh:auto_generated.result[5]
+result[6] <= add_sub_rlh:auto_generated.result[6]
+result[7] <= add_sub_rlh:auto_generated.result[7]
+result[8] <= add_sub_rlh:auto_generated.result[8]
+result[9] <= add_sub_rlh:auto_generated.result[9]
+result[10] <= add_sub_rlh:auto_generated.result[10]
+result[11] <= add_sub_rlh:auto_generated.result[11]
+result[12] <= add_sub_rlh:auto_generated.result[12]
+result[13] <= add_sub_rlh:auto_generated.result[13]
+result[14] <= add_sub_rlh:auto_generated.result[14]
+result[15] <= add_sub_rlh:auto_generated.result[15]
+cout <= <GND>
+overflow <= <GND>
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|Adder:inst1|lpm_add_sub:lpm_add_sub_component|add_sub_rlh:auto_generated
@@ -8957,6 +10688,22 @@ datab[12] => op_1.IN7
 datab[13] => op_1.IN5
 datab[14] => op_1.IN3
 datab[15] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxINC:inst
@@ -8993,6 +10740,22 @@ data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
 data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
 data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
 sel => LPM_MUX:LPM_MUX_component.SEL[0]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxINC:inst|LPM_MUX:LPM_MUX_component
@@ -9032,6 +10795,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|MuxINC:inst|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
@@ -9067,6 +10846,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -9102,9 +10897,41 @@ sel[0] => _.IN0
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|Const:inst5
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+result[2] <= lpm_constant:lpm_constant_component.result[2]
+result[3] <= lpm_constant:lpm_constant_component.result[3]
+result[4] <= lpm_constant:lpm_constant_component.result[4]
+result[5] <= lpm_constant:lpm_constant_component.result[5]
+result[6] <= lpm_constant:lpm_constant_component.result[6]
+result[7] <= lpm_constant:lpm_constant_component.result[7]
+result[8] <= lpm_constant:lpm_constant_component.result[8]
+result[9] <= lpm_constant:lpm_constant_component.result[9]
+result[10] <= lpm_constant:lpm_constant_component.result[10]
+result[11] <= lpm_constant:lpm_constant_component.result[11]
+result[12] <= lpm_constant:lpm_constant_component.result[12]
+result[13] <= lpm_constant:lpm_constant_component.result[13]
+result[14] <= lpm_constant:lpm_constant_component.result[14]
+result[15] <= lpm_constant:lpm_constant_component.result[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|Const:inst5|lpm_constant:lpm_constant_component
+result[0] <= <VCC>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <GND>
+result[15] <= <GND>
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|PC_Temp:inst4
@@ -9126,6 +10953,22 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|InstructionAddressGenerator:inst5|PC_Temp:inst4|lpm_ff:lpm_ff_component
@@ -9183,6 +11026,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|immediate:inst12
@@ -9204,6 +11063,22 @@ immed[6] => immedEx.DATAA
 immed[6] => immedEx[6].DATAIN
 extend[0] => Equal0.IN1
 extend[1] => Equal0.IN0
+immedEx[0] <= immed[0].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[1] <= immed[1].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[2] <= immed[2].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[3] <= immed[3].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[4] <= immed[4].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[5] <= immed[5].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[6] <= immed[6].DB_MAX_OUTPUT_PORT_TYPE
+immedEx[7] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[8] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[9] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[10] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[11] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[12] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[13] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[14] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
+immedEx[15] <= immedEx.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|DFF_16BIT:RM
@@ -9226,6 +11101,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|DFF_16BIT:RM|lpm_ff:lpm_ff_component
@@ -9283,6 +11174,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|PC_Temp:inst8
@@ -9304,6 +11211,22 @@ data[12] => lpm_ff:lpm_ff_component.data[12]
 data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|PC_Temp:inst8|lpm_ff:lpm_ff_component
@@ -9361,6 +11284,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|PC:inst6
@@ -9383,6 +11322,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|PC:inst6|lpm_ff:lpm_ff_component
@@ -9440,6 +11395,22 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|MuxPC:inst2
@@ -9476,6 +11447,22 @@ data1x[13] => LPM_MUX:lpm_mux_component.DATA[1][13]
 data1x[14] => LPM_MUX:lpm_mux_component.DATA[1][14]
 data1x[15] => LPM_MUX:lpm_mux_component.DATA[1][15]
 sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+result[8] <= LPM_MUX:lpm_mux_component.RESULT[8]
+result[9] <= LPM_MUX:lpm_mux_component.RESULT[9]
+result[10] <= LPM_MUX:lpm_mux_component.RESULT[10]
+result[11] <= LPM_MUX:lpm_mux_component.RESULT[11]
+result[12] <= LPM_MUX:lpm_mux_component.RESULT[12]
+result[13] <= LPM_MUX:lpm_mux_component.RESULT[13]
+result[14] <= LPM_MUX:lpm_mux_component.RESULT[14]
+result[15] <= LPM_MUX:lpm_mux_component.RESULT[15]
 
 
 |ProcessorV1|MuxPC:inst2|LPM_MUX:lpm_mux_component
@@ -9515,6 +11502,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|MuxPC:inst2|LPM_MUX:lpm_mux_component|mux_m4e:auto_generated
@@ -9550,6 +11553,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -9617,6 +11636,22 @@ datab[12] => lpm_add_sub:lpm_add_sub_component.datab[12]
 datab[13] => lpm_add_sub:lpm_add_sub_component.datab[13]
 datab[14] => lpm_add_sub:lpm_add_sub_component.datab[14]
 datab[15] => lpm_add_sub:lpm_add_sub_component.datab[15]
+result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
+result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
+result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
+result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
+result[4] <= lpm_add_sub:lpm_add_sub_component.result[4]
+result[5] <= lpm_add_sub:lpm_add_sub_component.result[5]
+result[6] <= lpm_add_sub:lpm_add_sub_component.result[6]
+result[7] <= lpm_add_sub:lpm_add_sub_component.result[7]
+result[8] <= lpm_add_sub:lpm_add_sub_component.result[8]
+result[9] <= lpm_add_sub:lpm_add_sub_component.result[9]
+result[10] <= lpm_add_sub:lpm_add_sub_component.result[10]
+result[11] <= lpm_add_sub:lpm_add_sub_component.result[11]
+result[12] <= lpm_add_sub:lpm_add_sub_component.result[12]
+result[13] <= lpm_add_sub:lpm_add_sub_component.result[13]
+result[14] <= lpm_add_sub:lpm_add_sub_component.result[14]
+result[15] <= lpm_add_sub:lpm_add_sub_component.result[15]
 
 
 |ProcessorV1|Adder:PCAdder|lpm_add_sub:lpm_add_sub_component
@@ -9657,6 +11692,24 @@ add_sub => ~NO_FANOUT~
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= add_sub_rlh:auto_generated.result[0]
+result[1] <= add_sub_rlh:auto_generated.result[1]
+result[2] <= add_sub_rlh:auto_generated.result[2]
+result[3] <= add_sub_rlh:auto_generated.result[3]
+result[4] <= add_sub_rlh:auto_generated.result[4]
+result[5] <= add_sub_rlh:auto_generated.result[5]
+result[6] <= add_sub_rlh:auto_generated.result[6]
+result[7] <= add_sub_rlh:auto_generated.result[7]
+result[8] <= add_sub_rlh:auto_generated.result[8]
+result[9] <= add_sub_rlh:auto_generated.result[9]
+result[10] <= add_sub_rlh:auto_generated.result[10]
+result[11] <= add_sub_rlh:auto_generated.result[11]
+result[12] <= add_sub_rlh:auto_generated.result[12]
+result[13] <= add_sub_rlh:auto_generated.result[13]
+result[14] <= add_sub_rlh:auto_generated.result[14]
+result[15] <= add_sub_rlh:auto_generated.result[15]
+cout <= <GND>
+overflow <= <GND>
 
 
 |ProcessorV1|Adder:PCAdder|lpm_add_sub:lpm_add_sub_component|add_sub_rlh:auto_generated
@@ -9692,6 +11745,22 @@ datab[12] => op_1.IN7
 datab[13] => op_1.IN5
 datab[14] => op_1.IN3
 datab[15] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProcessorV1|MuxINC:inst18
@@ -9728,6 +11797,22 @@ data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
 data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
 data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
 sel => LPM_MUX:LPM_MUX_component.SEL[0]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|MuxINC:inst18|LPM_MUX:LPM_MUX_component
@@ -9767,6 +11852,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|MuxINC:inst18|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
@@ -9802,6 +11903,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -9851,6 +11968,10 @@ data2x[2] => LPM_MUX:LPM_MUX_component.DATA[2][2]
 data2x[3] => LPM_MUX:LPM_MUX_component.DATA[2][3]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
 
 
 |ProcessorV1|MuxDest:inst11|LPM_MUX:LPM_MUX_component
@@ -9871,6 +11992,10 @@ sel[1] => mux_53e:auto_generated.sel[1]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_53e:auto_generated.result[0]
+result[1] <= mux_53e:auto_generated.result[1]
+result[2] <= mux_53e:auto_generated.result[2]
+result[3] <= mux_53e:auto_generated.result[3]
 
 
 |ProcessorV1|MuxDest:inst11|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
@@ -9886,6 +12011,10 @@ data[8] => data2_wire[0].IN0
 data[9] => data2_wire[1].IN0
 data[10] => data2_wire[2].IN0
 data[11] => data2_wire[3].IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => data0_wire[3].IN0
 sel[0] => data1_wire[3].IN1
 sel[0] => data1_wire[2].IN1
@@ -9932,6 +12061,22 @@ data1x[13] => LPM_MUX:LPM_MUX_component.DATA[1][13]
 data1x[14] => LPM_MUX:LPM_MUX_component.DATA[1][14]
 data1x[15] => LPM_MUX:LPM_MUX_component.DATA[1][15]
 sel => LPM_MUX:LPM_MUX_component.SEL[0]
+result[0] <= LPM_MUX:LPM_MUX_component.RESULT[0]
+result[1] <= LPM_MUX:LPM_MUX_component.RESULT[1]
+result[2] <= LPM_MUX:LPM_MUX_component.RESULT[2]
+result[3] <= LPM_MUX:LPM_MUX_component.RESULT[3]
+result[4] <= LPM_MUX:LPM_MUX_component.RESULT[4]
+result[5] <= LPM_MUX:LPM_MUX_component.RESULT[5]
+result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
+result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
+result[8] <= LPM_MUX:LPM_MUX_component.RESULT[8]
+result[9] <= LPM_MUX:LPM_MUX_component.RESULT[9]
+result[10] <= LPM_MUX:LPM_MUX_component.RESULT[10]
+result[11] <= LPM_MUX:LPM_MUX_component.RESULT[11]
+result[12] <= LPM_MUX:LPM_MUX_component.RESULT[12]
+result[13] <= LPM_MUX:LPM_MUX_component.RESULT[13]
+result[14] <= LPM_MUX:LPM_MUX_component.RESULT[14]
+result[15] <= LPM_MUX:LPM_MUX_component.RESULT[15]
 
 
 |ProcessorV1|MuxINC:inst9|LPM_MUX:LPM_MUX_component
@@ -9971,6 +12116,22 @@ sel[0] => mux_m4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
+result[0] <= mux_m4e:auto_generated.result[0]
+result[1] <= mux_m4e:auto_generated.result[1]
+result[2] <= mux_m4e:auto_generated.result[2]
+result[3] <= mux_m4e:auto_generated.result[3]
+result[4] <= mux_m4e:auto_generated.result[4]
+result[5] <= mux_m4e:auto_generated.result[5]
+result[6] <= mux_m4e:auto_generated.result[6]
+result[7] <= mux_m4e:auto_generated.result[7]
+result[8] <= mux_m4e:auto_generated.result[8]
+result[9] <= mux_m4e:auto_generated.result[9]
+result[10] <= mux_m4e:auto_generated.result[10]
+result[11] <= mux_m4e:auto_generated.result[11]
+result[12] <= mux_m4e:auto_generated.result[12]
+result[13] <= mux_m4e:auto_generated.result[13]
+result[14] <= mux_m4e:auto_generated.result[14]
+result[15] <= mux_m4e:auto_generated.result[15]
 
 
 |ProcessorV1|MuxINC:inst9|LPM_MUX:LPM_MUX_component|mux_m4e:auto_generated
@@ -10006,6 +12167,22 @@ data[28] => result_node[12].IN1
 data[29] => result_node[13].IN1
 data[30] => result_node[14].IN1
 data[31] => result_node[15].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result_node[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result_node[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result_node[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result_node[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result_node[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result_node[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result_node[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result_node[15].DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => result_node[15].IN0
 sel[0] => _.IN0
 sel[0] => result_node[14].IN0
@@ -10060,6 +12237,22 @@ data[13] => lpm_ff:lpm_ff_component.data[13]
 data[14] => lpm_ff:lpm_ff_component.data[14]
 data[15] => lpm_ff:lpm_ff_component.data[15]
 enable => lpm_ff:lpm_ff_component.enable
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+q[4] <= lpm_ff:lpm_ff_component.q[4]
+q[5] <= lpm_ff:lpm_ff_component.q[5]
+q[6] <= lpm_ff:lpm_ff_component.q[6]
+q[7] <= lpm_ff:lpm_ff_component.q[7]
+q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
+q[11] <= lpm_ff:lpm_ff_component.q[11]
+q[12] <= lpm_ff:lpm_ff_component.q[12]
+q[13] <= lpm_ff:lpm_ff_component.q[13]
+q[14] <= lpm_ff:lpm_ff_component.q[14]
+q[15] <= lpm_ff:lpm_ff_component.q[15]
 
 
 |ProcessorV1|DFF_16BIT:RB|lpm_ff:lpm_ff_component
@@ -10117,5 +12310,21 @@ aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
 sset => ~NO_FANOUT~
 sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
