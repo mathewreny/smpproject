@@ -496,10 +496,10 @@ public class Compiler{
                 		
                 		
                 		  IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
-	                    for(int i = (15-IMMD.length()); i > 0; i--){
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
 	                    	toReturn = toReturn.concat("0");
 	                    }
-	                    toReturn = toReturn.concat(IMMD + "0");
+	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break;
                 case bal:
@@ -513,20 +513,20 @@ public class Compiler{
                 			toReturn = toReturn.concat("1110");
 	            		
 	            		    IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
-	                    for(int i = (15-IMMD.length()); i > 0; i--){
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
 	                    	toReturn = toReturn.concat("0");
 	                    }
-	                    toReturn = toReturn.concat(IMMD + "0");
+	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break;    
                 case j:
                 		  toReturn = toReturn.concat("0010");
                 		
                 		  IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
-	                    for(int i = (19-IMMD.length()); i > 0; i--){
+	                    for(int i = (20-IMMD.length()); i > 0; i--){
 	                    	toReturn = toReturn.concat("0");
 	                    }
-	                    toReturn = toReturn.concat(IMMD + "0");
+	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break; 
                 case jal:
@@ -534,10 +534,10 @@ public class Compiler{
 	            		
 	            		
 	            		    IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
-	                    for(int i = (19-IMMD.length()); i > 0; i--){
+	                    for(int i = (20-IMMD.length()); i > 0; i--){
 	                    	toReturn = toReturn.concat("0");
 	                    }
-	                    toReturn = toReturn.concat(IMMD + "0");
+	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break; 
                 case li: 
@@ -557,10 +557,10 @@ public class Compiler{
 	                    toReturn = toReturn.concat(RA);
 	                    
 	            		    IMMD = Integer.toBinaryString(Integer.parseInt(args[2]));
-	                    for(int i = (15-IMMD.length()); i > 0; i--){
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
 	                    	toReturn = toReturn.concat("0");
 	                    }
-	                    toReturn = toReturn.concat(IMMD + "0");
+	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break;	
                 }
