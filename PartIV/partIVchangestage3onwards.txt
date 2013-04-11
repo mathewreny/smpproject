@@ -1,0 +1,262 @@
+				-- alu
+		elsif(stage = 3) then			
+			
+			-- test value show stage
+			test_stage <= "011";
+			
+			-- R-type instructions
+			if(op_code(3) = '1' and op_code(1) = '1') then
+				-- Set Alu Flags is s is set
+				if(s = '1') then
+					flag_enable <= '1';
+				end if;
+		
+				-- jr instruction
+				if(op_code(2) = '1' and op_code(0) = '1') then
+					-- not implemented
+					pc_select <= '0';
+					pc_enable <= '1';
+					
+				-- CMP r-type instructions
+				elsif(op_code(2) = '1' and op_code(0) = '0') then
+					alu_op <= "11";
+					b_inv <= '1';
+					b_select <= '0';
+					
+				-- other r-type instructions
+				elsif(op_code(2) = '0' and op_code(0) = '0') then
+					
+					-- add instruction
+					if(opx = "100") then
+						alu_op <= "11";
+					
+					-- sub instruction
+					elsif(opx = "000") then
+						alu_op <= "11";
+						b_inv <= '1';
+						
+					-- and instruction
+					elsif(opx = "010") then
+						alu_op <= "00";
+						
+					-- or instruction
+					elsif(opx = "011") then
+						alu_op <= "01";
+						
+					-- xor instruction
+					elsif(opx = "001") then
+						alu_op <= "10";
+						
+					end if;
+				end if;
+			
+			
+			-- D-type instructions
+			elsif(op_code(3) = '1' and op_code(1) = '0') then
+				-- none implemented
+				-- Set Alu Flags is s is set
+				if(s = '1') then
+					flag_enable <= '1';
+				end if;
+				-- addi instruction
+				if (op_code = "1100") then
+					b_select <= '1';
+					extend <= "01";
+					alu_op <= "11";
+					
+				-- lw instruction	
+				elsif(op_code = "1000") then
+					b_select <= '1';
+					ma_select <= '0';
+					-- sign extened
+					extend <= "01";
+					alu_op <= "11";										
+					
+				-- sw instruction
+				elsif (op_code = "1001") then					
+					b_select <= '1';
+					ma_select <= '0';
+					-- sign extened
+					extend <= "01";
+					alu_op <= "11";
+						
+				end if;
+				
+				
+			-- B-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '0') then
+				-- none implemented
+				-- br instruction
+				if(op_code = "0000") then
+					inc_select <= '1';
+					pc_enable <= '1';
+					extend <= "00";
+					
+				elsif(op_code = "0010") then
+					y_select <= "10";
+					inc_select <= '1';
+					pc_enable <= '1';
+					extend <= "00";
+					
+				end if;
+		
+		
+			-- J-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '1') then
+				-- none implemented
+				if(op_code = "0011") then
+					b_select <= '1';
+					alu_op  <= "11";
+					
+				end if;
+				
+				
+			end if; -- instruction check				
+		
+		-- memory access
+		elsif(stage = 4) then
+			-- stop read of the alu flags
+			flag_enable <= '0';
+			
+			-- test value show stage
+			test_stage <= "100";
+		
+			-- R-type instructions
+			if(op_code(3) = '1' and op_code(1) = '1') then
+		
+				-- jr instruction
+				if(op_code(2) = '1' and op_code(0) = '1') then
+					-- not implemented
+					
+				-- other r-type instructions
+				elsif(op_code(2) = '0' and op_code(0) = '0') then
+					
+					-- add instruction
+					if(opx = "100") then
+						alu_op <= "11";
+					
+					-- sub instruction
+					elsif(opx = "000") then
+						alu_op <= "11";
+						b_inv <= '1';
+						
+					-- and instruction
+					elsif(opx = "010") then
+						alu_op <= "00";
+						
+					-- or instruction
+					elsif(opx = "011") then
+						alu_op <= "01";
+						
+					-- xor instruction
+					elsif(opx = "001") then
+						alu_op <= "10";
+						
+					end if;
+				end if;
+			
+			
+			-- D-type instructions
+			elsif(op_code(3) = '1' and op_code(1) = '0') then
+				-- none implemented
+				
+				-- sw instruction	
+				if(op_code = "1001") then						
+					ma_select <= '0';
+					mem_write <= '1';
+					rf_write  <= '0';
+					-- set y_select to check memory address computed
+					y_select <= "00";
+					
+				-- lw instruction
+				elsif (op_code = "1000") then	
+					ma_select <= '0';
+					mem_read	 <= '1';
+					-- set y_select to check memory address computed
+					y_select <= "01";
+					--rf_write <= '1';
+						
+				end if;
+				
+				
+			-- B-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '0') then
+				-- none implemented
+				if(op_code = "0000") then
+					y_select <= "11";
+					inc_select <= '0';
+					pc_enable <= '0';
+				else
+					inc_select <= '0';
+					pc_enable <= '0';
+				end if;
+					
+		
+			-- J-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '1') then
+				-- none implemented
+				
+			end if; -- instruction check
+		
+		
+		-- destination register
+		elsif(stage = 5) then						
+			mem_read <= '0';
+			-- test value show stage
+			test_stage <= "101";
+			
+			-- R-type instructions
+			if(op_code(3) = '1' and op_code(1) = '1') then
+		
+				-- jr instruction
+				if(op_code(2) = '1' and op_code(0) = '1') then
+					-- nothing to be done
+				elsif(op_code(2) = '1' and op_code(0) = '0') then
+					--nothing to be done
+					rf_write <= '0';
+				-- other r-type instructions
+				else
+					rf_write <= '1';
+					
+				end if;
+			
+			
+			-- D-type instructions
+			elsif(op_code(3) = '1' and op_code(1) = '0') then
+				-- none implemented
+				-- Add LW and SW immendiate
+				c_select <= "00";
+				
+				if(op_code = "1001") then
+					rf_write <= '0';
+					
+				else
+					rf_write <= '1';
+					
+				end if;
+				
+			-- B-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '0') then
+				-- none implemented
+				if(op_code = "0010") then
+					c_select <= "10";
+					rf_write <= '1';
+				end if;
+		
+			-- J-type instructions
+			elsif(op_code(3) = '0' and op_code(1) = '1') then
+				-- none implemented
+				if(op_code = "0011") then
+					c_select <= "11";
+					rf_write <= '1';
+					
+				end if;
+				
+			end if; -- instruction check
+		
+		end if; -- stage
+		
+		
+	end if; -- clock cycle
+	end process;
+end control_unit_230_arch;
