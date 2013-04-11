@@ -1,0 +1,12 @@
+addi	r2 r1 32
+lw 	r1 (4)r2
+add 	r1 r1 r0
+sw 	r1 (4)r2
+lw	r2 (4)r2
+b	-5
+
+so after this the program goes back to 
+lw	r1 (4)r2
+add	r1 r1 r0
+
+I decided to end it after this since it proves that everything works.
