@@ -1,56 +1,295 @@
-				-- alu
-		elsif(stage = 3) then			
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Control Unit for CSCE 230 Project
+-- Fall 201
+--
+-- Basic idea: set signals based on each stage of instruction execution
+--             stage 1 initializes every control signal
+--             subsequent stages only change contol signals as needed
+
+entity control_unit_230 is
+	port (op_code, cond: in std_logic_vector(3 downto 0);
+		  opx: in std_logic_vector(2 downto 0);
+		  s, n, z, v, c, mfc, clock, reset: in std_logic;
+		  
+		  -- memory interface control signals
+		  test_stage: out std_logic_vector(2 downto 0);	
+		  
+		  -- Should execute instruction flag_enable
+		  instr_executeflag: out std_logic;
+		  
+		  -- datapath control signals
+		  alu_op, c_select, y_select: out std_logic_vector(1 downto 0);
+		  rf_write, b_select, a_inv, b_inv, flag_enable: out std_logic;
+		  
+		  -- memory interface control signals
+		  extend: out std_logic_vector(1 downto 0);
+		  ir_enable, ma_select, mem_read, mem_write: out std_logic;
+		  
+		  -- instruction address control signals
+		  pc_select, pc_enable, inc_select: out std_logic);
+		  
+		  
+end control_unit_230;
+
+
+architecture control_unit_230_arch of control_unit_230 is
+	
+	signal wmfc: std_logic;
+	shared variable stage: integer:= 0;
+	shared variable instr_execute: integer:= 0;
+	
+begin
+	
+	process (clock, reset, cond)
+	begin
+	
+	-- only work on positive to Neg clock
+	if(falling_edge(clock)) then
+		-- 1111 = NV (Never) - Never
+		if(cond = "1111") then
+			instr_execute := 0;
+ 	
+ 		-- 1110 = AL (Always) - Always
+ 		elsif(cond = "1110") then
+ 			instr_execute := 1;
+ 		 
+ 		
+ 		-- 1101 = LE (less than or equal) - Z set, or N Set and V clear, or N Clear and V Set
+ 		elsif(cond = "1101") then
+ 			--              N           V            N           V  
+ 			if(z = '1' or (n = '1' and v = '0') or (n = '0' and v = '1')) then
+ 				instr_execute := 1;
+ 			end if;
+ 		 		
+ 	
+ 		-- 1100 = GT (greater than) - Z Clear, and either N Set and V set or N Clear and V Clear
+ 		elsif(cond = "1100") then
+ 			if(z = '0') then
+ 				--   N          V            N           V
+ 				if( (n = '1' and v = '1') or (n = '0' and n = '0')) then
+ 					instr_execute := 1;
+ 				end if;
+ 			end if;
+ 		 
+ 		
+ 		-- 1011 = LT (less than) - N Set && V Clear or N Clear && V Set
+ 		elsif(cond = "1011") then
+ 			--     N           V            N          V
+ 			if( (n = '1' and v = '0') or (n = '0'and v = '1') ) then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 1010 = GE (greater or equal) - N Set && V Set or N Clear && V Clear
+ 		elsif(cond = "1010") then
+ 			--     N           V            N          V
+  			if( (n = '1' and v = '1') or (n = '0'and v = '0')) then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 1000 = HI (unsigned higher) - C set && Z Clear
+ 		elsif(cond = "1000") then
+ 			--  C            Z
+ 			if(c = '1' and z = '0') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 1001 = LS (unsigned higher) - C Clear && Z Set
+ 		elsif(cond = "1001") then
+ 			--   C           Z
+ 			if(c = '0' and z = '1') then
+ 				instr_execute := 1;
+ 			end if;	
+ 	
+ 		-- 0000 = EQ (equal) - Z Set
+ 		elsif(cond = "0000") then
+ 			--       Z
+ 			if(z = '1') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0001 = NE (not equal) - Z Clear
+ 		elsif(cond = "0001") then
+ 			--    Z
+ 			if(z = '0') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0010 = CS (unsigned higher or same ) - c Set
+ 		elsif(cond = "0010") then
+ 			--    C
+ 			if(c = '1') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0011 = CC (unsigned lower - c Clear
+ 		elsif(cond = "0011") then
+ 			--       C
+ 			if(c = '0') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0100 = MI (negative) - N Set
+ 		elsif(cond = "0100") then
+ 			--      N
+ 			if(n = '1') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0101 = PL (positive or zero) - N Clear
+ 		elsif(cond = "0101") then
+ 			--      N
+ 			if(n = '0') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0110 = VS (overflow) - V set
+ 		elsif(cond = "0110") then
+ 			--     V
+ 			if(v = '1') then
+ 				instr_execute := 1;
+ 			end if;
+ 		 
+ 		
+ 		-- 0111 = VC (no overflow) - V Clear
+ 		elsif(cond = "0111") then
+ 			--        V
+ 			if(v = '0') then
+ 				instr_execute := 1;
+ 			end if;
+ 			
+ 		else
+ 			instr_execute := 0;		 	
+		end if;
+	end if ;
+	
+	-- only work on positive clock
+	if(rising_edge(clock)) then
+		
+ 		if(instr_execute = 1) then
+			instr_executeflag <= '1';
+		end if;
+	
+		if(reset = '1') then
+			stage := 0;
+		end if;
+	
+		-- increment stage if not waiting for memory
+		if((mfc = '1' or wmfc = '0')) then
+			stage := stage mod 5 + 1;
+		end if;		
+		
+		-- instruction fetch
+		if(stage = 1) then
+		
+			-- test value show stage
+			test_stage <= "001";
+	
+			wmfc <= '1';
+			alu_op <= "00";
+			c_select <= "01";
+			y_select <= "00";
+			rf_write <= '0';
+			b_select <= '0';
+			a_inv <= '0';
+			b_inv <= '0';
+			flag_enable <= '0';
+			extend <= "00";
+			ir_enable <= '1';
+			ma_select <= '1';
+			mem_read <= '1';
+			mem_write <= '0';
+			pc_select <= '1';
+			pc_enable <= mfc;
+			inc_select <= '0';		
+		
+		-- source registers
+		elsif(stage = 2) then	
+		
+			-- test value show stage
+			test_stage <= "010";
 			
+			wmfc <= '0';
+			ir_enable <= '0';
+			mem_read <= '0';
+			pc_enable <= '0';	
+		
+					-- alu
+		elsif(stage = 3) then			
+
+
 			-- test value show stage
 			test_stage <= "011";
-			
+
+
 			-- R-type instructions
 			if(op_code(3) = '1' and op_code(1) = '1') then
 				-- Set Alu Flags is s is set
 				if(s = '1') then
 					flag_enable <= '1';
 				end if;
-		
+
+
 				-- jr instruction
 				if(op_code(2) = '1' and op_code(0) = '1') then
 					-- not implemented
 					pc_select <= '0';
 					pc_enable <= '1';
-					
+
+
 				-- CMP r-type instructions
 				elsif(op_code(2) = '1' and op_code(0) = '0') then
 					alu_op <= "11";
 					b_inv <= '1';
 					b_select <= '0';
-					
+
+
 				-- other r-type instructions
 				elsif(op_code(2) = '0' and op_code(0) = '0') then
-					
+
+
 					-- add instruction
 					if(opx = "100") then
 						alu_op <= "11";
-					
+
+
 					-- sub instruction
 					elsif(opx = "000") then
 						alu_op <= "11";
 						b_inv <= '1';
-						
+
+
 					-- and instruction
 					elsif(opx = "010") then
 						alu_op <= "00";
-						
+
+
 					-- or instruction
 					elsif(opx = "011") then
 						alu_op <= "01";
-						
+
+
 					-- xor instruction
 					elsif(opx = "001") then
 						alu_op <= "10";
-						
+
+
 					end if;
 				end if;
-			
-			
+
+
+
+
 			-- D-type instructions
 			elsif(op_code(3) = '1' and op_code(1) = '0') then
 				-- none implemented
@@ -63,7 +302,8 @@
 					b_select <= '1';
 					extend <= "01";
 					alu_op <= "11";
-					
+
+
 				-- lw instruction	
 				elsif(op_code = "1000") then
 					b_select <= '1';
@@ -71,7 +311,8 @@
 					-- sign extened
 					extend <= "01";
 					alu_op <= "11";										
-					
+
+
 				-- sw instruction
 				elsif (op_code = "1001") then					
 					b_select <= '1';
@@ -79,10 +320,13 @@
 					-- sign extened
 					extend <= "01";
 					alu_op <= "11";
-						
+
+
 				end if;
-				
-				
+
+
+
+
 			-- B-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '0') then
 				-- none implemented
@@ -91,75 +335,96 @@
 					inc_select <= '1';
 					pc_enable <= '1';
 					extend <= "00";
-					
+
+
 				elsif(op_code = "0010") then
 					y_select <= "10";
 					inc_select <= '1';
 					pc_enable <= '1';
 					extend <= "00";
-					
+
+
 				end if;
-		
-		
+
+
+
+
 			-- J-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '1') then
 				-- none implemented
 				if(op_code = "0011") then
 					b_select <= '1';
 					alu_op  <= "11";
-					
+
+
 				end if;
-				
-				
+
+
+
+
 			end if; -- instruction check				
-		
+
+
 		-- memory access
 		elsif(stage = 4) then
 			-- stop read of the alu flags
 			flag_enable <= '0';
-			
+
+
 			-- test value show stage
 			test_stage <= "100";
-		
+
+
 			-- R-type instructions
 			if(op_code(3) = '1' and op_code(1) = '1') then
-		
+
+
 				-- jr instruction
 				if(op_code(2) = '1' and op_code(0) = '1') then
 					-- not implemented
-					
+
+
 				-- other r-type instructions
 				elsif(op_code(2) = '0' and op_code(0) = '0') then
-					
+
+
 					-- add instruction
 					if(opx = "100") then
 						alu_op <= "11";
-					
+
+
 					-- sub instruction
 					elsif(opx = "000") then
 						alu_op <= "11";
 						b_inv <= '1';
-						
+
+
 					-- and instruction
 					elsif(opx = "010") then
 						alu_op <= "00";
-						
+
+
 					-- or instruction
 					elsif(opx = "011") then
 						alu_op <= "01";
-						
+
+
 					-- xor instruction
 					elsif(opx = "001") then
 						alu_op <= "10";
-						
+
+
 					end if;
 				end if;
-			
-			
+
+
+
+
 			-- D-type instructions
 			elsif(op_code(3) = '1' and op_code(1) = '0') then
 				-- none implemented
-				
+
+
 				-- sw instruction	
 				if(op_code = "1001") then						
 					ma_select <= '0';
@@ -167,7 +432,8 @@
 					rf_write  <= '0';
 					-- set y_select to check memory address computed
 					y_select <= "00";
-					
+
+
 				-- lw instruction
 				elsif (op_code = "1000") then	
 					ma_select <= '0';
@@ -175,10 +441,13 @@
 					-- set y_select to check memory address computed
 					y_select <= "01";
 					--rf_write <= '1';
-						
+
+
 				end if;
-				
-				
+
+
+
+
 			-- B-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '0') then
 				-- none implemented
@@ -190,24 +459,31 @@
 					inc_select <= '0';
 					pc_enable <= '0';
 				end if;
-					
-		
+
+
+
+
 			-- J-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '1') then
 				-- none implemented
-				
+
+
 			end if; -- instruction check
-		
-		
+
+
+
+
 		-- destination register
 		elsif(stage = 5) then						
 			mem_read <= '0';
 			-- test value show stage
 			test_stage <= "101";
-			
+
+
 			-- R-type instructions
 			if(op_code(3) = '1' and op_code(1) = '1') then
-		
+
+
 				-- jr instruction
 				if(op_code(2) = '1' and op_code(0) = '1') then
 					-- nothing to be done
@@ -217,24 +493,31 @@
 				-- other r-type instructions
 				else
 					rf_write <= '1';
-					
+
+
 				end if;
-			
-			
+
+
+
+
 			-- D-type instructions
 			elsif(op_code(3) = '1' and op_code(1) = '0') then
 				-- none implemented
 				-- Add LW and SW immendiate
 				c_select <= "00";
-				
+
+
 				if(op_code = "1001") then
 					rf_write <= '0';
-					
+
+
 				else
 					rf_write <= '1';
-					
+
+
 				end if;
-				
+
+
 			-- B-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '0') then
 				-- none implemented
@@ -242,21 +525,27 @@
 					c_select <= "10";
 					rf_write <= '1';
 				end if;
-		
+
+
 			-- J-type instructions
 			elsif(op_code(3) = '0' and op_code(1) = '1') then
 				-- none implemented
 				if(op_code = "0011") then
 					c_select <= "11";
 					rf_write <= '1';
-					
+
+
 				end if;
-				
+
+
 			end if; -- instruction check
-		
+
+
 		end if; -- stage
-		
-		
+
+
+
+
 	end if; -- clock cycle
 	end process;
 end control_unit_230_arch;
