@@ -30,8 +30,8 @@
  *  
  *  
  *** HOW TO USE CONDITIONS ***
- * Conditions follow the format NZCV.  Exchange these letters with a 1 or 0
- * $> java Compiler b 67 -c NZCV
+ * Conditions follow the format 0000, 0001, ..., 1110.
+ * $> java Compiler b 67 -c (4-bit condition)
  *
  *  Thanks for reading.
 */
@@ -40,11 +40,42 @@ public class Compiler{
              //As we move along in our project we should update this
 			//So far these instructions are supported.  Feel free to add more.
              public enum Instruction {
-                  add, and, or, xor, addi, lw, sw, jr, cmp, b, bal, j, jal, li;
+                  add, and, or, xor, addi, lw, sw, jr, cmp, b, bal, j, jal, li, blt, beq, bne;
              }
 
-
-
+		 
+/*		 public String toBinaryStringL(int input, int totLength){
+		 			boolean negative = false;	
+					
+					if(input < 0)
+						negative = true;
+						
+					if(negative)
+						input -= 1;
+							
+					String toReturn = Integer.toBinaryString(input));
+					
+					if(negative){
+						string negativeToReturn = "";
+						for(char ch: toReturn.toCharArray()){
+							if(ch == '1')
+								negativeToReturn = negativeToReturn.concat("0");
+							else
+								negativeToReturn = negativeToReturn.concat("1");
+						}
+					}
+	            
+					if(negative){
+						for(int i = (totLength-toReturn.length()); i > 0; i--){
+	              		toReturn = toReturn.concat("1");
+	           		}
+					} else {
+						for(int i = (totLength-toReturn.length()); i > 0; i--){
+	              		toReturn = toReturn.concat("0");
+	           		}
+					}
+		 }
+*/
 
         public static void main(String[] args){
 
@@ -502,6 +533,42 @@ public class Compiler{
 	                    toReturn = toReturn.concat(IMMD);
 	                    System.out.println(toReturn);
 	                    break;
+					case blt:	
+                		  toReturn = toReturn.concat("0000");
+                		  toReturn = toReturn.concat("1101");
+                		
+                		
+                		  IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
+	                    	toReturn = toReturn.concat("0");
+	                    }
+	                    toReturn = toReturn.concat(IMMD);
+	                    System.out.println(toReturn);
+	                    break;
+					case beq:	
+                		  toReturn = toReturn.concat("0000");
+                		  toReturn = toReturn.concat("0000");
+                		
+                		
+                		  IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
+	                    	toReturn = toReturn.concat("0");
+	                    }
+	                    toReturn = toReturn.concat(IMMD);
+	                    System.out.println(toReturn);
+	                    break;
+					 case bne:	
+                		  toReturn = toReturn.concat("0000");
+                		  toReturn = toReturn.concat("0001");
+                		
+                		
+                		  IMMD = Integer.toBinaryString(Integer.parseInt(args[1]));
+	                    for(int i = (16-IMMD.length()); i > 0; i--){
+	                    	toReturn = toReturn.concat("0");
+	                    }
+	                    toReturn = toReturn.concat(IMMD);
+	                    System.out.println(toReturn);
+	                    break;
                 case bal:
 	                		
 	                	toReturn = toReturn.concat("0100");
@@ -541,7 +608,7 @@ public class Compiler{
 	                    System.out.println(toReturn);
 	                    break; 
                 case li: 
-	                	  toReturn = toReturn.concat("0110");
+	                	  toReturn = toReturn.concat("0011");
 	            		
 	                	//RA
 	                    RA = args[1].toLowerCase().substring(1);
