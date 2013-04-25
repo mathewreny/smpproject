@@ -1,0 +1,14 @@
+--begin
+.Mass_of_Mat(123)
+.LEDTOTURNON(1)
+START:
+addi r1 r0 0
+addi r2 r0 8
+cmp r2 r1
+beq end
+LOOP:
+addi r1 r1 1
+b loop
+addi r2 r0 ledtoturnon
+END:
+sw r2 boardledgreen(r0)
