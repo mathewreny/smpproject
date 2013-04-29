@@ -1,0 +1,175 @@
+--begin
+START:
+	li r3, 32768
+	ldw r5, 0(r3)
+OUTPUTTOHEX:
+	li r3, 32768 --THIS IS THE BOARD SWITCH MEMORY LOCATION
+	ldw r4, 0(r3) --CURRENT SWITCH INPUT
+	beq r4, r5, OUTPUTTOHEX
+OUTPUTHEX3:	--PUT NUMBER IN R5
+	addi r6, r0, 100
+	blt r5, r6, LTONEHUN
+	li r6, 200
+	blt r5, r6, LTTWOHUN
+	li r6, 300
+	blt r5, r6, LTTHREEHUN
+	li r6, 400
+	blt r5, r6, LTFOURHUN
+	li r6, 500
+	blt r5, r6, LTFIVEHUN
+	addi r9, r0, 18
+	addi r10, r0, 50
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX2
+LTONEHUN:
+	addi r9, r0, 64
+	br OUTPUTHEX2
+LTTWOHUN:
+	addi r9, r0, 121
+	addi r10, r0, 10
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX2
+LTTHREEHUN:
+	addi r9, r0, 36
+	addi r10, r0, 20
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX2
+LTFOURHUN:
+	addi r9, r0, 48
+	addi r10, r0, 30
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX2
+LTFIVEHUN:
+	addi r9, r0, 25
+	addi r10, r0, 40
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX2
+OUTPUTHEX2:
+	addi r6, r0, 10
+	blt r5, r6, LTTEN
+	addi r6, r0, 20
+	blt r5, r6, LTTWENTY
+	addi r6, r0, 30
+	blt r5, r6, LTTHIRTY
+	addi r6, r0, 40
+	blt r5, r6, LTFOURTY
+	addi r6, r0, 50
+	blt r5, r6, LTFIFTY
+	addi r6, r0, 60
+	blt r5, r6, LTSIXTY
+	addi r6, r0, 70
+	blt r5, r6, LTSEVENTY
+	addi r6, r0, 80
+	blt r5, r6, LTEIGHTY
+	addi r6, r0, 90
+	blt r5, r6, LTNINETY
+	addi r8, r0, 24
+	addi r10, r0, 9
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX1
+LTTEN:
+	addi r8, r0, 64
+	br OUTPUTHEX1
+LTTWENTY:
+	addi r8, r0, 121
+	addi r5, r5, -10
+	br OUTPUTHEX1
+LTTHIRTY:
+	addi r8, r0, 36
+	addi r5, r5, -20
+	br OUTPUTHEX1
+LTFOURTY:
+	addi r8, r0, 48
+	addi r5, r5, -30
+	br OUTPUTHEX1
+LTFIFTY:
+	addi r8, r0, 25
+	addi r5, r5, -40
+	br OUTPUTHEX1
+LTSIXTY:
+	addi r8, r0, 18
+	addi r5, r5, -50
+	br OUTPUTHEX1
+LTSEVENTY:
+	addi r8, r0, 3
+	addi r5, r5, -60
+	br OUTPUTHEX1
+LTEIGHTY:
+	addi r8, r0, 120
+	addi r10, r0, 7
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX1
+LTNINETY:
+	addi r8, r0, 0
+	addi r10, r0, 8
+	call SUBTRACTLARGENUM
+	br OUTPUTHEX1
+OUTPUTHEX1:
+	addi r6, r0, 0
+	beq r5, r6, ZERO
+	addi r6, r0, 1
+	beq r5, r6, ONE
+	addi r6, r0, 2
+	beq r5, r6, TWO
+	addi r6, r0, 3
+	beq r5, r6, THREE
+	addi r6, r0, 4
+	beq r5, r6, FOUR
+	addi r6, r0, 5
+	beq r5, r6, FIVE
+	addi r6, r0, 6
+	beq r5, r6, SIX
+	addi r6, r0, 7
+	beq r5, r6, SEVEN
+	addi r6, r0, 8
+	beq r5, r6, EIGHT
+	addi r7, r0, 24
+	br OUTPUTALLHEX
+ZERO:
+	addi r7, r0, 64
+	br OUTPUTALLHEX
+ONE:
+	addi r7, r0, 121
+	br OUTPUTALLHEX
+TWO:
+	addi r7, r0, 36
+	br OUTPUTALLHEX
+THREE:
+	addi r7, r0, 48
+	br OUTPUTALLHEX
+FOUR:
+	addi r7, r0, 25
+	br OUTPUTALLHEX
+FIVE:
+	addi r7, r0, 18
+	br OUTPUTALLHEX
+SIX:
+	addi r7, r0, 3
+	br OUTPUTALLHEX
+SEVEN:
+	addi r7, r0, 120
+	br OUTPUTALLHEX
+EIGHT:
+	addi r7, r0, 0
+	br OUTPUTALLHEX
+OUTPUTALLHEX:
+--	li r6, 57344 --BOARDHEX2 
+--	stw r9, 0(r6)
+--	li r6, 24576 --BOARDHEX1
+--	stw r8, 0(r6)
+	li r6, 8192  --BOARDHEX0
+	stw r7, 0(r6)
+	addi r5, r4, 0
+	br OUTPUTTOHEX
+--END OF HEX DECODING TO DECIMAL
+SUBTRACTLARGENUM:
+	addi r5, r5, -10
+	addi r10, r10, -1
+	blt r10, r0, SUBTRACTLARGENUM
+	ret
+END:
+		
+	
+
+
+	

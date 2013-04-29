@@ -1,0 +1,334 @@
+
+START:
+MAIN:
+	addi r3, r0, 15
+	li r1, 16384
+	ldw r2, 0(r1)
+	beq r2, r3, START
+	call PERFACT
+	br MAIN
+SAVETOMEMKEY3:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	li r3, 700 			--START SAVE NUMBER TO LOCATION 698
+	ldw r2, 0(r3)
+	li r3, 698
+	stw r2, 0(r3)		--END SAVE NUMBER TO LOCATION TO 698
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r2, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+	ldw r15, 0(STACKPOINTER)
+	ret
+SAVETOMEMKEY2:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	li r3, 700 			--START SAVE NUMBER TO LOCATION 699
+	ldw r2, 0(r3)
+	li r3, 699
+	stw r2, 0(r3)		--END SAVE NUMBER TO LOCATION TO 699
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r2, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+	ldw r15, 0(STACKPOINTER)
+	ret
+DISPLAYMATH:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	
+	li r3, 700 	--get the number in 700 which is a math code
+	ldw r2, 0(r3)		--r2 holds the switch combo
+	li r3, 698
+	ldw r5, 0(r3)
+	li r3, 699
+	ldw r6, 0(r3)
+	
+	
+	li r1, 1
+	beq r2, r1, ADD
+	li r1, 2
+	beq r2, r1, SUB
+	li r1, 4
+	beq r2, r1, OR
+	li r1, 8
+	beq r2, r1, XOR
+	li r1, 16
+	beq r2, r1, AND
+	br ADD
+	
+	ADD:
+		add r7, r5, r6
+		br ENDMATH
+	SUB:
+		sub r7, r5, r6
+		br ENDMATH
+	OR:
+		or r7, r5, r6
+		br ENDMATH
+	XOR:
+		xor r7, r5, r6
+		br ENDMATH
+	AND:
+		and r7, r5, r6
+		br ENDMATH
+	ENDMATH:
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r7, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+		
+	
+	ldw r15, 0(STACKPOINTER)
+	ret
+PERFACT:
+	addi r3, r0, 7
+	beq r3, r2, SAVETOMEMKEY3
+	addi r3, r0, 11
+	beq r3, r2, SAVETOMEMKEY2
+	addi r3, r0, 13
+	beq r3, r2, DISPLAYMATH
+	br DISPLAYERROR
+	ret
+GETSWITCHBINARY:  --SAVES THE SWITCH TO MEMORY LOCATION 700
+	addi stackpointer, stackpointer, -1  
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1 
+	stw r3, 0(stackpointer)
+	li r3, 32768
+	ldw r2, 0(r3)
+	li r3, 700
+	stw r2, 0(r3)
+	li r3, 4096
+	stw r2, 0(r3)
+	ldw r3, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+DISPLAYTOHEX: --DISPLAYS NUMBER IN MEMORY LOCATION 701			
+	addi stackpointer, stackpointer, -1
+	stw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r3, 0(stackpointer)		
+	addi stackpointer, stackpointer, -1
+	stw r4, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r5, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r6, 0(stackpointer)		
+	addi stackpointer, stackpointer, -1
+	stw r15, 0(stackpointer)					--^^^SAVES TO STACK^^^
+	
+	li r2, 701
+	li r5, 702
+	ldw r1, 0(r2)
+	li r4, 0 			--int displayNumber
+	br LOOPBEGIN				--The following are the corner cases
+		THOUSANDEXACTLY:
+			stw r4, 0(r5)	--BEGIN DISPLAY THOUSANDS
+			call GETDISPLAYCODING
+			ldw r4, 0(r5)
+			li r1, 40960
+			stw r4, 0(r1)
+			li r1, 57344
+			li r2, 64
+			stw r2, 0(r1)
+			li r1, 24576
+			stw r2, 0(r1)
+			li r1, 8192
+			stw r2, 0(r1)
+			br DISPLAYTOHEXEND
+		HUNDREDEXACTLY:
+			stw r4, 0(r5)	--BEGIN DISPLAY THOUSANDS
+			call GETDISPLAYCODING
+			ldw r4, 0(r5)
+			li r1, 57344
+			stw r4, 0(r1)
+			li r1, 24576
+			li r2, 64
+			stw r2, 0(r1)
+			li r1, 8192
+			stw r2, 0(r1)
+			br DISPLAYTOHEXEND	
+		TENEXACTLY:
+			stw r4, 0(r5)	--BEGIN DISPLAY THOUSANDS
+			call GETDISPLAYCODING
+			ldw r4, 0(r5)
+			li r1, 24576
+			stw r4, 0(r1)
+			li r1, 8192
+			li r2, 64
+			stw r2, 0(r1)
+			br DISPLAYTOHEXEND
+										--end corner cases								
+	LOOPBEGIN:
+		li r2, 1000
+		LOOPTHOUSANDS:
+			beq r1, r0, THOUSANDEXACTLY
+			blt r1, r2, LOOPHUNDREDSBEGIN
+			addi r4, r4, 1
+			sub r1, r1, r2
+			br LOOPTHOUSANDS
+	LOOPHUNDREDSBEGIN:
+		stw r4, 0(r5)	--BEGIN DISPLAY THOUSANDS
+		call GETDISPLAYCODING
+		ldw r4, 0(r5)
+		li r6, 40960
+		stw r4, 0(r6)	--END DISPLAY THOUDANDS
+		li r4, 0
+		li r3, -100
+		li r2, 100
+		LOOPHUNDREDS:
+			beq r1, r0, HUNDREDEXACTLY
+			blt r1, r2, LOOPTENSBEGIN
+			addi r4, r4, 1
+			add r1, r1, r3
+			br LOOPHUNDREDS
+	LOOPTENSBEGIN:
+		stw r4, 0(r5)
+		call GETDISPLAYCODING
+		ldw r4, 0(r5)
+		li r6, 57344
+		stw r4, 0(r6)
+		li r4, 0
+		li r3, -10
+		li r2, 10
+		LOOPTENS:
+			beq r1, r0, TENEXACTLY
+			blt r1, r2, LOOPONESBEGIN
+			addi r4, r4, 1
+			add r1, r1, r3
+			br LOOPTENS
+	LOOPONESBEGIN:
+		stw r4, 0(r5)
+		call GETDISPLAYCODING
+		ldw r4, 0(r5)
+		li r6, 24576
+		stw r4, 0(r6)
+		stw r1, 0(r5)
+		call GETDISPLAYCODING
+		ldw r4, 0(r5)
+		li r6, 8192
+		stw r4, 0(r6)
+	DISPLAYTOHEXEND:
+	
+	ldw r15, 0(stackpointer)					--vvvGETS NUMBERS FROM STACKvvv
+	addi stackpointer, stackpointer, 1
+	ldw r6, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r5, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r4, 0(stackpointer)
+	addi stackpointer, stackpointer, 1	
+	ldw r3, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+GETDISPLAYCODING:  --TAKES NUMBER FROM 702 and outputs correct coding to 702
+	addi stackpointer, stackpointer, -1
+	stw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r3, 0(stackpointer)	
+	
+	li r3, 702
+	ldw r2, 0(r3)
+	li r3, 0
+	li r1, 64
+	beq r2, r3, SAVECODING
+	li r3, 1
+	li r1, 121
+	beq r2, r3, SAVECODING
+	li r3, 2
+	li r1, 36
+	beq r2, r3, SAVECODING
+	li r3, 3
+	li r1, 48
+	beq r2, r3, SAVECODING
+	li r3, 4
+	li r1, 25
+	beq r2, r3, SAVECODING
+	li r3, 5
+	li r1, 18
+	beq r2, r3, SAVECODING
+	li r3, 6
+	li r1, 3
+	beq r2, r3, SAVECODING
+	li r3, 7
+	li r1, 120
+	beq r2, r3, SAVECODING
+	li r3, 8
+	li r1, 0
+	beq r2, r3, SAVECODING
+	li r1, 24
+	SAVECODING:
+		li r3, 702
+		stw r1, 0(r3)
+
+	ldw r3, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+GETTHOUSANDSCODING:		--takes number from 710 and outputs the coding to 710
+	addi stackpointer, stackpointer, -1
+	stw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r3, 0(stackpointer)	
+	addi stackpointer, stackpointer, -1
+	stw r15, 0(stackpointer)					--^^^SAVES TO STACK^^^
+	
+		
+	li r3, 710
+	ldw r2, 0(r3) --GET VALUE FROM 710
+	
+	li r3, 1000
+	li r1, 0
+	blt r2, r3, RETURNTHOUSANDSCODING
+	li r3, 1999
+	li r1, 2
+	bgt r2, r3, RETURNTHOUSANDSCODING
+	li r3, 999
+	li r1, 1
+	bgt r2, r3, RETURNTHOUSANDSCODING
+	br DISPLAYERROR		--TEST TO SEE IF ERRORS EXIST!
+	RETURNTHOUSANDSCODING:
+		
+		
+	
+	
+	
+	ldw r15, 0(stackpointer)					--vvvGETS NUMBERS FROM STACKvvv
+	addi stackpointer, stackpointer, 1	
+	ldw r3, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+DISPLAYERROR:	--DISPLAYS ERROR AND EXITS PROGRAM also resets stack pointer.
+	li r1, 40960
+	li r2, 6
+	stw r2, 0(r1)
+	li r1, 57344
+	li r2, 47
+	stw r2, 0(r1)
+	li r1, 24576
+	li r2, 47
+	stw r2, 0(r1)
+	li r1, 8192
+	li r2, 127
+	stw r2, 0(r1)
+	li stackpointer, 1023	--NEEDED FOR MEMORY LEAKS
+	br MAIN					--Branch straight to main once error occurs
+	
+		

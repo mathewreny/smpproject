@@ -1,0 +1,18 @@
+--begin
+.text
+	this is the text 
+	that you should skip
+	i hate this text
+
+.equ Mass_of_Mat, 123
+.equ LEDTOTURNON, 1
+
+START:
+	addi r1, r0, 0
+	addi r2, r0, 8
+LOOP: beq r2, r1, END
+	addi r1, r1, 1
+	br LOOP
+END: addi r2, r0, LEDTOTURNON
+	stw r2, BOARDLEDGREEN(r0)
+	

@@ -1,0 +1,9 @@
+li r14 1023
+START:
+li r1 50
+li r2 40
+sub r2 r1 r2
+or r2 r1 r2
+xor r2 r1 r2
+and r2 r1 r2
+add r2 r1 r2

@@ -1,0 +1,65 @@
+--begin
+.text
+	this is the text 
+	that you should skip
+	i hate this text
+
+.equ Mass_of_Mat, 123
+.equ LEDTOTURNON, 1
+
+START:
+	addi r1, r0, 0
+	addi r2, r0, 8
+LOOP: beq r2, r1, END
+	addi r1, r1, 1
+	br LOOP
+END: addi r2, r0, LEDTOTURNON
+	stw r2, BOARDLEDGREEN(r0)
+
+OUTPUTHEX3:	--PUT NUMBER IN R5
+	addi r6, r0, 100
+	blt r5, r6, LTONEHUN
+	addi r6, r0, 200
+	blt r5, r6, LTTWOHUN
+	addi r6, r0, 300
+	blt r5, r6, LTTHREEHUN
+	addi r6, r0, 400
+	blt r5, r6, LTFOURHUN
+	addi r6, r0, 500
+	blt r5, r6, LTFIVEHUN
+	addi r9, r0, 18
+	addi r5, r5, -500
+	br OUTPUTHEX2
+LTONEHUN:
+	addi r9, r0, 64
+	br OUTPUTHEX2
+LTTWOHUN:
+	addi r9, r0, 121
+	addi r5, r5, -100
+	br OUTPUTHEX2
+LTTHREEHUN:
+	addi r9, r0, 36
+	addi r5, r5, -200
+	br OUTPUTHEX2
+LTFOURHUN:
+	addi r9, r0, 48
+	addi r5, r5, -300
+	br OUTPUTHEX2
+LTFIVEHUN:
+	addi r9, r0, 25
+	addi r5, r5, -400
+	br OUTPUTHEX2
+OUTPUTHEX2:
+	addi r6, r0, 10
+	blt r5, r6, LTTEN
+	addi r6, r0, 20
+	blt r5, r6, LTTWENTY
+	addi r6, r0, 30
+	blt r5, r6, LTTHIRTY
+	addi r6, r0, 40
+	blt r5, r6, LTFOURTY
+	addi r6, r0, 50
+	blt r5, r6, LTFIFTY
+
+
+	

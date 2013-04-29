@@ -1,0 +1,354 @@
+
+START:
+MAIN:	
+	addi r3, r0, 15
+	li r1, 16384
+	ldw r2, 0(r1)
+	beq r2, r3, START
+	call PERFACT
+	br MAIN
+SAVETOMEMKEY3:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	li r3, 700 			--START SAVE NUMBER TO LOCATION 698
+	ldw r2, 0(r3)
+	li r3, 698
+	stw r2, 0(r3)		--END SAVE NUMBER TO LOCATION TO 698
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r2, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+	ldw r15, 0(STACKPOINTER)
+	ret
+SAVETOMEMKEY2:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	li r3, 700 			--START SAVE NUMBER TO LOCATION 699
+	ldw r2, 0(r3)
+	li r3, 699
+	stw r2, 0(r3)		--END SAVE NUMBER TO LOCATION TO 699
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r2, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+	ldw r15, 0(STACKPOINTER)
+	ret
+DISPLAYMATH:
+	stw r15, 0(STACKPOINTER)
+	call GETSWITCHBINARY
+	
+	li r3, 700 	--get the number in 700 which is a math code
+	ldw r2, 0(r3)		--r2 holds the switch combo
+	li r4, 500		--DISPLAY AN ERROR IF GREATER THAN 500
+	li r3, 698
+	ldw r5, 0(r3)
+	bgt r5, r4, DISPLAYERROR
+	li r3, 699
+	ldw r6, 0(r3)
+	bgt r6, r4, DISPLAYERROR
+	
+	
+	li r1, 1
+	beq r2, r1, ADD
+	li r1, 2
+	beq r2, r1, SUB
+	li r1, 4
+	beq r2, r1, OR
+	li r1, 8
+	beq r2, r1, XOR
+	li r1, 16
+	beq r2, r1, AND
+	br ADD
+	
+	ADD:
+		add r7, r5, r6
+		br ENDMATH
+	SUB:
+		sub r7, r5, r6
+		br ENDMATH
+	OR:
+		or r7, r5, r6
+		br ENDMATH
+	XOR:
+		xor r7, r5, r6
+		br ENDMATH
+	AND:
+		and r7, r5, r6
+		br ENDMATH
+	ENDMATH:
+	li r3, 701			--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	stw r7, 0(r3)		--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+	call DISPLAYTOHEX
+		
+	
+	ldw r15, 0(STACKPOINTER)
+	ret
+PERFACT:
+	addi r3, r0, 7
+	beq r3, r2, SAVETOMEMKEY3
+	addi r3, r0, 11
+	beq r3, r2, SAVETOMEMKEY2
+	addi r3, r0, 13
+	beq r3, r2, DISPLAYMATH
+	br DISPLAYERROR
+	ret
+GETSWITCHBINARY:  --SAVES THE SWITCH TO MEMORY LOCATION 700
+	addi stackpointer, stackpointer, -1  
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1 
+	stw r3, 0(stackpointer)
+	
+	li r2, 0
+	li r3, 0
+	
+	li r3, 32768
+	ldw r2, 0(r3)  --save switch to r2
+	li r3, 500
+	blt r2, r3, SAVEGETSWITCHBINARY
+									--The following runs only if the number is negative, i.e. greater than 500
+	li r3, 65024  					--the number 1111111000000000
+	or r2, r2, r3 					--turns the upper bits to one. i.e sign extend
+	SAVEGETSWITCHBINARY:
+	li r3, 700
+	stw r2, 0(r3)
+	li r3, 4096
+	stw r2, 0(r3)
+	ldw r3, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+	
+--SO FAR THIS WORKS
+DISPLAYTOHEX: --DISPLAYS NUMBER IN MEMORY LOCATION 701			
+	addi stackpointer, stackpointer, -1
+	stw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r3, 0(stackpointer)		
+	addi stackpointer, stackpointer, -1
+	stw r4, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r5, 0(stackpointer)
+	addi stackpointer, stackpointer, -1
+	stw r6, 0(stackpointer)		
+	addi stackpointer, stackpointer, -1
+	stw r15, 0(stackpointer)					--^^^SAVES TO STACK^^^
+	
+	br STARTDISPLAYTOHEX
+	
+	DISPLAYTOHEXDISPLAYTENEXACTLY:
+		li r1, 57344
+		li r2, 127
+		stw r2, 0(r1)
+		li r1, 24576
+		li r2, 121
+		stw r2, 0(r1)
+		li r1, 8192
+		li r2, 64
+		stw r2, 0(r1)
+		li r3, 64
+		br DISPLAYTOHEXDISPLAYONES
+		
+	DISPLAYTOHEXDISPLAYELEVENEXACTLY:
+		li r1, 57344
+		li r2, 127
+		stw r2, 0(r1)
+		li r1, 24576
+		li r2, 121
+		stw r2, 0(r1)
+		li r1, 8192
+		li r2, 121
+		stw r2, 0(r1)
+		li r3, 121
+		br DISPLAYTOHEXDISPLAYONES
+			
+	STARTDISPLAYTOHEX:
+	li r1, 0
+	li r2, 0
+	li r3, 0
+	li r4, 0
+	li r5, 0
+	li r6, 0
+	
+	--Register 3 is the display register.
+	--Register 1 is the current value register.
+	--Register 2 is the address register.
+	li r2, 701
+	ldw r1, 0(r2)
+	li r6, 1000
+	bgt r1, r6, DISPLAYERROR
+	li r3, 127			--for displaying a positive number,  changes if number is not positive ... duh
+	bgt r1, r0, DISPLAYTOHEXDISPLAYSIGN
+											--The following runs if the number is negative
+	li r6, -1			--creates a register with all ones
+	xor r1, r1, r6		--FLIPS BITS
+	addi r1, r1, 1
+	li r3, 63			--for displaying a negative		
+	
+	DISPLAYTOHEXDISPLAYSIGN:
+		li r2, 40960
+		stw r3, 0(r2)			--displays the sign to hex3
+	
+	DISPLAYTOHEXBUGS:
+		addi r1, r1, -1		-----------------------BUG SOLVED WITH THIS LINE! NEVER REMOVE---------------------------
+		li r6, 701
+		ldw r5, 0(r6)
+		li r6, 10
+		beq r6, r5, DISPLAYTOHEXDISPLAYTENEXACTLY --once sign is figured out, check to see if it is 10
+		li r6, 11
+		beq r6, r5, DISPLAYTOHEXDISPLAYELEVENEXACTLY  --once sign is figured out, check to see if it is 11
+		
+	DISPLAYTOHEXHUNDREDSINIT:
+		li r3, 24
+		li r4, 899
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 0
+		li r4, 799
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 120
+		li r4, 699
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 3
+		li r4, 599
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 18
+		li r4, 499
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 25
+		li r4, 399
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 48
+		li r4, 299
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 36
+		li r4, 199
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 121
+		li r4, 99
+		bgt r1, r4, DISPLAYTOHEXDISPLAYHUNDREDS
+		li r3, 127			--since there are no thousands, display a blank if techincally zero
+		li r4, -1
+	DISPLAYTOHEXDISPLAYHUNDREDS:
+		li r2, 57344		--address of hex2
+		stw r3, 0(r2)		--stores  the correct display value to hex2
+		li r6, 10
+		blt r1, r6, DISPLAYTOHEXDISPLAYTENS			--Should display blank if the tens place is in fact blank and not zero
+		addi r4, r4, 1
+		sub r1, r1, r4		--should make r1= r1%100
+	DISPLAYTOHEXTENSINIT:
+		li r3, 24
+		li r4, 89
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 0
+		li r4, 79
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 120
+		li r4, 69
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 3
+		li r4, 59
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 18
+		li r4, 49
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 25
+		li r4, 39
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 48
+		li r4, 29
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 36
+		li r4, 19
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 121
+		li r4, 9
+		bgt r1, r4, DISPLAYTOHEXDISPLAYTENS
+		li r3, 64
+		li r4, -1
+	DISPLAYTOHEXDISPLAYTENS:
+		li r2, 24576		--address of hex1
+		stw r3, 0(r2)		--stores  the correct display value to hex1
+		addi r4, r4, 1
+		sub r1, r1, r4		--should make r1= r1%10
+	DISPLAYTOHEXONESINIT:
+		li r3, 24
+		li r4, 8
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 0
+		li r4, 7
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 120
+		li r4, 6
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 3
+		li r4, 5
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 18
+		li r4, 4
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 25
+		li r4, 3
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 48
+		li r4, 2
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 36
+		li r4, 1
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 121
+		li r4, 0
+		bgt r1, r4, DISPLAYTOHEXDISPLAYONES
+		li r3, 64
+	DISPLAYTOHEXDISPLAYONES:
+		li r2, 8192		--address of hex1
+		stw r3, 0(r2)		--stores  the correct display value to hex1
+	
+	ldw r15, 0(stackpointer)					--vvvGETS NUMBERS FROM STACKvvv
+	addi stackpointer, stackpointer, 1
+	ldw r6, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r5, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r4, 0(stackpointer)
+	addi stackpointer, stackpointer, 1	
+	ldw r3, 0(stackpointer)	
+	addi stackpointer, stackpointer, 1	
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r1, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret
+
+--The following needs testing
+DISPLAYERROR:	--DISPLAYS ERROR AND EXITS PROGRAM also resets stack pointer.
+	li r1, 0
+	li r2, 0
+	li r3, 0
+	li r4, 0
+	li r5, 0
+	li r6, 0
+	li r7, 0
+	li r8, 0
+	li r9, 0
+	li r10, 0
+	li r11, 0
+	li r12, 0
+	li r13, 0
+	li r14, 0
+	li r15, 0
+	li r1, 40960
+	li r2, 6
+	stw r2, 0(r1)
+	li r1, 57344
+	li r2, 47
+	stw r2, 0(r1)
+	li r1, 24576
+	li r2, 47
+	stw r2, 0(r1)
+	li r1, 8192
+	li r2, 127
+	stw r2, 0(r1)
+	li stackpointer, 1023	--NEEDED FOR MEMORY LEAKS
+	br MAIN					--Branch straight to main once error occurs
+	
+		

@@ -1,0 +1,42 @@
+START:
+	li r4, 50000
+	addi r3, r0, 0
+	addi r5, r0, 10
+BEG:
+	li r1, 40960
+	addi r2, r0, 48
+	stw r2, 0(r1)
+	li r1, 57344
+	addi r2, r0, 36
+	stw r2, 0(r1)
+	li r1, 24576
+	addi r2, r0, 121
+	stw r2, 0(r1)
+	li r1, 8192
+	addi r2, r0, 64
+	stw r2, 0(r1)
+	
+	li r1, 32768
+	ldw r2, 0(r1)
+	li r1, 4096
+	stw r2, 0(r1)
+	addi r3, r3, 1
+	bne r3, r4, BEG
+	addi r5, r5, -1
+	bne r5, r0, BEG
+END:
+	li r1, 40960
+	addi r2, r0, 127
+	stw r2, 0(r1)
+	li r1, 57344
+	addi r2, r0, 6
+	stw r2, 0(r1)
+	li r1, 24576
+	addi r2, r0, 43
+	stw r2, 0(r1)
+	li r1, 8192
+	addi r2, r0, 33
+	stw r2, 0(r1)
+	br END
+	
+

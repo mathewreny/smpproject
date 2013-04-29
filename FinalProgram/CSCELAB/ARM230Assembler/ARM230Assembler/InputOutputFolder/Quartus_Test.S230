@@ -1,0 +1,26 @@
+GETSWITCHBINARY:  --SAVES THE SWITCH TO MEMORY LOCATION 700
+	addi stackpointer, stackpointer, -1  
+	stw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, -1 
+	stw r3, 0(stackpointer)
+	
+	li r2, 0
+	li r3, 0
+	
+	li r3, 32768
+	ldw r2, 0(r3)  --save switch to r2
+	li r3, 512
+	blt r2, r3, SAVEGETSWITCHBINARY
+									--The following runs only if the number is negative, i.e. greater than 500
+	li r3, 65024  					--the number 1111111000000000
+	or r2, r2, r3 					--turns the upper bits to one. i.e sign extend
+	SAVEGETSWITCHBINARY:
+	li r3, 700
+	stw r2, 0(r3)
+	li r3, 4096
+	stw r2, 0(r3)
+	ldw r3, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ldw r2, 0(stackpointer)
+	addi stackpointer, stackpointer, 1
+	ret

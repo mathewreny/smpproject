@@ -1,0 +1,586 @@
+li r14 1023
+START:
+--THIS DETERMINES IF THE START MESSAGE HAS BEEN READ. DON'T KNOW WHY I NEED IT BUT I DO
+li r9 697
+lw r1 0(r9)
+cmp r1 r0
+beq displaystartmessageinstructions
+DISPLAYSTARTMESSAGEINSTRUCTIONRETURN:
+li r1 53
+sw r1 0(r9)
+MAIN:
+addi r3 r0 15
+li r1 16384
+lw r2 0(r1)
+cmp r2 r3
+beq main
+bal perfact
+b main
+SAVETOMEMKEY3:
+sw r15 0(r14)
+bal getswitchbinary
+--START SAVE NUMBER TO LOCATION 698
+li r3 700
+lw r2 0(r3)
+li r3 698
+--END SAVE NUMBER TO LOCATION TO 698
+sw r2 0(r3)
+--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+li r3 701
+--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+sw r2 0(r3)
+bal displaytohex
+li r3 53248
+sw r2 0(r3)
+li r3 4096
+li r4 192
+sw r4 0(r3)
+lw r15 0(r14)
+jr r15
+SAVETOMEMKEY2:
+sw r15 0(r14)
+bal getswitchbinary
+--START SAVE NUMBER TO LOCATION 699
+li r3 700
+lw r2 0(r3)
+li r3 699
+--END SAVE NUMBER TO LOCATION TO 699
+sw r2 0(r3)
+--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+li r3 701
+--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+sw r2 0(r3)
+bal displaytohex
+li r3 53248
+sw r2 0(r3)
+li r3 4096
+li r4 48
+sw r4 0(r3)
+lw r15 0(r14)
+jr r15
+DISPLAYMATH:
+sw r15 0(r14)
+bal getswitchbinary
+--get the number in 700 which is a math code
+li r3 700
+--r2 holds the switch combo
+lw r2 0(r3)
+li r3 698
+lw r5 0(r3)
+li r3 699
+lw r6 0(r3)
+li r3 4096
+li r4 12
+sw r4 0(r3)
+li r1 1
+cmp r2 r1
+beq add
+li r1 2
+cmp r2 r1
+beq sub
+li r1 4
+cmp r2 r1
+beq or
+li r1 8
+cmp r2 r1
+beq xor
+li r1 16
+cmp r2 r1
+beq and
+li r1 6
+cmp r2 r1
+beq dispr5
+li r1 7
+cmp r2 r1
+beq dispr6
+b add
+ADD:
+add r7 r5 r6
+b endmath
+SUB:
+sub r7 r5 r6
+b endmath
+OR:
+or r7 r5 r6
+b endmath
+XOR:
+xor r7 r5 r6
+b endmath
+AND:
+and r7 r5 r6
+b endmath
+DISPR5:
+addi r7 r5 0
+li r3 4096
+li r4 192
+sw r4 0(r3)
+b endmath
+DISPR6:
+addi r7 r6 0
+li r3 4096
+li r4 48
+sw r4 0(r3)
+b endmath
+ENDMATH:
+--START SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+li r3 701
+--END SAVE NUMBER TO 701 FOR DISPLAY FUNCT
+sw r7 0(r3)
+bal displaytohex
+li r3 53248
+sw r7 0(r3)
+lw r15 0(r14)
+jr r15
+PERFACT:
+addi r3 r0 7
+cmp r3 r2
+beq savetomemkey3
+addi r3 r0 11
+cmp r3 r2
+beq savetomemkey2
+addi r3 r0 13
+cmp r3 r2
+beq displaymath
+b displayerror
+jr r15
+--The following needs testing
+--DISPLAYS ERROR AND EXITS PROGRAM also resets stack pointer.
+DISPLAYERROR:
+li r1 0
+li r2 0
+li r3 0
+li r4 0
+li r5 0
+li r6 0
+li r7 0
+li r8 0
+li r9 0
+li r10 0
+li r11 0
+li r12 0
+li r13 0
+li r14 0
+li r15 0
+li r1 40960
+li r2 6
+sw r2 0(r1)
+li r1 57344
+li r2 47
+sw r2 0(r1)
+li r1 24576
+li r2 47
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+--NEEDED FOR MEMORY LEAKS
+li r14 1023
+--Branch straight to main once error occurs
+b main
+--------------------------------------------------------------------------------------------------------------------------------------
+------------DO NOT CHANGE ANYTHING BELOW THIS BREAK POINT! EVERYTHING MOVED HERE IS TESTED TO WORK PROPERLY!--------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--SAVES THE SWITCH TO MEMORY LOCATION 700
+GETSWITCHBINARY:
+addi r14 r14 -1
+sw r2 0(r14)
+addi r14 r14 -1
+sw r3 0(r14)
+li r2 0
+li r3 0
+li r3 32768
+--save switch to r2
+lw r2 0(r3)
+li r3 511
+cmp r2 r3
+blt savegetswitchbinary
+--The following runs only if the number is negative, i.e. greater than 500
+--the number 1111111000000000
+li r3 65024
+--turns the upper bits to one. i.e sign extend
+or r2 r2 r3
+SAVEGETSWITCHBINARY:
+li r3 700
+sw r2 0(r3)
+li r3 4096
+sw r2 0(r3)
+lw r3 0(r14)
+addi r14 r14 1
+lw r2 0(r14)
+addi r14 r14 1
+jr r15
+WAIT:
+addi r14 r14 -1
+sw r2 0(r14)
+addi r14 r14 -1
+sw r3 0(r14)
+li r2 500
+LOOPOUTER:
+li r3 10000
+LOOPINNER:
+addi r3 r3 -1
+cmp r3 r0
+b loopinner (COND:1100)
+addi r2 r2 -1
+cmp r2 r0
+b loopouter (COND:1100)
+lw r3 0(r14)
+addi r14 r14 1
+lw r2 0(r14)
+addi r14 r14 1
+jr r15
+DISPLAYSTARTMESSAGEINSTRUCTIONS:
+li r1 40960
+li r2 8
+sw r2 0(r1)
+li r1 57344
+li r2 33
+sw r2 0(r1)
+li r1 24576
+li r2 33
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 4096
+li r2 12
+sw r2 0(r1)
+li r1 53248
+li r2 1
+sw r2 0(r1)
+--ADD SW0
+bal wait
+li r1 40960
+li r2 18
+sw r2 0(r1)
+li r1 57344
+li r2 99
+sw r2 0(r1)
+li r1 24576
+li r2 3
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 53248
+li r2 2
+sw r2 0(r1)
+--SUB SW1
+bal wait
+li r1 40960
+li r2 64
+sw r2 0(r1)
+li r1 57344
+li r2 47
+sw r2 0(r1)
+li r1 24576
+li r2 127
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 53248
+li r2 4
+sw r2 0(r1)
+--OR SW2
+bal wait
+li r1 40960
+li r2 9
+sw r2 0(r1)
+li r1 57344
+li r2 35
+sw r2 0(r1)
+li r1 24576
+li r2 47
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 53248
+li r2 8
+sw r2 0(r1)
+--XOR SW3
+bal wait
+li r1 40960
+li r2 8
+sw r2 0(r1)
+li r1 57344
+li r2 43
+sw r2 0(r1)
+li r1 24576
+li r2 33
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 53248
+li r2 16
+sw r2 0(r1)
+--AND SW4
+bal wait
+--CLEAR
+li r1 40960
+li r2 127
+sw r2 0(r1)
+li r1 57344
+li r2 127
+sw r2 0(r1)
+li r1 24576
+li r2 127
+sw r2 0(r1)
+li r1 8192
+li r2 127
+sw r2 0(r1)
+li r1 53248
+li r2 0
+sw r2 0(r1)
+li r2 4096
+li r1 0
+sw r1 0(r2)
+li r1 0
+li r2 0
+b displaystartmessageinstructionreturn
+-----------------------------------------------------------------------------------------------------------------------------------
+--DISPLAYS NUMBER IN MEMORY LOCATION 701			
+DISPLAYTOHEX:
+addi r14 r14 -1
+sw r1 0(r14)
+addi r14 r14 -1
+sw r2 0(r14)
+addi r14 r14 -1
+sw r3 0(r14)
+addi r14 r14 -1
+sw r4 0(r14)
+addi r14 r14 -1
+sw r5 0(r14)
+addi r14 r14 -1
+sw r6 0(r14)
+addi r14 r14 -1
+--^^^SAVES TO STACK^^^
+sw r15 0(r14)
+b startdisplaytohex
+DISPLAYTOHEXDISPLAYTENEXACTLY:
+li r1 57344
+li r2 127
+sw r2 0(r1)
+li r1 24576
+li r2 121
+sw r2 0(r1)
+li r1 8192
+li r2 64
+sw r2 0(r1)
+li r3 64
+b displaytohexdisplayones
+DISPLAYTOHEXDISPLAYELEVENEXACTLY:
+li r1 57344
+li r2 127
+sw r2 0(r1)
+li r1 24576
+li r2 121
+sw r2 0(r1)
+li r1 8192
+li r2 121
+sw r2 0(r1)
+li r3 121
+b displaytohexdisplayones
+STARTDISPLAYTOHEX:
+li r1 0
+li r2 0
+li r3 0
+li r4 0
+li r5 0
+li r6 0
+--Register 3 is the display register.
+--Register 1 is the current value register.
+--Register 2 is the address register.
+li r2 701
+lw r1 0(r2)
+li r6 1000
+cmp r1 r6
+b displayerror (COND:1100)
+--for displaying a positive number,  changes if number is not positive ... duh
+li r3 127
+cmp r1 r0
+b displaytohexdisplaysign (COND:1100)
+--The following runs if the number is negative
+--creates a register with all ones
+li r6 -1
+--FLIPS BITS
+xor r1 r1 r6
+addi r1 r1 1
+--for displaying a negative		
+li r3 63
+DISPLAYTOHEXDISPLAYSIGN:
+li r2 40960
+--displays the sign to hex3
+sw r3 0(r2)
+DISPLAYTOHEXBUGS:
+li r6 10
+--once sign is figured out, check to see if it is 10
+cmp r6 r1
+beq displaytohexdisplaytenexactly
+li r6 11
+--once sign is figured out, check to see if it is 11
+cmp r6 r1
+beq displaytohexdisplayelevenexactly
+-----------------------BUG SOLVED WITH THIS LINE! NEVER REMOVE---------------------------	
+addi r1 r1 -1
+DISPLAYTOHEXHUNDREDSINIT:
+li r3 24
+li r4 899
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 0
+li r4 799
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 120
+li r4 699
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 3
+li r4 599
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 18
+li r4 499
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 25
+li r4 399
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 48
+li r4 299
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 36
+li r4 199
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+li r3 121
+li r4 99
+cmp r1 r4
+b displaytohexdisplayhundreds (COND:1100)
+--since there are no thousands, display a blank if techincally zero
+li r3 127
+li r4 -1
+DISPLAYTOHEXDISPLAYHUNDREDS:
+--address of hex2
+li r2 57344
+--stores  the correct display value to hex2
+sw r3 0(r2)
+li r6 10
+--Should display blank if the tens place is in fact blank and not zero
+cmp r1 r6
+blt displaytohexdisplaytens
+addi r4 r4 1
+--should make r1= r1%100
+sub r1 r1 r4
+DISPLAYTOHEXTENSINIT:
+li r3 24
+li r4 89
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 0
+li r4 79
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 120
+li r4 69
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 3
+li r4 59
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 18
+li r4 49
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 25
+li r4 39
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 48
+li r4 29
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 36
+li r4 19
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 121
+li r4 9
+cmp r1 r4
+b displaytohexdisplaytens (COND:1100)
+li r3 64
+li r4 -1
+DISPLAYTOHEXDISPLAYTENS:
+--address of hex1
+li r2 24576
+--stores  the correct display value to hex1
+sw r3 0(r2)
+addi r4 r4 1
+--should make r1= r1%10
+sub r1 r1 r4
+DISPLAYTOHEXONESINIT:
+li r3 24
+li r4 8
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 0
+li r4 7
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 120
+li r4 6
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 3
+li r4 5
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 18
+li r4 4
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 25
+li r4 3
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 48
+li r4 2
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 36
+li r4 1
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 121
+li r4 0
+cmp r1 r4
+b displaytohexdisplayones (COND:1100)
+li r3 64
+DISPLAYTOHEXDISPLAYONES:
+--address of hex1
+li r2 8192
+--stores  the correct display value to hex1
+sw r3 0(r2)
+--vvvGETS NUMBERS FROM STACKvvv
+lw r15 0(r14)
+addi r14 r14 1
+lw r6 0(r14)
+addi r14 r14 1
+lw r5 0(r14)
+addi r14 r14 1
+lw r4 0(r14)
+addi r14 r14 1
+lw r3 0(r14)
+addi r14 r14 1
+lw r2 0(r14)
+addi r14 r14 1
+lw r1 0(r14)
+addi r14 r14 1
+jr r15
+-------------------------------------------------------------------------------------------------------------------------------------		
